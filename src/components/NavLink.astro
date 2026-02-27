@@ -1,0 +1,18 @@
+---
+interface Props {
+  href: string,
+  className: string,
+};
+const { href, className } = Astro.props as Props;
+
+function normalize(pathname) {
+  return (pathname != "/") ? pathname.replace(/\/$/, "") : pathname;
+}
+
+let defaultClasses = "hover:underline hover:text-blue-600"
+if (normalize(href) === normalize(Astro.url.pathname)) defaultClasses += " font-medium";
+---
+
+<a href={href} class={`${defaultClasses} ${className ?? ""}`} >
+  <slot/>
+</a>

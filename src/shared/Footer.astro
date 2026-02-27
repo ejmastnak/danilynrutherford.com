@@ -1,0 +1,35 @@
+---
+import client from "@tina/__generated__/client";
+
+interface Props {
+  className: string
+}
+const { className } = Astro.props as Props;
+
+const content = await client.queries.myFooter({ relativePath: "index.json" });
+const footer = content.data.footer;
+---
+
+<div class={`bg-theme-brown clip-wave-top-condensed md:clip-wave-top text-white pt-20 md:pt-28 pb-16 px-8 ${className ?? ""}`} >
+  <div class="max-w-5xl mx-auto flex" >
+    <div>
+      <p class="text-5xl font-['Latin_Modern_Roman']">{footer.name}</p>
+      <p class="mt-2.5 italic text-sm">{footer.tagline}</p>
+      <div class="mt-8 text-sm">
+        <p>{footer.company}</p>
+        <p>{footer.address1}</p>
+        <p>{footer.address2}</p>
+      </div>
+      <div class="mt-3 border-t border-gray-400 w-fit text-sm">
+        <a class="mt-3 block hover:underline" href={`mailto:${footer.email}`}>
+          {footer.email}
+        </a>
+        <a class="block hover:underline" href={`tel:${footer.phoneMachineReadable}`}>
+          {footer.phone}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+

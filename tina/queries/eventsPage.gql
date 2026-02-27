@@ -1,0 +1,30 @@
+query myEventsPage($relativePath: String!) {
+  eventsPage(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyEventsPageParts
+  }
+}
+
+fragment MyEventsPageParts on EventsPage {
+  __typename
+  head {
+    __typename
+    title
+    description
+  }
+  h1
+  upcomingEventsHeading
+  pastEventsHeading
+}

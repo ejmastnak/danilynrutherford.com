@@ -1,0 +1,29 @@
+query myPublicWorkPage($relativePath: String!) {
+  publicWorkPage(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyPublicWorkPageParts
+  }
+}
+
+fragment MyPublicWorkPageParts on PublicWorkPage {
+  __typename
+  head {
+    __typename
+    title
+    description
+  }
+  h1
+  description
+}

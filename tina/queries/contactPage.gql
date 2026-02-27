@@ -1,0 +1,27 @@
+query myContactPage($relativePath: String!) {
+  contactPage(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyContactPageParts
+  }
+}
+
+fragment MyContactPageParts on ContactPage {
+  __typename
+  head {
+    __typename
+    title
+    description
+  }
+}

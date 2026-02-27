@@ -1,0 +1,39 @@
+query myFooter($relativePath: String!) {
+  footer(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyFooterParts
+  }
+}
+
+fragment MyFooterParts on Footer {
+  __typename
+  name
+  footerLinks {
+    __typename
+    href
+    text
+  }
+  footerLinks {
+    __typename
+    href
+    text
+  }
+  socialLinks {
+    __typename
+    site
+    href
+    icon
+  }
+}

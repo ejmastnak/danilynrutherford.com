@@ -1,0 +1,27 @@
+query myNav($relativePath: String!) {
+  nav(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyNavParts
+  }
+}
+
+fragment MyNavParts on Nav {
+  __typename
+  navLinks {
+    __typename
+    href
+    text
+  }
+}

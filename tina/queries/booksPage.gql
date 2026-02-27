@@ -1,0 +1,28 @@
+query myBooksPage($relativePath: String!) {
+  booksPage(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyBooksPageParts
+  }
+}
+
+fragment MyBooksPageParts on BooksPage {
+  __typename
+  head {
+    __typename
+    title
+    description
+  }
+  h1
+}

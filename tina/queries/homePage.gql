@@ -1,0 +1,27 @@
+query myHomePage($relativePath: String!) {
+  homePage(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+      _values
+    }
+    ...MyHomePageParts
+  }
+}
+
+fragment MyHomePageParts on HomePage {
+  __typename
+  head {
+    __typename
+    title
+    description
+  }
+}
