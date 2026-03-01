@@ -1,34 +1,37 @@
 ---
+import FooterLink from '@/components/FooterLink.astro'
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "@tina/__generated__/client";
 
 interface Props {
-  className: string
+  classes: string
 }
-const { className } = Astro.props as Props;
+const { classes } = Astro.props as Props;
 
 const content = await client.queries.myFooter({ relativePath: "index.json" });
 const footer = content.data.footer;
 ---
 
-<div class={`bg-theme-brown clip-wave-top-condensed md:clip-wave-top text-white pt-20 md:pt-28 pb-16 px-8 ${className ?? ""}`} >
+<div class={`bg-black text-white pt-12 pb-16 px-8 ${classes ? classes : ''}`} >
   <div class="max-w-5xl mx-auto flex" >
     <div>
-      <p class="text-5xl font-['Latin_Modern_Roman']">{footer.name}</p>
-      <p class="mt-2.5 italic text-sm">{footer.tagline}</p>
-      <div class="mt-8 text-sm">
-        <p>{footer.company}</p>
-        <p>{footer.address1}</p>
-        <p>{footer.address2}</p>
+      <p class="text-3xl">{footer.name}</p>
+      <div class="mt-5">
+        <div className="prose">
+          <TinaMarkdown content={footer.address} />
+        </div>
       </div>
-      <div class="mt-3 border-t border-gray-400 w-fit text-sm">
-        <a class="mt-3 block hover:underline" href={`mailto:${footer.email}`}>
+      <div class="mt-3 border-t border-gray-400 w-fit">
+        <a class="mt-3 block" href={`mailto:${footer.email}`}>
           {footer.email}
-        </a>
-        <a class="block hover:underline" href={`tel:${footer.phoneMachineReadable}`}>
-          {footer.phone}
         </a>
       </div>
     </div>
+    <ul class="hidden md:flex text-lg ml-auto mt-3 flex justify-around gap-x-8 h-fit">
+      {footer.footerLinks.map((footerLink) => (
+      <li key={footerLink.text}><FooterLink href={footerLink.href}>{footerLink.text}</FooterLink></li>
+      ))}
+    </ul>
   </div>
 </div>
 

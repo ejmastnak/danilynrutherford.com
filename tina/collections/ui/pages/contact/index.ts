@@ -37,5 +37,10 @@ export const ContactPageCollection: Collection = {
         },
       ],
     },
+    {
+      name: "h1",
+      label: "Heading",
+      type: "string",
+    }
   ],
 };

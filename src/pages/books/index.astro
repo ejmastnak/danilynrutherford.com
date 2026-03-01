@@ -1,0 +1,14 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Books from "@tina/pages/Books/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myBooksPage({ relativePath: "index.json" });
+const head = content.data.booksPage.head;
+
+---
+
+<BaseLayout head={head}>
+  <Books {...content} client:tina />
+</BaseLayout>

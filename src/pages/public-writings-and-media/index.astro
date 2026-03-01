@@ -1,0 +1,14 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PublicWorks from "@tina/pages/PublicWorks/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myPublicWorksPage({ relativePath: "index.json" });
+const head = content.data.publicWorksPage.head;
+
+---
+
+<BaseLayout head={head}>
+  <PublicWorks {...content} client:tina />
+</BaseLayout>

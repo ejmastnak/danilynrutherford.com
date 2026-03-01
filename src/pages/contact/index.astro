@@ -1,0 +1,12 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Contact from "@tina/pages/Contact/Index.tsx";
+
+const content = await client.queries.myContactPage({ relativePath: "index.json" });
+const head = content.data.contactPage.head;
+---
+
+<BaseLayout head={head}>
+  <Contact {...content} client:load />
+</BaseLayout>

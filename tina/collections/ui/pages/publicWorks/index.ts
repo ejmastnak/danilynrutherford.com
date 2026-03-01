@@ -5,7 +5,7 @@ export const PublicWorksPageCollection: Collection = {
 
   name: "publicWorksPage",
   label: "Public Writings & Media Page",
-  path: "tina/content/ui/pages/publicWork",
+  path: "tina/content/ui/pages/publicWorks",
   format: "json",
 
   ui: {

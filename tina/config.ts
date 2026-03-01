@@ -1,6 +1,6 @@
 import { defineConfig } from "tinacms";
 
-import { HomePageCollection } from "@tina/collections/ui/pages/index.ts";
+import { HomePageCollection } from "@tina/collections/ui/pages/index/index.ts";
 import { AboutPageCollection } from "@tina/collections/ui/pages/about/index.ts";
 import { AcademicWorksPageCollection } from "@tina/collections/ui/pages/academicWorks/index.ts";
 import { BooksPageCollection } from "@tina/collections/ui/pages/books/index.ts";

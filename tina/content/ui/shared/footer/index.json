@@ -1,0 +1,33 @@
+{
+  "name": "Danilyn Rutherford",
+  "footerLinks": [
+    {
+      "href": "/",
+      "text": "Home"
+    },
+    {
+      "href": "/about",
+      "text": "About"
+    },
+    {
+      "href": "/books",
+      "text": "Books"
+    },
+    {
+      "href": "/academic-writings",
+      "text": "Academic Writings"
+    },
+    {
+      "href": "/public-writings-and-media",
+      "text": "Public Writings & Media"
+    },
+    {
+      "href": "/events",
+      "text": "Events"
+    },
+    {
+      "href": "/contact",
+      "text": "Contact"
+    }
+  ]
+}

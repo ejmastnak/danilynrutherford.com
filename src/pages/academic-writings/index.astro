@@ -1,0 +1,14 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import AcademicWorks from "@tina/pages/AcademicWorks/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myAcademicWorksPage({ relativePath: "index.json" });
+const head = content.data.academicWorksPage.head;
+
+---
+
+<BaseLayout head={head}>
+  <AcademicWorks {...content} client:tina />
+</BaseLayout>

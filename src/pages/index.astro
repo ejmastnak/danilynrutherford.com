@@ -1,0 +1,14 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Index from "@tina/pages/Index/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myHomePage({ relativePath: "index.json" });
+const head = content.data.homePage.head;
+
+---
+
+<BaseLayout head={head}>
+  <Index {...content} client:tina />
+</BaseLayout>

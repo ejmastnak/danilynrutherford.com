@@ -1,0 +1,12 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Events from "@tina/pages/Events/Index.tsx";
+
+const content = await client.queries.myEventsPage({ relativePath: "index.json" });
+const head = content.data.eventsPage.head;
+---
+
+<BaseLayout head={head}>
+  <Events {...content} client:load />
+</BaseLayout>

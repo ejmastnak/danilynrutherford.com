@@ -5,7 +5,7 @@ export const AcademicWorksPageCollection: Collection = {
 
   name: "academicWorksPage",
   label: "Academic Writings Page",
-  path: "tina/content/ui/pages/academicWork",
+  path: "tina/content/ui/pages/academicWorks",
   format: "json",
 
   ui: {
