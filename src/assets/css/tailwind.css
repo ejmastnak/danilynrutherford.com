@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .clip-wave-bottom {
+    clip-path: url(#clipWaveBottom);
+  }
+  .clip-wave-bottom-condensed {
+    clip-path: url(#clipWaveBottomCondensed);
+  }
+  .clip-wave-top {
+    clip-path: url(#clipWaveTop);
+  }
+  .clip-wave-top-condensed {
+    clip-path: url(#clipWaveTopCondensed);
+  }
+}
