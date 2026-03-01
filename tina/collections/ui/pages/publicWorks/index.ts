@@ -1,9 +1,9 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
-export const PublicWorkPageCollection: Collection = {
+export const PublicWorksPageCollection: Collection = {
 
-  name: "publicWorkPage",
+  name: "publicWorksPage",
   label: "Public Writings & Media Page",
   path: "tina/content/ui/pages/publicWork",
   format: "json",

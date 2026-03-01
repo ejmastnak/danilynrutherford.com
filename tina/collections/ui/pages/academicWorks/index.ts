@@ -1,9 +1,9 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
-export const AcademicWorkPageCollection: Collection = {
+export const AcademicWorksPageCollection: Collection = {
 
-  name: "academicWorkPage",
+  name: "academicWorksPage",
   label: "Academic Writings Page",
   path: "tina/content/ui/pages/academicWork",
   format: "json",

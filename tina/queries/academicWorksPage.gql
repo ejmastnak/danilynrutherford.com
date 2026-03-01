@@ -1,5 +1,5 @@
-query myPublicWorkPage($relativePath: String!) {
-  publicWorkPage(relativePath: $relativePath) {
+query myAcademicWorksPage($relativePath: String!) {
+  academicWorksPage(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -13,11 +13,11 @@ query myPublicWorkPage($relativePath: String!) {
       id
       _values
     }
-    ...MyPublicWorkPageParts
+    ...MyAcademicWorksPageParts
   }
 }
 
-fragment MyPublicWorkPageParts on PublicWorkPage {
+fragment MyAcademicWorksPageParts on AcademicWorksPage {
   __typename
   head {
     __typename
@@ -25,5 +25,4 @@ fragment MyPublicWorkPageParts on PublicWorkPage {
     description
   }
   h1
-  description
 }

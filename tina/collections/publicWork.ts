@@ -58,7 +58,7 @@ export const PublicWorkCollection: Collection = {
       label: 'Date',
       type: 'datetime',
       required: true,
-    }
+    },
     {
       name: 'type',
       label: 'The type of work',
