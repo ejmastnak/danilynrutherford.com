@@ -1,0 +1,30 @@
+{
+  "head": {
+    "title": "Beautiful Mystery",
+    "description": ""
+  },
+  "title": "Beautiful Mystery",
+  "subtitle": "Living in a Wordless World",
+  "publisher": "Duke University Press",
+  "year": "2025",
+  "image": "/src/assets/img/uploads/books/beautiful-mystery.jpg",
+  "imageAlt": "Cover of Beautiful Mystery",
+  "link": "https://dukeupress.edu/beautiful-mystery",
+  "publisherLinkButtonText": "Order here",
+  "description": "When Danilyn Rutherford and her husband Craig noticed that their six-month-old daughter Millie wasn’t making eye contact, they took her to their pediatrician. And an optometrist. Then a neurologist. Later, to a team of physical and occupational therapists. None of the doctors could give Millie a diagnosis, but it was clear that her brain was not developing at the rate it should. At an age when some children take their first steps, Millie had the cognitive ability and motor skills of a three-month-old. Three years later, Craig died suddenly of a heart attack and Danilyn found herself on the precipice of her anthropology career as a widow and single mother, still trying to solve the puzzle posed by Millie’s inaccessible mind.\n\nNow in her twenties, Millie has never been able to express herself verbally, but she has a thriving social environment rooted in the people around her and in things her companions and family can see, hear, smell, and feel. Life in Millie’s world is far richer than might be immediately evident to those who think and communicate in conventional ways.\n\n*Beautiful Mystery* explores what it means to be a person in the spaces between what we can and cannot say, and how we can fight to care for those we love when they don’t have the language to fight for themselves. Through her unique lens as a mother and an anthropologist, Rutherford tells the story of arriving in Millie’s world, what she found there, and how Millie showed her that words aren’t always what makes us human. Enlightening and deeply felt, *Beautiful Mystery* proves that you don’t have to understand someone to love them—a lesson that, if we all learned it, might allow us to live together in a fractured world.",
+  "reviewsHeading": "Praise\n",
+  "reviews": [
+    {
+      "review": "Danilyn Rutherford has given us a riveting and powerful chronicle. Her writing is luminous, moving, and deeply thoughtful. She carries us along on her path to knowledge gained over many years as she learns the most essential of life lessons from living with her disabled daughter Millie and the fellow travelers in the disability worlds she has traversed: what it means to be human in ways that embrace the vast diversity and ‘beautiful mystery’ of the bodyminds we are privileged to encounter.",
+      "reviewer": "Faye Ginsburg, coauthor of *Disability Worlds*"
+    },
+    {
+      "review": "*Beautiful Mystery* is that rare and precious book: both an unforgettable personal story and a powerfully argued view of how to think about profound human difference. Beautifully written and deeply moving.",
+      "reviewer": "T. M. Luhrmann, author of *How God Becomes Real: Kindling the Presence of Invisible Others*"
+    },
+    {
+      "review": "A truly extraordinary and deeply personal and unique life story. Exceptionally well written, emotionally engaging, and inherently fascinating from start to finish",
+      "reviewer": "Midwest Book Review"
+    }
+  ]
+}

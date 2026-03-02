@@ -4,12 +4,12 @@ import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION,
 export const PublicWorkCollection: Collection = {
   name: "publicWork",
   label: "Public Writings & Media Collection",
-  path: "tina/content/public-work",
+  path: "tina/content/publicWorks",
   format: "json",
   ui: {
-    router({ document }) {
-      return `/public-writings-and-media/${document._sys.filename}`;
-    },
+    // router({ document }) {
+    //   return `/public-writings-and-media/${document._sys.filename}`;
+    // },
     filename: {
       showFirst: true,
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors.",
@@ -40,8 +40,6 @@ export const PublicWorkCollection: Collection = {
       name: 'title',
       label: 'Title',
       type: 'string',
-      required: true,
-      isTitle: true,
     },
     {
       name: 'featuredImage',
@@ -57,7 +55,6 @@ export const PublicWorkCollection: Collection = {
       name: 'date',
       label: 'Date',
       type: 'datetime',
-      required: true,
     },
     {
       name: 'type',
@@ -69,12 +66,6 @@ export const PublicWorkCollection: Collection = {
       name: 'href',
       label: 'External link (optional)',
       type: 'string',
-    },
-    {
-      name: 'introduction',
-      label: 'Introductory text (optional)',
-      description: 'A few sentences introducing the work.',
-      type: 'rich-text',
     },
     {
       name: 'body',

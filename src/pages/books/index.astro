@@ -7,8 +7,10 @@ import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 const content = await client.queries.myBooksPage({ relativePath: "index.json" });
 const head = content.data.booksPage.head;
 
+const booksResponse = await client.queries.bookConnection();
+const books = booksResponse.data.bookConnection.edges?.map((edge) => edge.node);
 ---
 
 <BaseLayout head={head}>
-  <Books {...content} client:tina />
+  <Books books={books} {...content} client:tina />
 </BaseLayout>

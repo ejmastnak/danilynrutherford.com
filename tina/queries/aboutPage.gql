@@ -28,5 +28,6 @@ fragment MyAboutPageParts on AboutPage {
   image
   imageAlt
   body
+  cv
   cvButtonText
 }

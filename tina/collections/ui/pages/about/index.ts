@@ -58,6 +58,12 @@ export const AboutPageCollection: Collection = {
       type: 'rich-text',
     },
     {
+      name: 'cv',
+      label: 'CV PDF file',
+      description: 'Your CV is in your Media Library library',
+      type: 'image',
+    },
+    {
       name: 'cvButtonText',
       label: 'CV button text',
       type: 'string',

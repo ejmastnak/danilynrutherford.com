@@ -41,7 +41,6 @@ export const BooksPageCollection: Collection = {
       name: 'h1',
       label: 'Heading',
       type: 'string',
-      required: true,
     },
   ]
 };

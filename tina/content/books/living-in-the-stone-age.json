@@ -1,0 +1,34 @@
+{
+  "head": {
+    "title": "Living in the Stone Age",
+    "description": ""
+  },
+  "title": "Living in the Stone Age",
+  "subtitle": "Reflections on the Orgins of a Colonial Fantasy",
+  "publisher": "University of Chicago Press",
+  "year": "2018",
+  "image": "/src/assets/img/uploads/books/living-in-the-stone-age.jpg",
+  "imageAlt": "Cover of Living in the Stone Age",
+  "link": "https://press.uchicago.edu/ucp/books/book/chicago/L/bo28470985.html",
+  "publisherLinkButtonText": "Order here",
+  "description": "In 1961, John F. Kennedy referred to the Papuans as “living, as it were, in the Stone Age.” For the most part, politicians and scholars have since learned not to call people “primitive,” but when it comes to the Papuans, the Stone-Age stain persists and for decades has been used to justify denying their basic rights. Why has this fantasy held such a tight grip on the imagination of journalists, policy-makers, and the public at large?\n\n*Living in the Stone Age* answers this question by following the adventures of officials sent to the New Guinea highlands in the 1930s to establish a foothold for Dutch colonialism.  These officials became deeply dependent on the good graces of their would-be Papuan subjects, who were their hosts, guides, and, in some cases, friends.\n\nDanilyn Rutherford shows how, to preserve their sense of racial superiority, these officials imagined that they were traveling in the Stone Age—a parallel reality where their own impotence was a reasonable response to otherworldly conditions rather than a sign of ignorance or weakness. Thus, Rutherford shows, was born a colonialist ideology.\n\n*Living in the Stone Age* is a call to write the history of colonialism differently, as a tale of weakness not strength. It will change the way readers think about cultural contact, colonial fantasies of domination, and the role of anthropology in the postcolonial world.\n",
+  "reviewsHeading": "Praise",
+  "reviews": [
+    {
+      "review": "In this eloquent book, Rutherford brings big questions and big historical contexts to a neglected archive of early interactions in western New Guinea at the end of the Dutch Empire.  Living in the Stone Age conveys complex arguments through lively, conversational, and succinct writing.  This book is a major contribution to West Papuan studies, and to understanding the enduring, pernicious historical constraints that the category ‘Stone Age’ imposes on any people associated with it.",
+      "reviewer": "Rupert Stasch, University of Cambridge"
+    },
+    {
+      "review": "*Living in the Stone Age* is a deeply thoughtful and refreshingly programmatic book about the experience of empire and its fantasies and sympathies. Rutherford offers a subtle, close-up sense of the everyday experience, imperial fantasies, and agonistic assertions of sovereignty during the Dutch colony’s closing decades. Extremely well crafted and written in an accessible, engaging style, this book makes for a fascinating and essential read for anyone interested in sovereignty, colonialism, anthropology, or Southeast Asian studies.",
+      "reviewer": "Patricia Spyer, The Graduate Institute, Geneva"
+    },
+    {
+      "review": "In this arresting meditation on a colonial fantasy and anthropology’s paradoxical complicities with it, Rutherford carves out an affective space constituted by and shared among Papuans and their generations of Western interlocutors. Sympathy, humiliation, vulnerability, fear, and fascination are at the very core of these relations. Constituted by degrees of dependence and control, intimacy and interference, coercion and care, these sentiments also provide the sustenance for a better, more ethical, future anthropology.",
+      "reviewer": "Ann Stoler, The New School for Social Research"
+    },
+    {
+      "review": "If anyone can bring a fresh perspective to the debates around colonialism’s legacies, ethnographers’ ethics, and anthropological ways of knowing, it is Danilyn Rutherford. Written with singular grace, generosity, and insight, this volume opens up inviting new pathways.",
+      "reviewer": "Webb Keane, University of Michigan "
+    }
+  ]
+}

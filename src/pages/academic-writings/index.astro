@@ -7,8 +7,11 @@ import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 const content = await client.queries.myAcademicWorksPage({ relativePath: "index.json" });
 const head = content.data.academicWorksPage.head;
 
+const academicWorksResponse = await client.queries.academicWorkConnection();
+const academicWorks = academicWorksResponse.data.academicWorkConnection.edges?.map((edge) => edge.node);
 ---
 
+
 <BaseLayout head={head}>
-  <AcademicWorks {...content} client:tina />
+  <AcademicWorks academicWorks={academicWorks} {...content} client:tina />
 </BaseLayout>

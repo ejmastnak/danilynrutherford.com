@@ -7,9 +7,9 @@ export const BookCollection: Collection = {
   path: "tina/content/books",
   format: "json",
   ui: {
-    router({ document }) {
-      return `/books/${document._sys.filename}`;
-    },
+    // router({ document }) {
+    //   return `/books/${document._sys.filename}`;
+    // },
     filename: {
       showFirst: true,
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors. I suggest a format like \"beautiful-mystery\", \"living-in-the-stone-age\", etc.",
@@ -70,12 +70,11 @@ export const BookCollection: Collection = {
       name: 'link',
       label: "Link to book page on publisher's site",
       type: 'string',
-      required: true,
     },
     {
       name: 'publisherLinkButtonText',
       label: "Button text for link to publisher's book page",
-      type: 'rich-text',
+      type: 'string',
     },
     {
       name: 'description',
@@ -85,7 +84,7 @@ export const BookCollection: Collection = {
     {
       name: 'reviewsHeading',
       label: 'Reviews heading',
-      type: 'rich-text',
+      type: 'string',
     },
     {
       name: 'reviews',
@@ -94,21 +93,23 @@ export const BookCollection: Collection = {
       list: true,
       ui: {
         itemProps: (review) => {
-          return { label: "Review" };
+          return { label: review.reviewer };
         },
+      },
+      defaultItem: {
+        review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        reviewer: "John Doe, Example University",
       },
       fields: [
         {
           name: 'review',
           label: 'Review text',
           type: 'rich-text',
-          required: true,
         },
         {
           name: 'reviewer',
           label: "Reviewer",
           type: 'rich-text',
-          required: true,
         },
       ],
     },

@@ -3,7 +3,7 @@ import type { Collection } from "tinacms";
 export const AcademicWorkCollection: Collection = {
   name: "academicWork",
   label: "Academic Writings Collection",
-  path: "tina/content/academic-work",
+  path: "tina/content/academicWorks",
   format: "json",
   ui: {
     filename: {
@@ -22,15 +22,12 @@ export const AcademicWorkCollection: Collection = {
       name: 'title',
       label: 'Title',
       type: 'string',
-      required: true,
-      isTitle: true,
     },
     {
       name: 'type',
       label: 'Type of publication',
       description: 'E.g. Research Article, Commentary, Review',
       type: 'string',
-      required: true,
     },
     {
       name: 'authors',

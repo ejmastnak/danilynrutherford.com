@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Book from "@tina/pages/Books/Book.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+export async function getStaticPaths() {
+  const books = await getCollection("books");
+
+  return books.map((book) => ({
+    params: { id: book.id },
+    props: {
+      book,
+      getTinaProps: async () =>
+        client.queries.book({
+          relativePath: book.data.tinaInfo.relativePath,
+        }),
+    },
+  }));
+}
+
+const { book, getTinaProps } = Astro.props;
+const content = await getTinaProps();
+const head = content.data.book.head;
+
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'book', 'image'],
+    altPath: ['data', 'book', 'imageAlt'],
+    width: 800,
+  },
+]);
+
+---
+
+<BaseLayout head={head}>
+  <Book {...content} client:tina />
+</BaseLayout>

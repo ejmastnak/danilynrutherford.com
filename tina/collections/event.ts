@@ -26,27 +26,22 @@ export const EventCollection: Collection = {
     {
       name: "title",
       label: "Title",
-      type: "string",
-      required: true,
-      isTitle: true,
+      type: "rich-text",
     },
     {
       name: 'institution',
       label: 'Institution',
       type: 'string',
-      required: true,
     },
     {
       name: 'type',
       label: 'Type of event',
       type: 'string',
-      required: true,
     },
     {
       name: 'date',
       label: 'Date',
       type: 'datetime',
-      required: true,
     },
     {
       name: 'time',
@@ -57,13 +52,11 @@ export const EventCollection: Collection = {
       name: 'location',
       label: 'Location',
       type: 'string',
-      required: true,
     },
     {
       name: 'description',
       label: 'Description',
       type: 'rich-text',
-      required: true,
     },
     {
       name: 'href',
