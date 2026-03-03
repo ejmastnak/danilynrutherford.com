@@ -1,6 +1,7 @@
 {
   "title": "Remembering Sam Kapissa",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Newspaper / Magazine Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,8 +11,9 @@
   "editors": [],
   "containerTitle": "Inside Indonesia",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "67",
-  "issue": null,
+  "issue": "September",
   "pages": null,
   "year": "2001",
   "href": null

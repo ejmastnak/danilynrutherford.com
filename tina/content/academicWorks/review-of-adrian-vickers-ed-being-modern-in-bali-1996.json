@@ -1,6 +1,7 @@
 {
   "title": "Review of Adrian Vickers, ed., Being Modern in Bali",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Indonesia",
-  "publisher": null,
+  "publisher": "",
   "volume": "62",
-  "issue": null,
-  "pages": "125-131",
+  "issue": "",
+  "pages": "125–131",
   "year": "1996",
-  "href": null
+  "href": ""
 }

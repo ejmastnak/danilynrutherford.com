@@ -1,6 +1,7 @@
 {
   "title": "The Art of Noticing",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "SOJOURN: Journal of Social Issues in Southeast Asia",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "31",
   "issue": "2",
-  "pages": "575-621",
+  "pages": "575–621",
   "year": "2016",
   "href": null
 }

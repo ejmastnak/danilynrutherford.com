@@ -1,6 +1,7 @@
 {
   "title": "Both Places at Once",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -15,6 +16,7 @@
   ],
   "containerTitle": "Producing Indonesia: The State of the Field of Indonesian Studies",
   "publisher": "Southeast Asia Program Publications",
+  "publisherPlace": "Ithaca",
   "volume": null,
   "issue": null,
   "pages": null,

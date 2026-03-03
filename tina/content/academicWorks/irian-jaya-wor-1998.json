@@ -1,6 +1,7 @@
 {
   "title": "Irian Jaya: Wor",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Indonesian Languages and Literature, Indonesian Heritage",
   "publisher": "Didier Millet",
+  "publisherPlace": "Singapore",
   "volume": "10",
   "issue": null,
   "pages": "58-59",

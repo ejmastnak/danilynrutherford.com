@@ -1,6 +1,7 @@
 {
   "title": "Review of Elizabeth Povinelli, The Empire of Love: Towards a Theory of Intimacy, Genealogy, and Carnality",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Journal of the Royal Anthropological Institute",
-  "publisher": null,
+  "publisher": "",
   "volume": "14",
-  "issue": null,
-  "pages": "709-710",
+  "issue": "",
+  "pages": "709–710",
   "year": "2008",
-  "href": null
+  "href": ""
 }

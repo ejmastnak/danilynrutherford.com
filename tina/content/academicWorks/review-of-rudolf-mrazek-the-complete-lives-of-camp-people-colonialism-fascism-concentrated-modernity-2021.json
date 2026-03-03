@@ -1,6 +1,7 @@
 {
   "title": "Review of Rudolf Mrazek, The Complete Lives of Camp People: Colonialism, Fascism, Concentrated Modernity",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "SOJOURN: Journal of Social Issues in Southeast Asia",
-  "publisher": null,
+  "publisher": "",
   "volume": "36",
   "issue": "3",
-  "pages": "550-552",
+  "pages": "550–552",
   "year": "2021",
-  "href": null
+  "href": ""
 }

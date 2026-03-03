@@ -1,6 +1,7 @@
 {
   "title": "Laughing at Leviathan: John Furnivall, Dutch New Guinea, and the Ridiculousness of Colonial Rule",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Southeast Asia over Three Generations",
   "publisher": "Cornell Southeast Asia Program Publications",
+  "publisherPlace": "Ithaca",
   "volume": null,
   "issue": null,
   "pages": "27-46",

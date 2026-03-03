@@ -1,6 +1,7 @@
 {
   "title": "Engaged Anthropology",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Handbook to Cultural Anthropology",
   "publisher": "SAGE Publications",
+  "publisherPlace": "London",
   "volume": null,
   "issue": null,
   "pages": null,

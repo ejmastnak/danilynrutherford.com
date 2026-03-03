@@ -1,6 +1,7 @@
 {
   "title": "Waiting for the End in Biak: Violence, Order, and a Flag Raising",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Indonesia",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "67",
   "issue": null,
   "pages": "39-59",

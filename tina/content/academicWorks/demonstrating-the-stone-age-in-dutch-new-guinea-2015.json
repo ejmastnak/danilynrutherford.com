@@ -1,6 +1,7 @@
 {
   "title": "Demonstrating the Stone Age in Dutch New Guinea",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "From Stone Age to Real Time: Exploring Papuan Temporalities, Mobilities, and Religiosities",
   "publisher": "Australian National University Press",
+  "publisherPlace": "Canberra",
   "volume": null,
   "issue": null,
   "pages": null,

@@ -1,6 +1,7 @@
 {
   "title": "Affect: Provocation",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Online Article / Blog Post",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -8,8 +9,9 @@
     }
   ],
   "editors": [],
-  "containerTitle": "Cultural Anthropology Online (Fieldsights – Fieldnotes)",
+  "containerTitle": "Cultural Anthropology Online",
   "publisher": null,
+  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,

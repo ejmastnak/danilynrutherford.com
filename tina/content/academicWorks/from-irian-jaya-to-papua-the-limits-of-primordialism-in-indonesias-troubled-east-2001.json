@@ -1,15 +1,21 @@
 {
   "title": "From Irian Jaya to Papua: The Limits of Primordialism in Indonesia’s Troubled East",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
       "familyName": "Rutherford"
+    },
+    {
+      "givenName": "Octovianus",
+      "familyName": "Mote"
     }
   ],
   "editors": [],
   "containerTitle": "Indonesia",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "72",
   "issue": null,
   "pages": "115-140",

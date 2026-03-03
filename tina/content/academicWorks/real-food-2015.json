@@ -1,6 +1,7 @@
 {
   "title": "Real Food",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Hau: Journal of Ethnographic Theory",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "5",
   "issue": "1",
-  "pages": "541-546",
+  "pages": "541–546",
   "year": "2015",
   "href": null
 }

@@ -1,6 +1,7 @@
 {
   "title": "Trekking to New Guinea: Dutch Colonial Fantasies of a Virgin Land 1900-1940",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Domesticating the Empire: Race, Gender and Family Life in French and Dutch Colonialism",
   "publisher": "University of Virginia Press",
+  "publisherPlace": "Charlottesville",
   "volume": null,
   "issue": null,
   "pages": "255-271",

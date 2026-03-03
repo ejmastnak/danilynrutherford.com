@@ -1,6 +1,7 @@
 {
   "title": "Review of Julie Wheelwright, Mata Hari and the Myth of Women in Espionage",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Antara Kita",
-  "publisher": null,
+  "publisher": "",
   "volume": "39",
-  "issue": null,
-  "pages": "15-18",
+  "issue": "",
+  "pages": "15–18",
   "year": "1994",
-  "href": null
+  "href": ""
 }

@@ -1,6 +1,7 @@
 {
   "title": "Review of Mary Margaret Steedly, Rifle Reports: A Story of Indonesian Independence",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "PoLAR: Political and Legal Anthropology Review",
-  "publisher": null,
+  "publisher": "",
   "volume": "37",
   "issue": "2",
-  "pages": null,
+  "pages": "",
   "year": "2014",
-  "href": null
+  "href": ""
 }

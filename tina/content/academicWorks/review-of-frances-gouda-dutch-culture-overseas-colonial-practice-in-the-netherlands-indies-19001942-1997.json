@@ -1,6 +1,7 @@
 {
-  "title": "Review of Frances Gouda, Dutch Culture Overseas: Colonial Practice in the Netherlands Indies 1900-1942",
-  "type": "Review",
+  "title": "Review of Frances Gouda, Dutch Culture Overseas: Colonial Practice in the Netherlands Indies 1900–1942",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "American Anthropologist",
-  "publisher": null,
+  "publisher": "",
   "volume": "99",
   "issue": "3",
-  "pages": "28-29",
+  "pages": "28–29",
   "year": "1997",
-  "href": null
+  "href": ""
 }

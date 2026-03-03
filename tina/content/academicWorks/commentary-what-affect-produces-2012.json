@@ -1,6 +1,7 @@
 {
   "title": "Commentary: What Affect Produces",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "American Ethnologist",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "39",
   "issue": "4",
-  "pages": "688-691",
+  "pages": "688–691",
   "year": "2012",
   "href": null
 }

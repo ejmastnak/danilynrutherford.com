@@ -1,18 +1,24 @@
 {
   "title": "Writing in Community: Relationship Building and Accountability in Knowledge Production",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
       "familyName": "Rutherford"
+    },
+    {
+      "givenName": "Jordi Armani Rivera",
+      "familyName": "Prince"
     }
   ],
   "editors": [],
   "containerTitle": "American Anthropologist",
   "publisher": null,
+  "publisherPlace": null,
   "volume": null,
   "issue": null,
-  "pages": "1-20",
+  "pages": "1–20",
   "year": "2025",
   "href": "https://doi.org/10.1111/aman.28070"
 }

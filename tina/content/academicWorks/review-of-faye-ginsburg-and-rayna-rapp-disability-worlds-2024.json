@@ -1,6 +1,7 @@
 {
   "title": "Review of Faye Ginsburg and Rayna Rapp, Disability Worlds",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Reviews in Anthropology",
-  "publisher": null,
-  "volume": null,
-  "issue": null,
-  "pages": null,
+  "publisher": "",
+  "volume": "",
+  "issue": "",
+  "pages": "",
   "year": "2024",
   "href": "https://doi.org/10.1080/00938157.2024.2379108"
 }

@@ -1,6 +1,7 @@
 {
   "title": "Living, As It Were, in the Stone Age",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,8 +11,9 @@
   "editors": [],
   "containerTitle": "Indonesia",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "95",
-  "issue": null,
+  "issue": "April",
   "pages": null,
   "year": "2013",
   "href": null

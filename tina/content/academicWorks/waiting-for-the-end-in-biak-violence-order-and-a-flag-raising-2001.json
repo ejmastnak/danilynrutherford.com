@@ -1,6 +1,7 @@
 {
   "title": "Waiting for the End in Biak: Violence, Order, and a Flag Raising",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -15,6 +16,7 @@
   ],
   "containerTitle": "Violence and the State in Indonesia",
   "publisher": "Cornell Southeast Asia Program Publications",
+  "publisherPlace": "Ithaca",
   "volume": null,
   "issue": null,
   "pages": "189-212",

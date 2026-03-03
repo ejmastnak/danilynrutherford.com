@@ -1,6 +1,7 @@
 {
   "title": "Cultures of Fermentation: Wenner-Gren Symposium Supplement 24",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Current Anthropology",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "61",
   "issue": "S24",
-  "pages": "S193-S106",
+  "pages": "S193–S206",
   "year": "2021",
   "href": null
 }

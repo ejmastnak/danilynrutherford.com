@@ -1,6 +1,7 @@
 {
   "title": "The Anthropology of Corruption: Wenner-Gren Symposium Supplement 18",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Current Anthropology",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "58",
   "issue": "S18",
-  "pages": "S1-S3",
+  "pages": "S1–S3",
   "year": "2018",
   "href": null
 }

@@ -1,6 +1,7 @@
 {
   "title": "The Foreignness of Power: Alterity and Subversion in Kafka’s “In the Penal Colony” and Beyond",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Modernism/Modernity",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "8",
   "issue": "2",
   "pages": "303-313",

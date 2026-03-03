@@ -1,6 +1,7 @@
 {
   "title": "Proximity to Disability",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Anthropological Quarterly",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "93",
   "issue": "1",
   "pages": "1453-1481",

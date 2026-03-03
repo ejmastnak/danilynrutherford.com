@@ -1,6 +1,7 @@
 {
   "title": "Patchy Anthropocene: Frenzies and Afterlives of Violent Simplifications: Wenner-Gren Symposium Supplement 20",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Current Anthropology",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "60",
   "issue": "S20",
-  "pages": "S183-S185",
+  "pages": "S183–S185",
   "year": "2019",
   "href": null
 }

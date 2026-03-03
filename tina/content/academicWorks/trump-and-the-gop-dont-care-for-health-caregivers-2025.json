@@ -1,6 +1,7 @@
 {
   "title": "Trump and the GOP Don’t Care for Health Caregivers",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Newspaper / Magazine Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Salon",
   "publisher": null,
+  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,

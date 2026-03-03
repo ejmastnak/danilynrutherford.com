@@ -1,6 +1,7 @@
 {
   "title": "Review of Pieter Drooglever, An Act of Free Choice: Decolonization and the Right to Self-Determination in West Papua",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Indonesia",
-  "publisher": null,
+  "publisher": "",
   "volume": "90",
-  "issue": null,
-  "pages": "173-184",
+  "issue": "",
+  "pages": "173–184",
   "year": "2010",
-  "href": null
+  "href": ""
 }

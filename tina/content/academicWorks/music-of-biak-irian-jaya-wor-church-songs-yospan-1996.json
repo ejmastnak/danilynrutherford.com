@@ -1,6 +1,7 @@
 {
   "title": "Music of Biak, Irian Jaya: Wor, Church Songs, Yospan",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -13,8 +14,9 @@
       "familyName": "Yampolsky"
     }
   ],
-  "containerTitle": "Music of Indonesia (compact disc)",
+  "containerTitle": "Music of Indonesia",
   "publisher": "Smithsonian Institute/Folkways Records",
+  "publisherPlace": "Washington",
   "volume": "10",
   "issue": null,
   "pages": null,

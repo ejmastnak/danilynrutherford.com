@@ -1,6 +1,7 @@
 {
   "title": "An Absence of Belief?",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Online Article / Blog Post",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,11 @@
   ],
   "editors": [],
   "containerTitle": "The Immanent Frame: Secularism, Religion, and the Public Sphere",
-  "publisher": "Social Science Research Council",
+  "publisher": "SSRC",
+  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,
   "year": "2009",
-  "href": "https://tif.ssrc.org/2009/12/01/an-absence-of-belief/"
+  "href": "http://blogs.ssrc.org/tif/2009/12/01/an-absence-of-belief/"
 }

@@ -1,6 +1,7 @@
 {
   "title": "Review of Sophie Chao, In the Shadow of the Palms: More-than-Human Becomings in West Papua",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Journal of Asian Studies",
-  "publisher": null,
+  "publisher": "",
   "volume": "83",
   "issue": "1",
-  "pages": "198-200",
+  "pages": "198–200",
   "year": "2024",
-  "href": null
+  "href": ""
 }

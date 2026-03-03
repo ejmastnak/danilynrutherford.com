@@ -1,6 +1,7 @@
 {
   "title": "Intimacy and Alienation: Money and the Foreign in Biak",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Public Culture",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "13",
   "issue": "2",
   "pages": "299-32",

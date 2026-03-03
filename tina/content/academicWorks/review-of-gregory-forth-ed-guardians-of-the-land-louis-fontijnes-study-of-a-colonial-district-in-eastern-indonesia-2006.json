@@ -1,6 +1,7 @@
 {
   "title": "Review of Gregory Forth, ed., Guardians of the Land: Louis Fontijne’s Study of a Colonial District in Eastern Indonesia",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Indonesia",
-  "publisher": null,
+  "publisher": "",
   "volume": "82",
-  "issue": null,
-  "pages": "141-145",
+  "issue": "",
+  "pages": "141–145",
   "year": "2006",
-  "href": null
+  "href": ""
 }

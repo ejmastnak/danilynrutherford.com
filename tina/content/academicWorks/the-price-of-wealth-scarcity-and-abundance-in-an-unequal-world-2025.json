@@ -1,6 +1,7 @@
 {
   "title": "The Price of Wealth: Scarcity and Abundance in an Unequal World",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Current Anthropology",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "66",
   "issue": "S27",
   "pages": null,

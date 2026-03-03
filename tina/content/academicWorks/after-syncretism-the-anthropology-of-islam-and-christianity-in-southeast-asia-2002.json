@@ -1,6 +1,7 @@
 {
   "title": "After Syncretism: The Anthropology of Islam and Christianity in Southeast Asia",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Comparative Studies in Society and History",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "44",
   "issue": "1",
-  "pages": "196-205",
+  "pages": "196–205",
   "year": "2002",
   "href": null
 }

@@ -1,6 +1,7 @@
 {
   "title": "Position Paper in The Learning of Mind: How Do You Figure Out What a Mind Is? Play, Creativity, Fiction, and Fantasy. Toward a Theory of Mind",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -15,6 +16,7 @@
   ],
   "containerTitle": "Suomen Journal of the Finnish Anthropological Institute",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "36",
   "issue": "4",
   "pages": "39-41",

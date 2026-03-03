@@ -1,6 +1,7 @@
 {
   "title": "Review of Clive Moore, New Guinea: Crossing Boundaries and History",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Journal of the Economic and Social History of the Orient",
-  "publisher": null,
+  "publisher": "",
   "volume": "48",
   "issue": "1",
-  "pages": "136-138",
+  "pages": "136–138",
   "year": "2005",
-  "href": null
+  "href": ""
 }

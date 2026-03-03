@@ -1,6 +1,7 @@
 {
   "title": "Love, Violence, and Foreign Wealth: Kinship and History in Biak, Irian Jaya",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "Journal of the Royal Anthropological Institute",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "4",
   "issue": "2",
   "pages": "257-81",

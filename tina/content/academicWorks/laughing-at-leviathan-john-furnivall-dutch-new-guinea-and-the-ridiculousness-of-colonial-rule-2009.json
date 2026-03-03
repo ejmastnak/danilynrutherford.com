@@ -1,6 +1,7 @@
 {
   "title": "Laughing at Leviathan: John Furnivall, Dutch New Guinea, and the Ridiculousness of Colonial Rule",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Clio/Anthropos: Exploring the Boundaries between Anthropology and History",
   "publisher": "Stanford University Press",
+  "publisherPlace": "Stanford",
   "volume": null,
   "issue": null,
   "pages": "50-87",

@@ -1,6 +1,7 @@
 {
   "title": "The White Edge of the Margin: Textuality and Authority in Biak, Irian Jaya, Indonesia",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,6 +11,7 @@
   "editors": [],
   "containerTitle": "American Ethnologist",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "27",
   "issue": "2",
   "pages": "312-339",

@@ -1,6 +1,7 @@
 {
   "title": "Funding Anthropological Research in the Age of Covid-19",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Online Article / Blog Post",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -17,8 +18,9 @@
       "familyName": "Khan"
     }
   ],
-  "containerTitle": "American Ethnologist website",
+  "containerTitle": "American Ethnologist Website",
   "publisher": null,
+  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,

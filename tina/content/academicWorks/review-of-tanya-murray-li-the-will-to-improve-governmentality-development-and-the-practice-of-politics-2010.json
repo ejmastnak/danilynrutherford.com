@@ -1,6 +1,7 @@
 {
   "title": "Review of Tanya Murray Li, The Will to Improve: Governmentality, Development, and the Practice of Politics",
-  "type": "Review",
+  "displayType": "Review",
+  "formatType": "Review",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -9,10 +10,10 @@
   ],
   "editors": [],
   "containerTitle": "Pacific Affairs",
-  "publisher": null,
+  "publisher": "",
   "volume": "83",
   "issue": "1",
-  "pages": null,
+  "pages": "",
   "year": "2010",
-  "href": null
+  "href": ""
 }

@@ -1,6 +1,7 @@
 {
   "title": "Ethnography without Culture? Modernity and Marginality in the Anthropology of Indonesia",
-  "type": "Commentary",
+  "displayType": "Commentary",
+  "formatType": "Journal Article",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,9 +11,10 @@
   "editors": [],
   "containerTitle": "Reviews in Anthropology",
   "publisher": null,
+  "publisherPlace": null,
   "volume": "32",
   "issue": "1",
-  "pages": "91-108",
+  "pages": "91–108",
   "year": "2003",
   "href": null
 }

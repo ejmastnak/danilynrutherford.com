@@ -1,6 +1,7 @@
 {
   "title": "Der Tanz, Durkheim und das Freimde: Eine Rückkehr zum Comeback der Tradition in Biak (Dance, Durkheim, and the Foreign: Revisiting the Revival of Tradition in Biak)",
-  "type": "Journal Article",
+  "displayType": "Research Article",
+  "formatType": "Chapter",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -19,6 +20,7 @@
   ],
   "containerTitle": "Tanz als Anthropologie",
   "publisher": "Wilhelm Fink",
+  "publisherPlace": "Berlin",
   "volume": null,
   "issue": null,
   "pages": null,
