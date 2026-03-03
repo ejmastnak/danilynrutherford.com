@@ -1,6 +1,7 @@
 import { useTina, tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
+import LinkButton from '@tina/components/LinkButton.tsx'
 
 import type { Book, BookQueryVariables } from "@tina/__generated__/types";
 type Props = {
@@ -8,6 +9,12 @@ type Props = {
   data: BookQuery;
   query: string;
 };
+
+// Extracts a string value from the reviewer rich text's
+// Abstract Syntax Tree to use as a loop key.
+function extractReviewerKeyfromAst(reviewer) {
+  return reviewer?.children[0]?.children[0]?.text || (reviewer?.children[0]?.text)
+}
 
 export default function Book(props: Props) {
   const { data } = useTina({
@@ -19,7 +26,53 @@ export default function Book(props: Props) {
 
   return (
     <PageWrapper>
-      {book.title}
+      <div className="flex flex-col md:flex-row-reverse gap-y-6 gap-x-12">
+        <div className="w-full max-w-2xl">
+
+          <div className="text-center md:text-left">
+            <h1 data-tina-field={tinaField(book, "title")} className="text-4xl sm:text-5xl md:text-4xl">{book.title}</h1>
+            <p data-tina-field={tinaField(book, "subtitle")} className="mt-2 text-xl sm:text-2xl text-gray-800">{book.subtitle}</p>
+            <p className="mt-2 text-gray-800">{book.publisher}, {book.year}</p>
+          </div>
+
+          {/* Desktop body and link button */}
+          <div className="mt-6 hidden md:block ">
+            <LinkButton href={book.link}>
+              {book.publisherLinkButtonText}
+            </LinkButton>
+            <div className="prose mt-6 pt-6 border-t border-gray-300">
+              <TinaMarkdown content={book.description} />
+            </div>
+          </div>
+        </div>
+        <img className="shrink-0 h-full mx-auto w-56 md:w-80 lg:w-96 object-cover rounded-md" src={book.image} alt={book.imageAlt}/>
+      </div>
+
+      {/* Mobile body and link button */}
+      <div className="mt-6 md:hidden ">
+        <div className="mx-auto w-fit">
+          <LinkButton href={book.link}>
+            {book.publisherLinkButtonText}
+          </LinkButton>
+        </div>
+        <div className="mt-5 prose">
+          <TinaMarkdown content={book.description} />
+        </div>
+      </div>
+
+      {/* Reviews */}
+      <div className="pt-16 mt-16 border-t border-gray-200">
+        <h2 data-tina-field={tinaField(book, "reviewsHeading")} className="text-4xl">{book.reviewsHeading}</h2>
+        <div className="mt-8 flex flex-col gap-y-10">
+          {book.reviews.map((review, idx) => (
+            <div key={extractReviewerKeyfromAst(review.reviewer)} className={(idx % 2 == 1) ? 'ml-auto' : ''}>
+              <div data-tina-field={tinaField(review, "review")} className="max-w-3xl font-medium text-gray-800 leading-relaxed"><TinaMarkdown content={review.review} /></div>
+              <div data-tina-field={tinaField(review, "reviewer")} className="mt-2"><TinaMarkdown content={review.reviewer} /></div>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </PageWrapper>
   );
 }
