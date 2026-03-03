@@ -1,4 +1,5 @@
 import type { Collection } from "tinacms";
+import publicationTypes from "@src/assets/data/publicationTypes.json";
 
 export const AcademicWorkCollection: Collection = {
   name: "academicWork",
@@ -13,7 +14,7 @@ export const AcademicWorkCollection: Collection = {
   },
   defaultItem: {
     title: "Markets, Morality, and the State",
-    type: "Research Article",
+    type: Object.values(publicationTypes)[0],
     authors: [ { givenName: "Danilyn", familyName: "Rutherford" } ],
     containerTitle: "Example Journal of Social Theory"
   },
@@ -24,9 +25,14 @@ export const AcademicWorkCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'type',
-      label: 'Type of publication',
-      description: 'E.g. Research Article, Commentary, Review',
+      name: 'formatType',
+      label: 'Format type',
+      type: 'string',
+      options: Object.values(publicationTypes),
+    },
+    {
+      name: 'displayType',
+      label: 'Display type',
       type: 'string',
     },
     {

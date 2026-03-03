@@ -1,5 +1,7 @@
 {
-  "article-journal": "Journal article",
-  "commentary": "Commentary",
+  "article-journal": "Journal Article",
+  "chapter": "Chapter",
+  "article-newspaper": "Newspaper / Magazine Article",
+  "article-online": "Online Article / Blog Post",
   "review": "Review"
 }

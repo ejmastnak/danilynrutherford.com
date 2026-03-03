@@ -2,6 +2,7 @@ import { useTina, tinaField } from "tinacms/dist/react";
 import LinkButton from '@tina/components/LinkButton.tsx'
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
+import { renderChicagoCitation } from '@src/lib/renderChicagoCitation.jsx'
 
 import type { MyAcademicWorksPageQuery, MyAcademicWorksPageQueryVariables, AcademicWork } from "@tina/__generated__/types";
 type Props = {
@@ -19,12 +20,37 @@ export default function AcademicWorksPage(props: Props) {
   });
   const academicWorksPage = data.academicWorksPage;
 
+  const academicWorksByDisplayType = props.academicWorks.reduce((acc, item) => {
+    (acc[item.displayType] ||= []).push(item);
+    return acc;
+  }, {});
+
   return (
     <PageWrapper>
       This is the AcademicWorks page!
-      <pre>
-        {JSON.stringify(props.academicWorks, null, 2)}
-      </pre>
+
+      <div className="flex flex-col gap-y-10">
+        {Object.keys(academicWorksByDisplayType).map((type) => (
+          <div>
+            <h2 className="text-2xl">{type}</h2>
+            <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
+              {academicWorksByDisplayType[type].sort((a, b) => b.year - a.year).map((publication) => (
+                <li key={publication.id}>
+                  <div className="p-6 rounded-lg hover:bg-gray-50 max-w-3xl">
+                    <div className="font-medium">{renderChicagoCitation(publication)}</div>
+                    {publication.formatType}
+                    {publication.href && 
+                      <a href={publication.href} target="_blank" rel="noopener noreferrer" className="mt-3 w-fit text-gray-700 font-medium flex items-center hover:text-gray-900 hover:underline">Link</a>
+                    }
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+
+
     </PageWrapper>
   );
 }

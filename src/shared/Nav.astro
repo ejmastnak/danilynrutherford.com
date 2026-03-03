@@ -37,17 +37,17 @@ observer.observe(menu, { attributes: true });
 
     <div class="flex items-center">
 
-      <!-- <a class="text-xl xxxs:text-2xl text-gray-600 font-light hidden xxxxs:inline sm:hidden lg:inline text-nowrap hover:underline hover:text-blue-600" href="/">Artisanal Restoration</a> -->
+      <!-- <a class="text-xl xxxs:text-2xl text-gray-600 font-light hidden xxxxs:inline md:hidden lg:inline text-nowrap hover:underline hover:text-blue-600" href="/">Danilyn Rutherford</a> -->
 
       <!-- Desktop -->
-      <ul class="hidden sm:flex ml-auto flex gap-x-8">
+      <ul class="hidden md:flex ml-auto flex gap-x-8">
         {nav.navLinks.map((navLink) => (
         <li key={navLink.text}><NavLink href={navLink.href}>{navLink.text}</NavLink></li>
         ))}
       </ul>
 
       <!-- Mobile menu -->
-      <el-dropdown class="inline-block sm:hidden ml-auto">
+      <el-dropdown class="inline-block md:hidden ml-auto">
         <button class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 dark:bg-white/10 dark:text-white dark:shadow-none dark:ring-white/5 dark:hover:bg-white/20">
           <Bars3Icon id="mobile-menu-bars-icon" class="text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
           <XMarkIcon id="mobile-menu-x-icon" class="hidden text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
