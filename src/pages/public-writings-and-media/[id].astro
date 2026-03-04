@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PublicWork from "@tina/pages/PublicWorks/Id.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+export async function getStaticPaths() {
+  const publicWorks = await getCollection("publicWorks");
+
+  return publicWorks.map((publicWork) => ({
+    params: { id: publicWork.id },
+    props: {
+      publicWork,
+      getTinaProps: async () =>
+        client.queries.publicWork({
+          relativePath: publicWork.data.tinaInfo.relativePath,
+        }),
+    },
+  }));
+}
+
+const { publicWork, getTinaProps } = Astro.props;
+const content = await getTinaProps();
+const head = content.data.publicWork.head;
+
+---
+
+<BaseLayout head={head}>
+  <PublicWork {...content} client:tina />
+</BaseLayout>

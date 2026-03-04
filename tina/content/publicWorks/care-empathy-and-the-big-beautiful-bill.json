@@ -1,13 +1,14 @@
 {
   "head": {
-    "title": "Care, Empathy, and the Big Beautiful Bill"
+    "title": "Care, Empathy, and the Big Beautiful Bill",
+    "description": ""
   },
   "title": "Care, Empathy, and the Big Beautiful Bill",
   "featuredImage": "/src/assets/img/uploads/posts/frog.jpg",
   "featuredImageAlt": "Stock image of a small frog climbing vertically up a wet window pane",
   "date": "2025-08-01T16:13:15.137Z",
   "type": "Essay",
-  "href": "https://www.salon.com/2025/07/29/trump-and-the-gop-dont-care-for-health-caregivers/",
-  "body": "Whose empathy is really being weaponized? Read my essay, [“Trump and the GOP don’t care about health care providers,”](https://www.salon.com/2025/07/29/trump-and-the-gop-dont-care-for-health-caregivers/) in Salon.\n",
+  "link": "https://www.salon.com/2025/07/29/trump-and-the-gop-dont-care-for-health-caregivers/",
+  "body": "Whose empathy is really being weaponized? Read my essay, [“Trump and the GOP don’t care about health care providers”](https://www.salon.com/2025/07/29/trump-and-the-gop-dont-care-for-health-caregivers/), in Salon.\n",
   "event": ""
 }

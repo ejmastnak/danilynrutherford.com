@@ -7,8 +7,10 @@ import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 const content = await client.queries.myPublicWorksPage({ relativePath: "index.json" });
 const head = content.data.publicWorksPage.head;
 
+const publicWorksResponse = await client.queries.publicWorkConnection();
+const publicWorks = publicWorksResponse.data.publicWorkConnection.edges?.map((edge) => edge.node);
 ---
 
 <BaseLayout head={head}>
-  <PublicWorks {...content} client:tina />
+  <PublicWorks publicWorks={publicWorks} {...content} client:tina />
 </BaseLayout>

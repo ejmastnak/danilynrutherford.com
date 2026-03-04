@@ -5,8 +5,11 @@ import Events from "@tina/pages/Events/Index.tsx";
 
 const content = await client.queries.myEventsPage({ relativePath: "index.json" });
 const head = content.data.eventsPage.head;
+
+const eventsResponse = await client.queries.eventConnection();
+const events = eventsResponse.data.eventConnection.edges?.map((edge) => edge.node);
 ---
 
 <BaseLayout head={head}>
-  <Events {...content} client:load />
+  <Events events={events} {...content} client:load />
 </BaseLayout>

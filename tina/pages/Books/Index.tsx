@@ -26,7 +26,7 @@ export default function BooksPage(props: Props) {
       <ul className="mt-5">
         {props.books.map((book) => (
           <li key={book.id}>
-            <a href={`/books/${book._sys.filename}`} className="">{book.title}</a>
+            <a href={`/books/${book._sys.filename}`} className="text-blue-500 hover:text-blue-600 hover:underline">{book.title}</a>
           </li>
         ))}
       </ul>

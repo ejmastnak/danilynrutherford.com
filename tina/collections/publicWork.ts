@@ -63,7 +63,7 @@ export const PublicWorkCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'href',
+      name: 'link',
       label: 'External link (optional)',
       type: 'string',
     },
