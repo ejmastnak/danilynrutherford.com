@@ -3,5 +3,23 @@
     "title": "Contact",
     "description": ""
   },
-  "h1": "Contact"
+  "h1": "Contact",
+  "intro": "Contact Danilyn using the contact form below, or directly using the contact information displayed [at the bottom of this page](#contact-directly).\n",
+  "contactFormHeading": "Contact form (currently disabled)",
+  "contactForm": {
+    "contactFormNameLabel": "Name",
+    "contactFormNamePlaceholder": "Your name",
+    "contactFormMessageLabel": "Message",
+    "contactFormMessagePlaceholder": "Your message",
+    "contactFormEmailLabel": "Your email",
+    "contactFormEmailPlaceholder": "you@example.com",
+    "contactFormSubmitButtonText": "Send message"
+  },
+  "contactDirectlyHeading": "Contact Danilyn directly",
+  "contactDirectlyText": "You can contact Danilyn directly:",
+  "phoneText": "By phone at",
+  "phone": "(123) 111 1111",
+  "emailText": "By email at",
+  "email": "example@example.com",
+  "phoneMachineReadable": "+11231111111"
 }
