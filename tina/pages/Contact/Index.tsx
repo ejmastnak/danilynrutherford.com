@@ -60,7 +60,7 @@ export default function ContactPage(props: Props) {
 
   return (
     <PageWrapper>
-      <h1 data-tina-field={tinaField(contactPage, "h1")} className="text-5xl font-['Latin_Modern_Roman']">{contactPage.h1}</h1>
+      <h1 data-tina-field={tinaField(contactPage, "h1")} className="text-5xl">{contactPage.h1}</h1>
 
       {/* Intro message */}
       <div data-tina-field={tinaField(contactPage, "intro")} className="mt-8 prose text-gray-700 max-w-2xl">
@@ -70,7 +70,7 @@ export default function ContactPage(props: Props) {
       {/* Contact form */}
       <div className="mt-5 relative rounded-xl bg-gray-50 p-5 border border-gray-100 -m-5 overflow-hidden">
 
-        <h2 data-tina-field={tinaField(contactPage, "contactFormHeading")}className="text-3xl font-['Latin_Modern_Roman']">{contactPage.contactFormHeading}</h2>
+        <h2 data-tina-field={tinaField(contactPage, "contactFormHeading")}className="text-3xl">{contactPage.contactFormHeading}</h2>
 
         <form data-tina-field={tinaField(contactPage, "contactForm")} className="mt-4" onSubmit={submitForm}>
 
@@ -129,7 +129,7 @@ export default function ContactPage(props: Props) {
 
       {/* Direct contact data */}
       <div className="mt-16">
-        <h2 data-tina-field={tinaField(contactPage, "contactDirectlyHeading")} className="text-3xl font-['Latin_Modern_Roman']" id="contact-directly">{contactPage.contactDirectlyHeading}</h2>
+        <h2 data-tina-field={tinaField(contactPage, "contactDirectlyHeading")} className="text-3xl" id="contact-directly">{contactPage.contactDirectlyHeading}</h2>
         <div className="mt-4">
           <div  data-tina-field={tinaField(contactPage, "contactDirectlyText")} className="prose">
             <TinaMarkdown content={contactPage.contactDirectlyText} />
