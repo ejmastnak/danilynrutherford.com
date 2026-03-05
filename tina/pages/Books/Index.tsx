@@ -27,18 +27,18 @@ export default function BooksPage(props: Props) {
         {props.books.map((book) => (
           <li key={book.id} className="border-b border-gray-300 pb-20">
             <div className="md:flex gap-x-16">
-              <a href={`/books/${book._sys.filename}`} className="hover:outline hover:shadow-md hover:outline-1 hover:outline-gray-300 h-fit rounded-md">
 
-                {/* Mobile title/subtitle */}
-                <div className="md:hidden text-center mx-auto mb-6">
-                  <a href={`/books/${book._sys.filename}`} className="hover:underline"><h2 className="text-3xl font-medium">{book.title}</h2></a>
-                  <p className="text-lg mt-0.5">{book.subtitle}</p>
-                </div>
+              {/* Mobile title/subtitle */}
+              <div className="md:hidden text-center mx-auto mb-6">
+                <a href={`/books/${book._sys.filename}`} className="hover:underline"><h2 className="text-3xl font-medium">{book.title}</h2></a>
+                <p className="text-lg mt-0.5">{book.subtitle}</p>
+              </div>
 
+              <a href={`/books/${book._sys.filename}`} className="h-fit">
                 <img
                   src={book.image}
                   alt={book.imageAlt}
-                  className="shrink-0 w-full max-w-xs sm:max-w-sm h-full mx-auto md:w-80 lg:w-96 object-cover rounded-md border bordery-gray-200"
+                  className="shrink-0 w-full max-w-xs sm:max-w-sm h-full mx-auto md:w-80 lg:w-96 object-cover rounded-md border border-gray-200 hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"
                 />
               </a>
               <div className="mt-6 md:mt-2 text-gray-800">
