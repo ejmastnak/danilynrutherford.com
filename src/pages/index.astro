@@ -12,6 +12,16 @@ const books = booksResponse.data.bookConnection.edges?.map((edge) => edge.node);
 
 const eventsResponse = await client.queries.eventConnection();
 const events = eventsResponse.data.eventConnection.edges?.map((edge) => edge.node);
+
+const imagesToOptimize = books.map((book, idx) => {
+  return {
+    srcPath: [`${idx}`, 'image'],
+    altPath: [`${idx}`, 'imageAlt'],
+    width: 800,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(books, imagesToOptimize);
 ---
 
 <BaseLayout head={head}>

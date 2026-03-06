@@ -24,6 +24,14 @@ const { publicWork, getTinaProps } = Astro.props;
 const content = await getTinaProps();
 const head = content.data.publicWork.head;
 
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'publicWork', 'featuredImage'],
+    altPath: ['data', 'publicWork', 'featuredImageAlt'],
+    width: 800,
+  },
+]);
+
 ---
 
 <BaseLayout head={head}>

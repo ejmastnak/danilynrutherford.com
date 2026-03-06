@@ -7,6 +7,13 @@ import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 const content = await client.queries.myAboutPage({ relativePath: "index.json" });
 const head = content.data.aboutPage.head;
 
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'aboutPage', 'image'],
+    altPath: ['data', 'aboutPage', 'imageAlt'],
+    width: 700,
+  },
+]);
 ---
 
 <BaseLayout head={head}>

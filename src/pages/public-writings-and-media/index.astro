@@ -9,6 +9,16 @@ const head = content.data.publicWorksPage.head;
 
 const publicWorksResponse = await client.queries.publicWorkConnection();
 const publicWorks = publicWorksResponse.data.publicWorkConnection.edges?.map((edge) => edge.node);
+
+const imagesToOptimize = publicWorks.map((publicWork, idx) => {
+  return {
+    srcPath: [`${idx}`, 'featuredImage'],
+    altPath: [`${idx}`, 'featuredImageAlt'],
+    width: 500,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(publicWorks, imagesToOptimize);
 ---
 
 <BaseLayout head={head}>

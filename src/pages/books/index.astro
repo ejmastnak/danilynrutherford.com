@@ -9,6 +9,16 @@ const head = content.data.booksPage.head;
 
 const booksResponse = await client.queries.bookConnection();
 const books = booksResponse.data.bookConnection.edges?.map((edge) => edge.node);
+
+const imagesToOptimize = books.map((book, idx) => {
+  return {
+    srcPath: [`${idx}`, 'image'],
+    altPath: [`${idx}`, 'imageAlt'],
+    width: 700,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(books, imagesToOptimize);
 ---
 
 <BaseLayout head={head}>
