@@ -115,7 +115,7 @@ export default function HomePage(props: Props) {
         </div>
 
         {/* Other books */}
-        <div className="mt-16 md:mt-20">
+        <section className="mt-16 md:mt-20">
           <h2 className="text-5xl font-medium text-center sm:text-left">Academic books</h2>
           <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
             {otherBooks.map((book) => (
@@ -128,10 +128,10 @@ export default function HomePage(props: Props) {
               </li>
             ))}
           </ul>
-        </div>
+        </section>
 
         {/* Selected essays */}
-        <div className="mt-20 md:mt-24">
+        <section className="mt-20 md:mt-24">
           <h2 className="text-5xl font-medium">Selected Essays</h2>
           <ul className="mt-8 grid md:grid-cols-2 gap-8 mx-auto">
             {featuredEssays.map((essay) => (
@@ -147,11 +147,11 @@ export default function HomePage(props: Props) {
               </a>
             ))}
           </ul>
-        </div>
+        </section>
       </PageWrapper>
 
       {/* Praise */}
-      <div className="mt-12 bg-theme-darkgreen text-white py-24">
+      <section className="mt-12 bg-theme-darkgreen text-white py-24">
         <Wrapper>
           <h2 className="text-5xl font-medium">Praise</h2>
           <ul className="mt-8 grid md:grid-cols-4 gap-8 mx-auto px-4">
@@ -163,26 +163,28 @@ export default function HomePage(props: Props) {
             ))}
           </ul>
         </Wrapper>
-      </div>
+      </section>
 
       {/* Events */}
-      <PageWrapper>
-        <h2 className="text-5xl font-medium">Events</h2>
-        <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
-          {upcomingEvents.slice(0, N).map((event) => (
-            <li key={event.id}><Event event={event}/></li>
-          ))}
-          <li className="border-t border-gray-300"/>
-          {upcomingEvents.length < N && 
-            pastEvents.slice(0, N - pastEvents.length).map((event) => (
-              <li key={event.id}><Event event={event}/></li>
-            ))
-          }
-        </ul>
-        <LinkButton className="mt-5" href="/events" >
-          More events
-        </LinkButton>
-      </PageWrapper>
+      <section>
+        <PageWrapper>
+              <h2 className="text-5xl font-medium">Events</h2>
+              <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
+                {upcomingEvents.slice(0, N).map((event) => (
+                  <li key={event.id}><Event event={event}/></li>
+                ))}
+                <li className="border-t border-gray-300"/>
+                {upcomingEvents.length < N && 
+                  pastEvents.slice(0, N - pastEvents.length).map((event) => (
+                    <li key={event.id}><Event event={event}/></li>
+                  ))
+                }
+              </ul>
+              <LinkButton className="mt-5" href="/events" >
+                More events
+              </LinkButton>
+            </PageWrapper>
+      </section>
 
 
     </div>

@@ -40,9 +40,9 @@ export default function PublicWork(props: Props) {
 
       </div>
 
-      <div data-tina-field={tinaField(publicWork, "body")} className="prose mx-auto">
+      <article data-tina-field={tinaField(publicWork, "body")} className="prose mx-auto">
         <TinaMarkdown content={publicWork.body} />
-      </div>
+      </article>
     </PageWrapper>
   );
 }
