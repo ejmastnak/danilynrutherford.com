@@ -20,7 +20,6 @@ export const EventCollection: Collection = {
     time: "4:00 pm",
     location: "Room 101, Example University / Online",
     description: "A brief description of the event, outlining its focus, participants, and broader significance.",
-    href: "https://www.example.com/event",
   },
   fields: [
     {
@@ -57,12 +56,6 @@ export const EventCollection: Collection = {
       name: 'description',
       label: 'Description',
       type: 'rich-text',
-    },
-    {
-      name: 'href',
-      label: 'External link (optional)',
-      description: 'Use this field to provide an external link to, e.g., a description of the event on the hosting institution\'s website',
-      type: 'string',
     },
     {
       name: 'publicWork',

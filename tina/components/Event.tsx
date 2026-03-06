@@ -11,7 +11,6 @@ type Props = {
     time?: string,
     location: string,
     description: string,
-    href?: string,
   }
 };
 
@@ -59,17 +58,16 @@ export default function Event({event}: Props) {
         <p className="italic text-sm ml-px">{event.institution}</p>
         <div className="flex flex-col gap-x-2 gap-y-1 my-1">
           {event.type && <Pillbox>{event.type}</Pillbox>}
-          {event.location && <Pillbox>Location: {event.location}</Pillbox>}
         </div>
 
         <div className="mt-2 text-sm max-w-2xl myprose">
           <TinaMarkdown content={event.description} />
         </div>
 
-        {event.href &&
-          <a href={event.href} className="mt-2 w-fit text-sm text-gray-800 font-medium flex items-center hover:text-gray-900 hover:underline">
-            <span>Link</span> <ChevronRightIcon className="size-4 text-gray-800 hover:text-gray-900 shrink-0 translate-y-px"/>
-          </a>
+        {event.location && 
+          <div className="mt-2.5 text-sm text-gray-600">
+            <span className="font-semibold">Location:</span> {event.location}
+          </div>
         }
 
       </div>
