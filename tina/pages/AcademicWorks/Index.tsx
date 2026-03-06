@@ -27,13 +27,16 @@ export default function AcademicWorksPage(props: Props) {
 
   return (
     <PageWrapper>
-      This is the AcademicWorks page!
+      <h1 className="text-5xl">{academicWorksPage.h1}</h1>
+      <div className="mt-5 prose">
+        <TinaMarkdown content={academicWorksPage.intro} />
+      </div>
 
-      <div className="flex flex-col gap-y-10">
+      <div className="mt-10 flex flex-col gap-y-10">
         {Object.keys(academicWorksByDisplayType).map((type) => (
           <div>
             <h2 className="text-2xl">{type}</h2>
-            <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
+            <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit max-w-2xl">
               {academicWorksByDisplayType[type].sort((a, b) => b.year - a.year).map((publication) => (
                 <li key={publication.id}>
                   <div className="p-6 rounded-lg hover:bg-gray-50 max-w-3xl">

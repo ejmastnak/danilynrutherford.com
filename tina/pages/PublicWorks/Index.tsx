@@ -28,9 +28,8 @@ export default function PublicWorksPage(props: Props) {
   return (
     <PageWrapper>
       <h1 className="text-5xl">{publicWorksPage.h1}</h1>
-
       <div className="mt-5 prose">
-        <TinaMarkdown content={publicWorksPage.description} />
+        <TinaMarkdown content={publicWorksPage.intro} />
       </div>
 
       <div className="mt-8">

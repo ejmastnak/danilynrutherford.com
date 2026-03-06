@@ -25,4 +25,5 @@ fragment MyAcademicWorksPageParts on AcademicWorksPage {
     description
   }
   h1
+  intro
 }

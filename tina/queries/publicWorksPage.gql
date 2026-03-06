@@ -25,5 +25,5 @@ fragment MyPublicWorksPageParts on PublicWorksPage {
     description
   }
   h1
-  description
+  intro
 }

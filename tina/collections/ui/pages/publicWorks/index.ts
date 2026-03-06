@@ -42,8 +42,8 @@ export const PublicWorksPageCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'description',
-      label: 'Description',
+      name: 'intro',
+      label: 'Introductory text',
       type: 'rich-text',
     },
   ]
