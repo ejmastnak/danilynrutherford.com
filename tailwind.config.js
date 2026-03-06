@@ -26,8 +26,7 @@ export default {
         theme: {
           orange: '#c37048',
           darkorange: ' #af5b36',
-          darkgreen: '#28453b',
-          orangeish: '#d49753',
+          darkgreen: '#062c1e',
 
           offwhite: '#fdfdfe',
 
