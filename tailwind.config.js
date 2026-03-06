@@ -24,10 +24,15 @@ export default {
       },
       colors: {
         theme: {
-          brown: '#4B3621',
-          tan: '#b28d71',
-          tandark: '#a67b5b',
-          light: '#f8f4f2',
+          orange: '#c37048',
+          darkorange: ' #af5b36',
+          darkgreen: '#28453b',
+          orangeish: '#d49753',
+
+          offwhite: '#fdfdfe',
+
+          darkblue: '#1c6089',
+          lightblue: '#c9e3f1',
         },
       },
       fontFamily: {

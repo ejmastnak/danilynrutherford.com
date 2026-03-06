@@ -5,7 +5,7 @@
   },
   "h1": "Contact",
   "intro": "Contact Danilyn using the contact form below, or directly using the contact information displayed [at the bottom of this page](#contact-directly).\n",
-  "contactFormHeading": "Contact form (currently disabled)",
+  "contactFormHeading": "Contact form",
   "contactForm": {
     "contactFormNameLabel": "Name",
     "contactFormNamePlaceholder": "Your name",

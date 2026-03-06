@@ -12,7 +12,7 @@ const content = await client.queries.myFooter({ relativePath: "index.json" });
 const footer = content.data.footer;
 ---
 
-<div class={`bg-black text-white pt-12 pb-16 px-8 ${classes ? classes : ''}`} >
+<div class={`bg-theme-darkgreen text-white pt-12 pb-16 px-8 ${classes ? classes : ''}`} >
   <div class="max-w-5xl mx-auto flex" >
     <div>
       <p class="text-3xl">{footer.name}</p>

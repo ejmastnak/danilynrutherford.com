@@ -90,7 +90,8 @@ export default function HomePage(props: Props) {
             {/* Desktop about blurb */}
             <div className="hidden md:block mt-8">
               <div className="prose">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                A short introductory paragraph introducing Danilyn and her work.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </div>
               <LinkButton className="mt-5" href="/books/beautiful-mystery">
                 New book: <span className="italic">Beautiful Mystery</span> (2025)
@@ -114,9 +115,9 @@ export default function HomePage(props: Props) {
         </div>
 
         {/* Other books */}
-        <div className="mt-16">
+        <div className="mt-16 md:mt-20">
           <h2 className="text-5xl font-medium text-center sm:text-left">Academic books</h2>
-          <ul className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
+          <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
             {otherBooks.map((book) => (
               <li>
                 <img src={book.image} alt={book.imageAlt} className="w-64 sm:max-w-md object-cover w-full aspect-[2/3] mx-auto rounded-md" />
@@ -130,25 +131,27 @@ export default function HomePage(props: Props) {
         </div>
 
         {/* Selected essays */}
-        <div className="mt-20">
+        <div className="mt-20 md:mt-24">
           <h2 className="text-5xl font-medium">Selected Essays</h2>
           <ul className="mt-8 grid md:grid-cols-2 gap-8 mx-auto">
             {featuredEssays.map((essay) => (
-              <li className="bg-gray-50 rounded-md py-4 px-6 border border-gray-100">
-                <a href={essay.href} className="underline font-semibold hover:text-blue-600">
-                  {essay.title}
-                </a>
-                <div className="mt-2 prose">
-                  {essay.body}
-                </div>
-              </li>
+              <a href={essay.href} className="">
+                <li className="bg-gray-50 rounded-md py-4 px-6 border border-gray-100 hover:outline hover:outline-1 hover:outline-gray-200 hover:shadow-md">
+                  <p className="underline font-semibold hover:text-blue-600">
+                    {essay.title}
+                  </p>
+                  <div className="mt-2 prose">
+                    {essay.body}
+                  </div>
+                </li>
+              </a>
             ))}
           </ul>
         </div>
       </PageWrapper>
 
       {/* Praise */}
-      <div className="mt-12 bg-black text-white py-24">
+      <div className="mt-12 bg-theme-darkgreen text-white py-24">
         <Wrapper>
           <h2 className="text-5xl font-medium">Praise</h2>
           <ul className="mt-8 grid md:grid-cols-4 gap-8 mx-auto px-4">

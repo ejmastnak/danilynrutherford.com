@@ -39,9 +39,9 @@ export default function AcademicWorksPage(props: Props) {
             <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit max-w-2xl">
               {academicWorksByDisplayType[type].sort((a, b) => b.year - a.year).map((publication) => (
                 <li key={publication.id}>
-                  <div className="p-6 rounded-lg hover:bg-gray-50 max-w-3xl">
+                  <div className="p-6 rounded-lg max-w-3xl">
                     <div className="font-medium">{renderChicagoCitation(publication)}</div>
-                    {publication.formatType}
+                    <p className="mt-0.5">{publication.formatType}</p>
                     {publication.href && 
                       <a href={publication.href} target="_blank" rel="noopener noreferrer" className="mt-3 w-fit text-gray-700 font-medium flex items-center hover:text-gray-900 hover:underline">Link</a>
                     }

@@ -8,7 +8,7 @@ const TextArea = forwardRef<HTMLTextAreaElement, Props>(
     return (
       <textarea
         ref={ref}
-        className={`border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm !text-base ${className ?? ""}`}
+        className={`border-gray-300 focus:border-theme-darkblue focus:ring-theme-darkblue rounded-md shadow-sm !text-base ${className ?? ""}`}
         {...props}
       />
     );

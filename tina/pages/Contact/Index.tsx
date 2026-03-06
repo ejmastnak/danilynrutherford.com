@@ -68,7 +68,7 @@ export default function ContactPage(props: Props) {
       </div>
 
       {/* Contact form */}
-      <div className="mt-5 relative rounded-xl bg-gray-50 p-5 border border-gray-100 -m-5 overflow-hidden">
+      <div className="mt-5 relative rounded-xl bg-gray-50 p-5 border border-gray-200 -m-5 overflow-hidden">
 
         <h2 data-tina-field={tinaField(contactPage, "contactFormHeading")}className="text-3xl">{contactPage.contactFormHeading}</h2>
 

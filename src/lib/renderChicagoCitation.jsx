@@ -112,7 +112,6 @@ export function renderChicagoCitation(pub) {
           {pub.month && <> {pub.month}</>}
           {pub.day && <> {pub.day}</>}
           {pub.year && <> {pub.year}</>}
-          {pub.href && <>. <a href={pub.href}>{pub.href}</a></>}
           .
         </>
       )

@@ -13,7 +13,7 @@ const content = await client.queries.myNav({ relativePath: "index.json" });
 const nav = content.data.nav;
 ---
 
-<nav class={`sticky relative top-0 bg-white border-b z-20 py-5 px-6 ${className ?? ""}`} >
+<nav class={`sticky relative top-0 bg-theme-offwhite border-b z-20 py-5 px-6 ${className ?? ""}`} >
 
   <div class="max-w-5xl mx-auto">
 
@@ -30,12 +30,12 @@ const nav = content.data.nav;
 
       <!-- Mobile menu -->
       <el-dropdown class="inline-block md:hidden ml-auto">
-        <button class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+        <button class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-theme-offwhite px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           <Bars3Icon id="mobile-menu-bars-icon" class="text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
           <XMarkIcon id="mobile-menu-x-icon" class="hidden text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
         </button>
 
-        <el-menu id="mobile-menu-el-menu" anchor="bottom end" popover class="m-0 origin-top-right rounded-md bg-white p-0 shadow-lg outline outline-1 outline-black/5 transition [--anchor-gap:theme(spacing.2)] [transition-behavior:allow-discrete] data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in">
+        <el-menu id="mobile-menu-el-menu" anchor="bottom end" popover class="m-0 origin-top-right rounded-md bg-theme-offwhite p-0 shadow-lg outline outline-1 outline-black/5 transition [--anchor-gap:theme(spacing.2)] [transition-behavior:allow-discrete] data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in">
           <ul class="flex flex-col px-8 pt-6 pb-8 text-left mx-auto gap-y-4">
             {nav.navLinks.map((navLink) => (
             <li key={navLink.text} class="border-b border-gray-200"><NavLink href={navLink.href}>{navLink.text}</NavLink></li>
