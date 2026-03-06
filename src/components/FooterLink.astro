@@ -13,5 +13,7 @@ if (normalize(href) === normalize(Astro.url.pathname)) classes += " font-medium"
 ---
 
 <a href={href} class={classes} >
-  <slot/>
+  <div class="text-center">
+      <slot/>
+  </div>
 </a>

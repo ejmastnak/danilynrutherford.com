@@ -27,7 +27,7 @@ const footer = content.data.footer;
         </a>
       </div>
     </div>
-    <ul class="hidden md:flex text-lg ml-auto mt-3 flex justify-around gap-x-8 h-fit">
+    <ul class="hidden lg:flex text-lg ml-auto mt-3 flex justify-around gap-x-8 h-fit">
       {footer.footerLinks.map((footerLink) => (
       <li key={footerLink.text}><FooterLink href={footerLink.href}>{footerLink.text}</FooterLink></li>
       ))}

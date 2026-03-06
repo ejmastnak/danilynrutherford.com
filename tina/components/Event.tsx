@@ -60,7 +60,7 @@ export default function Event({event}: Props) {
           {event.type && <Pillbox>{event.type}</Pillbox>}
         </div>
 
-        <div className="mt-2 text-sm max-w-2xl myprose">
+        <div className="mt-2.5 text-sm max-w-2xl myprose">
           <TinaMarkdown content={event.description} />
         </div>
 
