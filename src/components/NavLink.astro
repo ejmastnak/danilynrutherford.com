@@ -14,5 +14,7 @@ if (normalize(href) === normalize(Astro.url.pathname)) defaultClasses += " font-
 ---
 
 <a href={href} class={`${defaultClasses} ${className ?? ""}`} >
-  <slot/>
+  <div class="text-center">
+    <slot/>
+  </div>
 </a>
