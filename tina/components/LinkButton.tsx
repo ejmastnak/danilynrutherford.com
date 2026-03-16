@@ -10,7 +10,7 @@ export default function LinkButton({ tinaField, className, children, ...props }:
   return (
     <a
       data-tina-field={tinaField}
-      className={`inline-flex gap-x-1 items-center text-center rounded-full bg-theme-orange px-4 py-2.5 text-sm font-semibold text-white shadow-sm border border-theme-darkorange hover:bg-theme-darkorange focus-visible:outline focus-visible:outline-2 focus-visible:border-theme-orange focus-visible:outline-offset-2 focus-visible:outline-theme-darkorange ${className ?? ""}`}
+      className={`inline-flex gap-x-1 items-center text-center rounded-full bg-theme-orange px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-theme-darkorange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-theme-darkorange ${className ?? ""}`}
       {...props}
     >
       {children}
