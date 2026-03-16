@@ -5,6 +5,8 @@ import Event from '@tina/components/Event.tsx'
 import Wrapper from '@tina/shared/Wrapper.tsx'
 import LinkButton from '@tina/components/LinkButton.tsx'
 
+import danilynMillieImage from '@/assets/img/uploads/danilyn-millie-cropped.jpg'
+
 import type { MyHomePageQuery, MyHomePageQueryVariables, Book, Event } from "@tina/__generated__/types";
 type Props = {
   variables: MyHomePageQueryVariables;
@@ -81,16 +83,37 @@ export default function HomePage(props: Props) {
     <div>
 
       <PageWrapper>
+
+        <div className="">
+
+          {/* Hero */}
+          <div className="mx-auto text-center">
+            <h1 className="text-5xl sm:text-6xl">Danilyn Rutherford</h1>
+            <p className="mt-2.5 md:text-lg text-gray-700">Anthropologist and author</p>
+          </div>
+
+          <div className="my-8 -mx-6 lg:mx-0 lg:px-12">
+            <img className="mx-auto object-cover w-full h-[440px] lg:h-[500px] md:rounded-md" src={danilynMillieImage.src} alt="Danilyn and her daughter Millie"/>
+          </div>
+
+          <div className="prose mx-auto text-center xxxs:text-left max-w-2xl">
+            A short introductory paragraph introducing Danilyn and her work.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </div>
+
+        </div>
+
         {/* Featured book */}
-        <div className="flex flex-col md:flex-row gap-x-10 lg:gap-x-12">
+        <div className="mt-24 flex flex-col md:flex-row gap-x-10 lg:gap-x-12">
           <div className="">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-medium text-center md:text-left">Danilyn<br/>Rutherford</h1>
-            <p className="mt-2 md:text-lg text-gray-700 text-center md:text-left">Anthropologist and author</p>
+            <h1 className="text-5xl font-medium text-center md:text-left">Beautiful Mystery</h1>
+            <p className="mt-0.5 md:text-lg text-gray-700 text-center md:text-left">Living in a wordless world</p>
+            {/* <p className="mt-2 inline-flex items-center w-fit rounded-full bg-white border border-theme-orange px-2 py-1 text-xs font-medium text-theme-orange ring-1 ring-inset ring-theme-orange/10">Newly published 2025</p> */}
 
             {/* Desktop about blurb */}
-            <div className="hidden md:block mt-8">
+            <div className="hidden md:block mt-5">
               <div className="prose">
-                A short introductory paragraph introducing Danilyn and her work.
+                A short introductory paragraph introducing Beautiful Mystery.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </div>
               <LinkButton className="mt-5" href="/books/beautiful-mystery">
@@ -168,22 +191,22 @@ export default function HomePage(props: Props) {
       {/* Events */}
       <section>
         <PageWrapper>
-              <h2 className="text-5xl font-medium">Events</h2>
-              <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
-                {upcomingEvents.slice(0, N).map((event) => (
-                  <li key={event.id}><Event event={event}/></li>
-                ))}
-                <li className="border-t border-gray-300"/>
-                {upcomingEvents.length < N && 
-                  pastEvents.slice(0, N - pastEvents.length).map((event) => (
-                    <li key={event.id}><Event event={event}/></li>
-                  ))
-                }
-              </ul>
-              <LinkButton className="mt-5" href="/events" >
-                More events
-              </LinkButton>
-            </PageWrapper>
+          <h2 className="text-5xl font-medium">Events</h2>
+          <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
+            {upcomingEvents.slice(0, N).map((event) => (
+              <li key={event.id}><Event event={event}/></li>
+            ))}
+            <li className="border-t border-gray-300"/>
+            {upcomingEvents.length < N && 
+              pastEvents.slice(0, N - pastEvents.length).map((event) => (
+                <li key={event.id}><Event event={event}/></li>
+              ))
+            }
+          </ul>
+          <LinkButton className="mt-5" href="/events" >
+            More events
+          </LinkButton>
+        </PageWrapper>
       </section>
 
 
