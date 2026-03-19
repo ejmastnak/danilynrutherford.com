@@ -19,17 +19,17 @@ const nav = content.data.nav;
 
     <div class="flex items-center">
 
-      <a class="text-xl md:hidden text-gray-600 font-light text-nowrap hover:underline hover:text-blue-600" href="/">Danilyn Rutherford</a>
+      <a class="text-xl text-gray-600 text-nowrap hover:underline hover:text-blue-600" href="/">Danilyn Rutherford</a>
 
       <!-- Desktop -->
-      <ul class="hidden md:flex ml-auto flex gap-x-8">
+      <ul class="hidden lg:flex ml-auto flex gap-x-8">
         {nav.navLinks.map((navLink) => (
         <li key={navLink.text}><NavLink href={navLink.href}>{navLink.text}</NavLink></li>
         ))}
       </ul>
 
       <!-- Mobile menu -->
-      <el-dropdown class="inline-block md:hidden ml-auto">
+      <el-dropdown class="inline-block lg:hidden ml-auto">
         <button class="inline-flex items-center justify-center gap-x-1.5 rounded-md bg-theme-offwhite px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           <Bars3Icon id="mobile-menu-bars-icon" class="text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
           <XMarkIcon id="mobile-menu-x-icon" class="hidden text-gray-600 h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
