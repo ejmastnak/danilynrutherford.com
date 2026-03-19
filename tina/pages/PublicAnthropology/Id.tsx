@@ -23,7 +23,7 @@ export default function PublicAnthropology(props: Props) {
     variables: props.variables,
     data: props.data,
   });
-  const publicAnthropologyItem = data.publicAnthropologyItem;
+  const publicAnthropologyItem = data.publicAnthropology;
 
   return (
     <PageWrapper>

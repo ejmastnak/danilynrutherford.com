@@ -39,7 +39,7 @@ export default function PublicAnthropologyPage(props: Props) {
             <ul className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl">
               {publicAnthropologyItemsByType[itemType].sort((a, b) => new Date(b.date) - new Date(a.date)).map((item) => (
                 <li key={item.id}>
-                  <a href={`/public-writings-and-media/${item._sys.filename}`} className="text-center">
+                  <a href={`/public-anthropology/${item._sys.filename}`} className="text-center">
                     <img src={item.featuredImage} alt={item.featuredImageAlt} className="object-cover w-full max-w-sm sm:w-56 h-56 rounded-md mx-auto hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"/>
                     <p className="mt-1 text-sm text-gray-600">{formatDateString(item.date)}</p>
                     <p className="mt-px font-medium hover:underline">{item.title}</p>

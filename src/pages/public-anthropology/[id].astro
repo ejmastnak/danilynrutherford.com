@@ -13,7 +13,7 @@ export async function getStaticPaths() {
     props: {
       item,
       getTinaProps: async () =>
-        client.queries.item({
+        client.queries.publicAnthropology({
           relativePath: item.data.tinaInfo.relativePath,
         }),
     },
@@ -22,12 +22,12 @@ export async function getStaticPaths() {
 
 const { publicAnthropologyItem, getTinaProps } = Astro.props;
 const content = await getTinaProps();
-const head = content.data.publicAnthropologyItem.head;
+const head = content.data.publicAnthropology.head;
 
 await optimizeTinaImages(content, [
   {
-    srcPath: ['data', 'publicAnthropologyItem', 'featuredImage'],
-    altPath: ['data', 'publicAnthropologyItem', 'featuredImageAlt'],
+    srcPath: ['data', 'publicAnthropology', 'featuredImage'],
+    altPath: ['data', 'publicAnthropology', 'featuredImageAlt'],
     width: 800,
   },
 ]);
