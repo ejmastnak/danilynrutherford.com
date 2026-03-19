@@ -8,7 +8,7 @@ function normalize(pathname) {
   return (pathname != "/") ? pathname.replace(/\/$/, "") : pathname;
 }
 
-let classes = "text-white hover:underline hover:text-gray-50"
+let classes = "text-white hover:underline hover:text-gray-50 text-nowrap"
 if (normalize(href) === normalize(Astro.url.pathname)) classes += " font-medium";
 ---
 
