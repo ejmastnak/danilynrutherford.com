@@ -1,15 +1,15 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
-export const AcademicWorksPageCollection: Collection = {
+export const EssaysPageCollection: Collection = {
 
-  name: "academicWorksPage",
-  label: "Academic Writings Page",
-  path: "tina/content/ui/pages/academicWorks",
+  name: "essaysPage",
+  label: "Essays Page",
+  path: "tina/content/ui/pages/essays",
   format: "json",
 
   ui: {
-    router: () => "/academic-writings/",
+    router: () => "/essays/",
     allowedActions: {
       create: false,
       delete: false,

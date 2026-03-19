@@ -1,15 +1,15 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
-export const PublicWorksPageCollection: Collection = {
+export const PublicAnthropologyPageCollection: Collection = {
 
-  name: "publicWorksPage",
-  label: "Public Writings & Media Page",
-  path: "tina/content/ui/pages/publicWorks",
+  name: "publicAnthropologyPage",
+  label: "Public Anthropology Page",
+  path: "tina/content/ui/pages/publicAnthropology",
   format: "json",
 
   ui: {
-    router: () => "/public-writings-and-media/",
+    router: () => "/public-anthropology/",
     allowedActions: {
       create: false,
       delete: false,

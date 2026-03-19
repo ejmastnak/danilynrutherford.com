@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PublicAnthropology from "@tina/pages/PublicAnthropology/Id.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+export async function getStaticPaths() {
+  const publicAnthropologyItems = await getCollection("publicAnthropology");
+
+  return publicAnthropologyItems.map((item) => ({
+    params: { id: item.id },
+    props: {
+      item,
+      getTinaProps: async () =>
+        client.queries.item({
+          relativePath: item.data.tinaInfo.relativePath,
+        }),
+    },
+  }));
+}
+
+const { publicAnthropologyItem, getTinaProps } = Astro.props;
+const content = await getTinaProps();
+const head = content.data.publicAnthropologyItem.head;
+
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'publicAnthropologyItem', 'featuredImage'],
+    altPath: ['data', 'publicAnthropologyItem', 'featuredImageAlt'],
+    width: 800,
+  },
+]);
+
+---
+
+<BaseLayout head={head}>
+  <PublicAnthropology {...content} client:tina />
+</BaseLayout>

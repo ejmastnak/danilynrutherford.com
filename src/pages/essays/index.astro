@@ -1,0 +1,17 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Essays from "@tina/pages/Essays/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myEssaysPage({ relativePath: "index.json" });
+const head = content.data.essaysPage.head;
+
+const essaysResponse = await client.queries.essayConnection();
+const essays = essaysResponse.data.essayConnection.edges?.map((edge) => edge.node);
+---
+
+
+<BaseLayout head={head}>
+  <Essays essays={essays} {...content} client:tina />
+</BaseLayout>

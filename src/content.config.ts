@@ -48,11 +48,11 @@ const books = defineCollection({
   }),
 });
 
-const publicWorks = defineCollection({
+const publicAnthropology = defineCollection({
   loader: async () => {
-    const response = await client.queries.publicWorkConnection();
+    const response = await client.queries.publicAnthropologyConnection();
 
-    return response.data.publicWorkConnection.edges
+    return response.data.publicAnthropologyConnection.edges
       ?.filter((edge) => !!edge?.node)
       .map((edge) => {
         const node = edge!.node!;
@@ -84,13 +84,7 @@ const publicWorks = defineCollection({
     link: z.string().nullish(),
     body: z.any().nullish(),
     event: z.any().nullish(),
-    // reviews: z.array(
-    //   z.object({
-    //     review: z.any().nullish(),
-    //     reviewer: z.any().nullish(),
-    //   })
-    // ).nullish(),
   }),
 });
 
-export const collections = { books, publicWorks };
+export const collections = { books, publicAnthropology };

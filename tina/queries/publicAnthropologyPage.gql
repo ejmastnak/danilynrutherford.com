@@ -1,5 +1,5 @@
-query myPublicWorksPage($relativePath: String!) {
-  publicWorksPage(relativePath: $relativePath) {
+query myPublicAnthropologyPage($relativePath: String!) {
+  publicAnthropologyPage(relativePath: $relativePath) {
     ... on Document {
       _sys {
         filename
@@ -13,11 +13,11 @@ query myPublicWorksPage($relativePath: String!) {
       id
       _values
     }
-    ...MyPublicWorksPageParts
+    ...MyPublicAnthropologyPageParts
   }
 }
 
-fragment MyPublicWorksPageParts on PublicWorksPage {
+fragment MyPublicAnthropologyPageParts on PublicAnthropologyPage {
   __typename
   head {
     __typename

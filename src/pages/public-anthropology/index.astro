@@ -1,0 +1,26 @@
+---
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PublicAnthropology from "@tina/pages/PublicAnthropology/Index.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+const content = await client.queries.myPublicAnthropologyPage({ relativePath: "index.json" });
+const head = content.data.publicAnthropologyPage.head;
+
+const publicAnthropologyResponse = await client.queries.publicAnthropologyConnection();
+const publicAnthropologyItems = publicAnthropologyResponse.data.publicAnthropologyConnection.edges?.map((edge) => edge.node);
+
+const imagesToOptimize = publicAnthropologyItems.map((item, idx) => {
+  return {
+    srcPath: [`${idx}`, 'featuredImage'],
+    altPath: [`${idx}`, 'featuredImageAlt'],
+    width: 500,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(publicAnthropologyItems, imagesToOptimize);
+---
+
+<BaseLayout head={head}>
+  <PublicAnthropology publicAnthropologyItems={publicAnthropologyItems} {...content} client:tina />
+</BaseLayout>

@@ -56,23 +56,6 @@ export const EventCollection: Collection = {
       name: 'description',
       label: 'Description',
       type: 'rich-text',
-    },
-    {
-      name: 'publicWork',
-      label: 'Linked Public Writing or Media (optional)',
-      description: 'If this event has an associated Public Writings & Media entry, link the associated work here (e.g. for interviews, radio appearances, etc.).',
-      type: 'reference',
-      collections: ['publicWork'],
-      ui: {
-        optionComponent: (
-          props: {
-            title: string,
-          },
-          _internalSys: { path: string }
-        ) => {
-          return props.title;
-        }
-      }
     }
   ],
 };

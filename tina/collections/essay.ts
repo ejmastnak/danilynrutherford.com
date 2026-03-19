@@ -1,10 +1,10 @@
 import type { Collection } from "tinacms";
 import publicationTypes from "@src/assets/data/publicationTypes.json";
 
-export const AcademicWorkCollection: Collection = {
-  name: "academicWork",
-  label: "Academic Writings Collection",
-  path: "tina/content/academicWorks",
+export const EssayCollection: Collection = {
+  name: "essay",
+  label: "Essays Collection",
+  path: "tina/content/essays",
   format: "json",
   ui: {
     filename: {

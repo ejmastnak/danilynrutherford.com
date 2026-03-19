@@ -1,14 +1,14 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
-export const PublicWorkCollection: Collection = {
-  name: "publicWork",
-  label: "Public Writings & Media Collection",
-  path: "tina/content/publicWorks",
+export const PublicAnthropologyCollection: Collection = {
+  name: "publicAnthropology",
+  label: "Public Anthropology Collection",
+  path: "tina/content/publicAnthropology",
   format: "json",
   ui: {
     // router({ document }) {
-    //   return `/public-writings-and-media/${document._sys.filename}`;
+    //   return `/public-anthropology/${document._sys.filename}`;
     // },
     filename: {
       showFirst: true,
