@@ -5,7 +5,8 @@ import Event from '@tina/components/Event.tsx'
 import Wrapper from '@tina/shared/Wrapper.tsx'
 import LinkButton from '@tina/components/LinkButton.tsx'
 
-import danilynMillieImage from '@/assets/img/uploads/danilyn-millie-cropped.jpg'
+import danilynMillieImage from '@/assets/img/uploads/danilyn-millie.jpg'
+import danilynMillieExtendedImage from '@/assets/img/uploads/danilyn-millie-extended.jpg'
 
 import type { MyHomePageQuery, MyHomePageQueryVariables, Book, Event } from "@tina/__generated__/types";
 type Props = {
@@ -82,23 +83,18 @@ export default function HomePage(props: Props) {
   return (
     <div>
 
+      <img className="mx-auto lg:hidden object-cover w-full h-[360px] sm:h-[440px] md:rounded-md" src={danilynMillieImage.src} alt="Danilyn and her daughter Millie"/>
+      <img className="mx-auto hidden lg:block object-cover w-full h-[500px] md:rounded-md" src={danilynMillieExtendedImage.src} alt="Danilyn and her daughter Millie"/>
+
       <PageWrapper>
 
-        <div className="">
+        <div className="pb-20 border-b border-gray-300 ">
 
-          {/* Hero */}
-          <div className="mx-auto text-center">
-            <h1 className="text-5xl sm:text-6xl">Danilyn Rutherford</h1>
-            <p className="mt-2.5 md:text-lg text-gray-700">Anthropologist and author</p>
-          </div>
+          {/* About blurb */}
+          <h1 className="mt-3 text-5xl sm:text-6xl mx-auto text-center">Danilyn Rutherford</h1>
 
-          <div className="my-8 -mx-6 lg:mx-0 lg:px-12">
-            <img className="mx-auto object-cover w-full h-[440px] lg:h-[500px] md:rounded-md" src={danilynMillieImage.src} alt="Danilyn and her daughter Millie"/>
-          </div>
-
-          <div className="prose mx-auto text-center xxxs:text-left max-w-2xl">
-            A short introductory paragraph introducing Danilyn and her work.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <div className="mt-8 md:mt-12 prose mx-auto text-center xxxs:text-left max-w-2xl">
+            Danilyn Rutherford is an anthropologist and author. She began her career as a visiting tutor at Goldsmiths College, before joining the faculty at the University of Chicago, then the University of California, Santa Cruz, where she was professor and chair. She has a passion for supporting other scholars, which she satisfies through her day job as President of the Wenner-Gren Foundation for Anthropological Research.
           </div>
 
         </div>
