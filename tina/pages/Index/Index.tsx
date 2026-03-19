@@ -122,7 +122,14 @@ export default function HomePage(props: Props) {
             </div>
 
           </div>
-          <img src={featuredBook.image} alt={featuredBook.imageAlt} className="w-full mx-auto md:mx-0 max-w-md lg:max-w-lg object-cover h-fit" />
+          <a href="/books/beautiful-mystery" className="h-fit">
+            <img
+              src={featuredBook.image}
+              alt={featuredBook.imageAlt}
+              className="w-full mx-auto md:mx-0 max-w-md lg:max-w-lg object-cover h-fit rounded hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md" 
+            />
+          </a>
+
         </div>
 
         {/* Mobile about blurb and link button */}
@@ -143,7 +150,13 @@ export default function HomePage(props: Props) {
           <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
             {otherBooks.map((book) => (
               <li>
-                <img src={book.image} alt={book.imageAlt} className="w-64 sm:max-w-md object-cover w-full aspect-[2/3] mx-auto rounded-md" />
+                <a href={`/books/${book._sys.filename}`} className="h-fit">
+                  <img
+                    src={book.image}
+                    alt={book.imageAlt}
+                    className="w-64 sm:max-w-md object-cover w-full aspect-[2/3] mx-auto rounded-md hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"
+                  />
+                </a>
                 <div className="mt-3 sm:mt-1.5 text-center">
                   <p className="text-lg font-semibold">{book.title}</p>
                   <p className="text-gray-600">{book.publisher}, {book.year}</p>
