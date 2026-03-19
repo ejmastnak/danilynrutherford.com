@@ -15,9 +15,7 @@ const footer = content.data.footer;
 <div class={`bg-theme-darkgreen text-white pt-12 pb-16 px-8 ${classes ? classes : ''}`} >
   <div class="max-w-5xl mx-auto flex" >
     <div>
-      <a href="/" class="hover:underline">
-        <p class="text-3xl">{footer.name}</p>
-      </a>
+      <a href="/" class="hover:underline text-3xl">{footer.name}</a>
       <div class="mt-5">
         <div className="prose">
           <TinaMarkdown content={footer.address} />
