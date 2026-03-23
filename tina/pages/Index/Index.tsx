@@ -1,12 +1,12 @@
 import { useTina, tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
-import Event from '@tina/components/Event.tsx'
+import EventComponent from '@tina/components/Event.tsx'
 import Wrapper from '@tina/shared/Wrapper.tsx'
 import LinkButton from '@tina/components/LinkButton.tsx'
 
 import danilynMillieImage from '@/assets/img/uploads/danilyn-millie.jpg'
-import danilynMillieExtendedImage from '@/assets/img/uploads/danilyn-millie-extended.jpg'
+import danilynMillieExtendedImage from '@/assets/img/uploads/danilyn-millie.jpg'
 
 import type { MyHomePageQuery, MyHomePageQueryVariables, Book, Event } from "@tina/__generated__/types";
 type Props = {
@@ -84,7 +84,7 @@ export default function HomePage(props: Props) {
     <div>
 
       <img className="mx-auto lg:hidden object-cover w-full h-[360px] sm:h-[440px] md:rounded-md" src={danilynMillieImage.src} alt="Danilyn and her daughter Millie"/>
-      <img className="mx-auto hidden lg:block object-cover w-full h-[500px] md:rounded-md" src={danilynMillieExtendedImage.src} alt="Danilyn and her daughter Millie"/>
+      <img className="mx-auto hidden lg:block object-cover w-full h-[800px] md:rounded-md" src={danilynMillieExtendedImage.src} alt="Danilyn and her daughter Millie"/>
 
       <PageWrapper>
 
@@ -203,12 +203,12 @@ export default function HomePage(props: Props) {
           <h2 className="text-5xl font-medium">Events</h2>
           <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
             {upcomingEvents.slice(0, N).map((event) => (
-              <li key={event.id}><Event event={event}/></li>
+              <li key={event.id}><EventComponent event={event}/></li>
             ))}
             <li className="border-t border-gray-300"/>
             {upcomingEvents.length < N && 
               pastEvents.slice(0, N - pastEvents.length).map((event) => (
-                <li key={event.id}><Event event={event}/></li>
+                <li key={event.id}><EventComponent event={event}/></li>
               ))
             }
           </ul>
