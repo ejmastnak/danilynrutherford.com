@@ -4,22 +4,10 @@
     "description": ""
   },
   "h1": "Contact",
-  "intro": "Contact Danilyn using the contact form below, or directly using the contact information displayed [at the bottom of this page](#contact-directly).\n",
-  "contactFormHeading": "Contact form",
-  "contactForm": {
-    "contactFormNameLabel": "Name",
-    "contactFormNamePlaceholder": "Your name",
-    "contactFormMessageLabel": "Message",
-    "contactFormMessagePlaceholder": "Your message",
-    "contactFormEmailLabel": "Your email",
-    "contactFormEmailPlaceholder": "you@example.com",
-    "contactFormSubmitButtonText": "Send message"
-  },
-  "contactDirectlyHeading": "Contact Danilyn directly",
-  "contactDirectlyText": "You can contact Danilyn directly:",
-  "phoneText": "By phone at",
-  "phone": "(123) 111 1111",
-  "emailText": "By email at",
-  "email": "example@example.com",
-  "phoneMachineReadable": "+11231111111"
+  "intro": "You can contact Danilyn at her address at the Wenner-Gren Foundation or at either of the email addresses displayed on this page.\n\n",
+  "addressHeading": "Address",
+  "address": "Wenner-Gren Foundation for Anthropological Research\n\n655 Third Avenue 23rd Floor\n\nNew York, NY 10017\n",
+  "emailHeading": "Email",
+  "primaryEmail": "danilynrutherford@gmail.com",
+  "secondaryEmail": "drutherford@wennergren.org"
 }

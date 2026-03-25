@@ -26,22 +26,9 @@ fragment MyContactPageParts on ContactPage {
   }
   h1
   intro
-  contactFormHeading
-  contactForm {
-    __typename
-    contactFormNameLabel
-    contactFormNamePlaceholder
-    contactFormMessageLabel
-    contactFormMessagePlaceholder
-    contactFormEmailLabel
-    contactFormEmailPlaceholder
-    contactFormSubmitButtonText
-  }
-  contactDirectlyHeading
-  contactDirectlyText
-  emailText
-  email
-  phoneText
-  phone
-  phoneMachineReadable
+  addressHeading
+  address
+  emailHeading
+  primaryEmail
+  secondaryEmail
 }
