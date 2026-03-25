@@ -57,6 +57,12 @@ export const InterventionCollection: Collection = {
       type: 'datetime',
     },
     {
+      name: 'publisher',
+      label: 'Publisher',
+      description: 'E.g. TIME, Salon, etc.',
+      type: 'string',
+    },
+    {
       name: 'link',
       label: 'External link',
       type: 'string',

@@ -6,28 +6,28 @@ import Intervention from "@tina/pages/Interventions/Id.tsx";
 import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 
 export async function getStaticPaths() {
-  const interviews = await getCollection("interviews");
+  const interventions = await getCollection("interventions");
 
-  return interviews.map((interview) => ({
-    params: { id: interview.id },
+  return interventions.map((intervention) => ({
+    params: { id: intervention.id },
     props: {
-      interview,
+      intervention,
       getTinaProps: async () =>
-        client.queries.interview({
-          relativePath: interview.data.tinaInfo.relativePath,
+        client.queries.intervention({
+          relativePath: intervention.data.tinaInfo.relativePath,
         }),
     },
   }));
 }
 
-const { interview, getTinaProps } = Astro.props;
+const { intervention, getTinaProps } = Astro.props;
 const content = await getTinaProps();
-const head = content.data.interview.head;
+const head = content.data.intervention.head;
 
 await optimizeTinaImages(content, [
   {
-    srcPath: ['data', 'interview', 'featuredImage'],
-    altPath: ['data', 'interview', 'featuredImageAlt'],
+    srcPath: ['data', 'intervention', 'featuredImage'],
+    altPath: ['data', 'intervention', 'featuredImageAlt'],
     width: 800,
   },
 ]);

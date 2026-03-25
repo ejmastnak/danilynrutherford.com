@@ -31,6 +31,7 @@ export default {
           offwhite: '#fdfdfe',
 
           darkblue: '#1c6089',
+          navy: '#164a6a',
           lightblue: '#c9e3f1',
         },
       },

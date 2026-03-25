@@ -4,11 +4,11 @@
     "description": ""
   },
   "h1": "Public Anthropology",
-  "intro": "A short introduction describing the content of the page, how it is divided into essays/blog posts, media appearances, interviews, etc.; and reminding readers that this is popular-facing work, and academic work can be found on a separate page; etc.",
+  "intro": "A short introduction describing the content of the page, how it is divided into reflections (self-published long-form writings); interventions (opinion essays in popular magazines, newspapers, etc.); and interviews, etc.; and reminding readers that this is popular-facing work, and academic work can be found on a separate page; etc.",
   "reflectionsHeading": "Reflections",
   "reflectionsDescription": "An introductory paragraph describing how reflections are long-form writings, somewhat in the spirit of blog posts, integrating material from your popular writing and academic work; how reflections compare to the other content on this page and elsewhere; and any other information the visitor should be aware of.",
   "interventionsHeading": "Interventions",
-  "interventionsDescription": "An introductory paragraph describing how interventions are online essays/opinion pieces for a popular audience, formally published with a third-party magazine, newspaper, etc.  (e.g. ).",
+  "interventionsDescription": "An introductory paragraph describing how interventions are online essays/opinion pieces for a popular audience, formally published with a third-party magazine, newspaper, etc.",
   "interviewsHeading": "Interviews",
-  "interviewsDescription": "A short introduction describing the content of the page, how it is divided into essays/blog posts, media appearances, interviews, etc.; and reminding readers that this is popular-facing work, and academic work can be found on a separate page; etc."
+  "interviewsDescription": "A short introduction describing how interviews encompass podcasts, radio appearances, etc. meant for a popular audience."
 }

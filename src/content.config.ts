@@ -116,6 +116,7 @@ const interventions = defineCollection({
     featuredImage: z.string().nullish(),
     featuredImageAlt: z.string().nullish(),
     date: z.coerce.date().nullish(),
+    publisher: z.string().nullish(),
     link: z.string().nullish(),
     body: z.any().nullish(),
   }),
