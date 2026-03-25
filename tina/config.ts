@@ -14,7 +14,9 @@ import { FooterCollection } from "@tina/collections/ui/shared/footer.ts";
 import { EssayCollection } from "@tina/collections/essay.ts";
 import { BookCollection } from "@tina/collections/book.ts";
 import { EventCollection } from "@tina/collections/event.ts";
-import { PublicAnthropologyCollection } from "@tina/collections/publicAnthropology.ts";
+import { ReflectionCollection } from "@tina/collections/reflection.ts";
+import { InterventionCollection } from "@tina/collections/intervention.ts";
+import { InterviewCollection } from "@tina/collections/interview.ts";
 
 import { TINA_MEDIA_ROOT, TINA_PUBLIC_FOLDER, TINA_SUPPORTED_IMAGE_MIMES } from "@src/assets/config.ts";
 
@@ -55,7 +57,10 @@ export default defineConfig({
       EssayCollection,
       BookCollection,
       EventCollection,
-      PublicAnthropologyCollection,
+
+      ReflectionCollection,
+      InterventionCollection,
+      InterviewCollection,
 
     ],
   },

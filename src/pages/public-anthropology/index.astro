@@ -7,10 +7,16 @@ import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 const content = await client.queries.myPublicAnthropologyPage({ relativePath: "index.json" });
 const head = content.data.publicAnthropologyPage.head;
 
-const publicAnthropologyResponse = await client.queries.publicAnthropologyConnection();
-const publicAnthropologyItems = publicAnthropologyResponse.data.publicAnthropologyConnection.edges?.map((edge) => edge.node);
+const reflectionResponse = await client.queries.reflectionConnection();
+const reflections = reflectionResponse.data.reflectionConnection.edges?.map((edge) => edge.node);
 
-const imagesToOptimize = publicAnthropologyItems.map((item, idx) => {
+const interventionResponse = await client.queries.interventionConnection();
+const interventions = interventionResponse.data.interventionConnection.edges?.map((edge) => edge.node);
+
+const interviewResponse = await client.queries.interviewConnection();
+const interviews = interviewResponse.data.interviewConnection.edges?.map((edge) => edge.node);
+
+const reflectionImagesToOptimize = reflections.map((item, idx) => {
   return {
     srcPath: [`${idx}`, 'featuredImage'],
     altPath: [`${idx}`, 'featuredImageAlt'],
@@ -18,9 +24,25 @@ const imagesToOptimize = publicAnthropologyItems.map((item, idx) => {
     idx: idx,
   }
 });
-await optimizeTinaImages(publicAnthropologyItems, imagesToOptimize);
+await optimizeTinaImages(reflections, reflectionImagesToOptimize);
+
+const interventionImagesToOptimize = interventions.map((item, idx) => {
+  return {
+    srcPath: [`${idx}`, 'featuredImage'],
+    altPath: [`${idx}`, 'featuredImageAlt'],
+    width: 500,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(interventions, interventionImagesToOptimize);
 ---
 
 <BaseLayout head={head}>
-  <PublicAnthropology publicAnthropologyItems={publicAnthropologyItems} {...content} client:tina />
+  <PublicAnthropology
+    reflections={reflections}
+    interventions={interventions}
+    interviews={interviews}
+    {...content}
+    client:tina
+  />
 </BaseLayout>

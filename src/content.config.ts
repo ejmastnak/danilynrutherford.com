@@ -48,11 +48,11 @@ const books = defineCollection({
   }),
 });
 
-const publicAnthropology = defineCollection({
+const reflections = defineCollection({
   loader: async () => {
-    const response = await client.queries.publicAnthropologyConnection();
+    const response = await client.queries.reflectionConnection();
 
-    return response.data.publicAnthropologyConnection.edges
+    return response.data.reflectionConnection.edges
       ?.filter((edge) => !!edge?.node)
       .map((edge) => {
         const node = edge!.node!;
@@ -80,11 +80,45 @@ const publicAnthropology = defineCollection({
     featuredImage: z.string().nullish(),
     featuredImageAlt: z.string().nullish(),
     date: z.coerce.date().nullish(),
-    type: z.string().nullish(),
-    link: z.string().nullish(),
     body: z.any().nullish(),
-    event: z.any().nullish(),
   }),
 });
 
-export const collections = { books, publicAnthropology };
+const interventions = defineCollection({
+  loader: async () => {
+    const response = await client.queries.interventionConnection();
+
+    return response.data.interventionConnection.edges
+      ?.filter((edge) => !!edge?.node)
+      .map((edge) => {
+        const node = edge!.node!;
+
+        return {
+          ...node,
+          id: node._sys.relativePath.replace(/\.json$/, ""),
+          tinaInfo: node._sys,
+        };
+      });
+  },
+
+  schema: z.object({
+    tinaInfo: z.object({
+      filename: z.string(),
+      basename: z.string(),
+      path: z.string(),
+      relativePath: z.string(),
+    }),
+    head: z.object({
+      title: z.string(),
+      description: z.string(),
+    }),
+    title: z.string().nullish(),
+    featuredImage: z.string().nullish(),
+    featuredImageAlt: z.string().nullish(),
+    date: z.coerce.date().nullish(),
+    link: z.string().nullish(),
+    body: z.any().nullish(),
+  }),
+});
+
+export const collections = { books, reflections, interventions };

@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Reflection from "@tina/pages/Reflections/Id.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+export async function getStaticPaths() {
+  const reflections = await getCollection("reflections");
+
+  return reflections.map((reflection) => ({
+    params: { id: reflection.id },
+    props: {
+      reflection,
+      getTinaProps: async () =>
+        client.queries.reflection({
+          relativePath: reflection.data.tinaInfo.relativePath,
+        }),
+    },
+  }));
+}
+
+const { reflection, getTinaProps } = Astro.props;
+const content = await getTinaProps();
+const head = content.data.reflection.head;
+
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'reflection', 'featuredImage'],
+    altPath: ['data', 'reflection', 'featuredImageAlt'],
+    width: 800,
+  },
+]);
+
+---
+
+<BaseLayout head={head}>
+  <Reflection {...content} client:tina />
+</BaseLayout>

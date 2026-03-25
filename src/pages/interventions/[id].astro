@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import client from "@tina/__generated__/client";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Intervention from "@tina/pages/Interventions/Id.tsx";
+import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
+
+export async function getStaticPaths() {
+  const interviews = await getCollection("interviews");
+
+  return interviews.map((interview) => ({
+    params: { id: interview.id },
+    props: {
+      interview,
+      getTinaProps: async () =>
+        client.queries.interview({
+          relativePath: interview.data.tinaInfo.relativePath,
+        }),
+    },
+  }));
+}
+
+const { interview, getTinaProps } = Astro.props;
+const content = await getTinaProps();
+const head = content.data.interview.head;
+
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'interview', 'featuredImage'],
+    altPath: ['data', 'interview', 'featuredImageAlt'],
+    width: 800,
+  },
+]);
+
+---
+
+<BaseLayout head={head}>
+  <Intervention {...content} client:tina />
+</BaseLayout>
