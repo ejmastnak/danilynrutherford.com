@@ -40,7 +40,7 @@ export default function PublicAnthropologyPage(props: Props) {
 
       {/* Reflections */}
       <section className="mt-16">
-        <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5 italic">{publicAnthropologyPage.reflectionsHeading}</h2>
+        <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
         <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.reflectionsDescription} />
         </div>
@@ -59,7 +59,7 @@ export default function PublicAnthropologyPage(props: Props) {
 
       {/* Interventions */}
       <section className="mt-16">
-        <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5 italic">{publicAnthropologyPage.interventionsHeading}</h2>
+        <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
         <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interventionsDescription} />
         </div>
@@ -88,7 +88,7 @@ export default function PublicAnthropologyPage(props: Props) {
 
       {/* Interviews */}
       <section className="mt-16">
-        <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5 italic">{publicAnthropologyPage.interviewsHeading}</h2>
+        <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
         <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interviewsDescription} />
         </div>
