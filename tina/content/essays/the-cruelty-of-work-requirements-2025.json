@@ -1,7 +1,8 @@
 {
+  "publisherPlace": null,
   "title": "The Cruelty of Work Requirements",
-  "category": "Commentaries",
   "citationFormat": "Newspaper / Magazine Article",
+  "category": "Online essays",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,11 +11,10 @@
   ],
   "editors": [],
   "containerTitle": "TIME",
+  "year": "2025",
   "publisher": null,
-  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,
-  "year": "2025",
   "href": "https://time.com/7260543/medicaid-work-requirements-disability-essay/"
 }

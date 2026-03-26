@@ -35,6 +35,7 @@ export default function EssaysPage(props: Props) {
 
   return (
     <PageWrapper>
+
       <h1 className="text-5xl">{essaysPage.h1}</h1>
       <div className="mt-5 prose">
         <TinaMarkdown content={essaysPage.intro} />

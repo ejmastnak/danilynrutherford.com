@@ -1,7 +1,8 @@
 {
+  "publisherPlace": null,
   "title": "Trump and the GOP Don’t Care for Health Caregivers",
-  "category": "Commentaries",
   "citationFormat": "Newspaper / Magazine Article",
+  "category": "Online essays",
   "authors": [
     {
       "givenName": "Danilyn",
@@ -10,11 +11,10 @@
   ],
   "editors": [],
   "containerTitle": "Salon",
+  "year": "2025",
   "publisher": null,
-  "publisherPlace": null,
   "volume": null,
   "issue": null,
   "pages": null,
-  "year": "2025",
   "href": "https://www.salon.com/2025/07/29/trump-and-the-gop-dont-care-for-health-caregivers/"
 }
