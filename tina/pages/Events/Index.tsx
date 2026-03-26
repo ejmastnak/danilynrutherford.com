@@ -1,4 +1,5 @@
 import { useTina, tinaField } from "tinacms/dist/react";
+import { useEffect, useState } from "react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { MyEventsPageQuery, MyEventsPageQueryVariables, Event } from "@tina/__generated__/types";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
@@ -20,11 +21,42 @@ export default function EventsPage(props: Props) {
   });
   const eventsPage = data.eventsPage;
 
-  const today = new Date()
-  const N = 2
+  function sortAsc(a, b) {
+    return new Date(a.date) - new Date(b.date);
+  }
 
-  const upcomingEvents = props.events.filter(e => new Date(e.date) >= today).sort((a, b) => a.date >= b.date ? 1 : -1);
-  const pastEvents = props.events.filter(e => new Date(e.date) < today).sort((a, b) => a.date < b.date ? 1 : -1);
+  function sortDesc(a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }
+
+  function splitEvents(events, today) {
+    const upcoming = [];
+    const past = [];
+
+    events.forEach((e) => {
+      const date = new Date(e.date);
+      if (date >= today) upcoming.push(e);
+        else past.push(e);
+    });
+
+    return {
+      upcoming: upcoming.sort(sortAsc),
+      past: past.sort(sortDesc),
+    };
+  }
+
+  // SSG fallback (runs at build time) 
+  const initial = splitEvents(props.events, new Date());
+
+  // Runs client-side if JS enabled
+  const [upcomingEvents, setUpcomingEvents] = useState(initial.upcoming);
+  const [pastEvents, setPastEvents] = useState(initial.past);
+
+  useEffect(() => {
+    const { upcoming, past } = splitEvents(props.events, new Date());
+    setUpcomingEvents(upcoming);
+    setPastEvents(past);
+  }, [props.events]);
 
   return (
     <PageWrapper>

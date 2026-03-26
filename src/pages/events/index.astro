@@ -11,5 +11,5 @@ const events = eventsResponse.data.eventConnection.edges?.map((edge) => edge.nod
 ---
 
 <BaseLayout head={head}>
-  <Events events={events} {...content} client:tina />
+  <Events events={events} {...content} client:load />
 </BaseLayout>
