@@ -11,5 +11,8 @@ const events = eventsResponse.data.eventConnection.edges?.map((edge) => edge.nod
 ---
 
 <BaseLayout head={head}>
+  <noscript>
+    <p class="mt-3 ml-3">JavaScript is disabled, so event listings are shown as of the last site build and may not reflect the current date.</p>
+  </noscript>
   <Events events={events} {...content} client:load />
 </BaseLayout>
