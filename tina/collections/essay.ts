@@ -1,5 +1,6 @@
 import type { Collection } from "tinacms";
 import citationFormats from "@src/assets/data/citationFormats.json";
+import essayCategories from "@src/assets/data/essayCategories.json";
 
 export const EssayCollection: Collection = {
   name: "essay",
@@ -32,10 +33,11 @@ export const EssayCollection: Collection = {
       options: Object.values(citationFormats),
     },
     {
-      name: 'displayType',
-      label: 'Display type',
+      name: 'category',
+      label: 'Category',
       description: 'This is the public-facing category shown to page visitors (e.g. Research Article, Commentary, etc.)',
       type: 'string',
+      options: essayCategories,
     },
     {
       name: 'authors',
