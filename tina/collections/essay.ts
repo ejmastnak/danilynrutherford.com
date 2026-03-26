@@ -1,5 +1,5 @@
 import type { Collection } from "tinacms";
-import publicationTypes from "@src/assets/data/publicationTypes.json";
+import citationFormats from "@src/assets/data/citationFormats.json";
 
 export const EssayCollection: Collection = {
   name: "essay",
@@ -14,7 +14,7 @@ export const EssayCollection: Collection = {
   },
   defaultItem: {
     title: "Markets, Morality, and the State",
-    type: Object.values(publicationTypes)[0],
+    citationFormat: Object.values(citationFormats)[0],
     authors: [ { givenName: "Danilyn", familyName: "Rutherford" } ],
     containerTitle: "Example Journal of Social Theory"
   },
@@ -25,14 +25,16 @@ export const EssayCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'formatType',
-      label: 'Format type',
+      name: 'citationFormat',
+      label: 'Citation format',
+      description: 'This field determines the work\'s citation format (e.g. journal article, review, magazine article, etc.), and is not visible to public visitors.',
       type: 'string',
-      options: Object.values(publicationTypes),
+      options: Object.values(citationFormats),
     },
     {
       name: 'displayType',
       label: 'Display type',
+      description: 'This is the public-facing category shown to page visitors (e.g. Research Article, Commentary, etc.)',
       type: 'string',
     },
     {
@@ -60,7 +62,7 @@ export const EssayCollection: Collection = {
     },
     {
       name: 'editors',
-      label: 'Editor(s) (optional)',
+      label: 'Editor(s) (if applicable)',
       type: 'object',
       list: true,
       ui: {
@@ -87,28 +89,8 @@ export const EssayCollection: Collection = {
     },
     {
       name: 'containerTitle',
-      label: 'Journal/book/etc.',
+      label: 'Journal/book/container/etc.',
       description: "Title of the journal, book, encyclopedia, newspaper, etc. in which this work was published",
-      type: 'string',
-    },
-    {
-      name: 'publisher',
-      label: 'Publisher',
-      type: 'string',
-    },
-    {
-      name: 'volume',
-      label: 'Volume',
-      type: 'string',
-    },
-    {
-      name: 'issue',
-      label: 'Issue',
-      type: 'string',
-    },
-    {
-      name: 'pages',
-      label: 'Pages (e.g. 234-242)',
       type: 'string',
     },
     {
@@ -117,8 +99,29 @@ export const EssayCollection: Collection = {
       type: 'string',
     },
     {
+      name: 'publisher',
+      label: 'Publisher (if applicable)',
+      type: 'string',
+    },
+    {
+      name: 'volume',
+      label: 'Volume (if applicable)',
+      type: 'string',
+    },
+    {
+      name: 'issue',
+      label: 'Issue (if applicable)',
+      type: 'string',
+    },
+    {
+      name: 'pages',
+      label: 'Pages (e.g. 234-242, if applicable)',
+      type: 'string',
+    },
+    {
       name: 'href',
-      label: 'Link',
+      label: 'Link (if applicable)',
+      description: 'A link to the work on the publisher\'s page',
       type: 'string',
     },
   ],

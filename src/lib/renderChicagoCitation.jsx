@@ -1,4 +1,4 @@
-import publicationTypes from "@/assets/data/publicationTypes.json"
+import citationFormats from "@/assets/data/citationFormats.json"
 
 function Person({ person }) {
   return (
@@ -56,7 +56,7 @@ export function renderChicagoCitation(pub) {
   const hasAuthors = pub.authors && pub.authors.length > 1
 
   switch (pub.formatType) {
-    case publicationTypes["article-journal"]:
+    case citationFormats["article-journal"]:
       return (
         <>
           {hasAuthors && <><Authors authors={pub.authors} /> </>}
@@ -69,7 +69,7 @@ export function renderChicagoCitation(pub) {
         </>
       )
 
-    case publicationTypes["review"]:
+    case citationFormats["review"]:
       return (
         <>
           {hasAuthors && <><Authors authors={pub.authors} /> </>}
@@ -82,8 +82,8 @@ export function renderChicagoCitation(pub) {
         </>
       )
 
-    case publicationTypes["entry-encyclopedia"]:
-    case publicationTypes["chapter"]:
+    case citationFormats["entry-encyclopedia"]:
+    case citationFormats["chapter"]:
       return (
         <>
           {hasAuthors && <><Authors authors={pub.authors} /> </>}
@@ -102,8 +102,8 @@ export function renderChicagoCitation(pub) {
         </>
       )
 
-    case publicationTypes["article-online"]:
-    case publicationTypes["article-newspaper"]:
+    case citationFormats["article-online"]:
+    case citationFormats["article-newspaper"]:
       return (
         <>
           {hasAuthors && <><Authors authors={pub.authors} /> </>}
