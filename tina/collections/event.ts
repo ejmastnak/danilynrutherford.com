@@ -3,7 +3,7 @@ import type { Collection } from "tinacms";
 export const EventCollection: Collection = {
 
   name: "event",
-  label: "Events",
+  label: "Events Collection",
   path: "tina/content/events",
   format: "json",
   ui: {
