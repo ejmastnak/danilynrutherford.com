@@ -1,5 +1,6 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
+import { condenseAst } from '@src/lib/ast.js'
 
 export const BookCollection: Collection = {
   name: "book",
@@ -93,7 +94,7 @@ export const BookCollection: Collection = {
       list: true,
       ui: {
         itemProps: (review) => {
-          return { label: review.reviewer };
+          return { label: condenseAst(review.reviewer) ?? "Reviews item" };
         },
       },
       defaultItem: {

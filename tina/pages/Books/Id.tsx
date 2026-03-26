@@ -2,6 +2,7 @@ import { useTina, tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
 import LinkButton from '@tina/components/LinkButton.tsx'
+import { condenseAst } from '@src/lib/ast.js'
 
 import type { Book, BookQueryVariables } from "@tina/__generated__/types";
 type Props = {
@@ -9,12 +10,6 @@ type Props = {
   data: BookQuery;
   query: string;
 };
-
-// Extracts a string value from the reviewer rich text's
-// Abstract Syntax Tree to use as a loop key.
-function extractReviewerKeyfromAst(reviewer) {
-  return reviewer?.children[0]?.children[0]?.text || (reviewer?.children[0]?.text)
-}
 
 export default function Book(props: Props) {
   const { data } = useTina({
@@ -65,7 +60,7 @@ export default function Book(props: Props) {
         <h2 data-tina-field={tinaField(book, "reviewsHeading")} className="text-4xl">{book.reviewsHeading}</h2>
         <div className="mt-8 flex flex-col gap-y-10">
           {book.reviews.map((review, idx) => (
-            <div key={extractReviewerKeyfromAst(review.reviewer)} className={(idx % 2 == 1) ? 'ml-auto' : ''}>
+            <div key={condenseAst(review.reviewer)} className={(idx % 2 == 1) ? 'ml-auto' : ''}>
               <div data-tina-field={tinaField(review, "review")} className="max-w-3xl font-medium text-gray-800 leading-relaxed"><TinaMarkdown content={review.review} /></div>
               <div data-tina-field={tinaField(review, "reviewer")} className="mt-2"><TinaMarkdown content={review.reviewer} /></div>
             </div>
