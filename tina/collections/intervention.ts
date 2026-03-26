@@ -7,9 +7,6 @@ export const InterventionCollection: Collection = {
   path: "tina/content/interventions",
   format: "json",
   ui: {
-    // router({ document }) {
-    //   return `/interventions/${document._sys.filename}`;
-    // },
     filename: {
       showFirst: true,
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors.",

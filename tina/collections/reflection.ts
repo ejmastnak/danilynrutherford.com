@@ -7,9 +7,9 @@ export const ReflectionCollection: Collection = {
   path: "tina/content/reflections",
   format: "json",
   ui: {
-    // router({ document }) {
-    //   return `/reflections/${document._sys.filename}`;
-    // },
+    router({ document }) {
+      return `/reflections/${document._sys.filename}`;
+    },
     filename: {
       showFirst: true,
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors.",

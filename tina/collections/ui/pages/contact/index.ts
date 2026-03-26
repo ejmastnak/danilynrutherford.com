@@ -9,7 +9,7 @@ export const ContactPageCollection: Collection = {
   format: "json",
 
   ui: {
-    router: () => "/contact/",
+    router: () => "/contact",
     allowedActions: {
       create: false,
       delete: false,

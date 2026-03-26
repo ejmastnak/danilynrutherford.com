@@ -9,7 +9,7 @@ export const PublicAnthropologyPageCollection: Collection = {
   format: "json",
 
   ui: {
-    router: () => "/public-anthropology/",
+    router: () => "/public-anthropology",
     allowedActions: {
       create: false,
       delete: false,

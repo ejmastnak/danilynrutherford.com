@@ -9,7 +9,7 @@ export const EventsPageCollection: Collection = {
   format: "json",
 
   ui: {
-    router: () => "/events/",
+    router: () => "/events",
     allowedActions: {
       create: false,
       delete: false,

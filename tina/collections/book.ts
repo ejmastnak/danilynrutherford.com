@@ -8,9 +8,9 @@ export const BookCollection: Collection = {
   path: "tina/content/books",
   format: "json",
   ui: {
-    // router({ document }) {
-    //   return `/books/${document._sys.filename}`;
-    // },
+    router({ document }) {
+      return `/books/${document._sys.filename}`;
+    },
     filename: {
       showFirst: true,
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors. I suggest a format like \"beautiful-mystery\", \"living-in-the-stone-age\", etc.",

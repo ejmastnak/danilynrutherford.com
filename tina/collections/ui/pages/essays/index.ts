@@ -9,7 +9,7 @@ export const EssaysPageCollection: Collection = {
   format: "json",
 
   ui: {
-    router: () => "/essays/",
+    router: () => "/essays",
     allowedActions: {
       create: false,
       delete: false,
