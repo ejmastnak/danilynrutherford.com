@@ -14,7 +14,6 @@ export const EssayCollection: Collection = {
     },
   },
   defaultItem: {
-    title: "Markets, Morality, and the State",
     citationFormat: Object.values(citationFormats)[0],
     authors: [ { givenName: "Danilyn", familyName: "Rutherford" } ],
     containerTitle: "Example Journal of Social Theory"
