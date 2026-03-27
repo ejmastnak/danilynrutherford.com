@@ -68,13 +68,13 @@ export const BookCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'link',
-      label: "Link to book page on publisher's site",
+      name: 'publisherLinkButtonText',
+      label: "Button text for link to publisher's book page",
       type: 'string',
     },
     {
-      name: 'publisherLinkButtonText',
-      label: "Button text for link to publisher's book page",
+      name: 'link',
+      label: "Link to book page on publisher's site",
       type: 'string',
     },
     {

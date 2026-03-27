@@ -36,8 +36,8 @@ export default function EssaysPage(props: Props) {
   return (
     <PageWrapper>
 
-      <h1 className="text-5xl">{essaysPage.h1}</h1>
-      <div className="mt-5 prose">
+      <h1 data-tina-field={tinaField(essaysPage, "h1")} className="text-5xl">{essaysPage.h1}</h1>
+      <div data-tina-field={tinaField(essaysPage, "intro")} className="mt-5 prose">
         <TinaMarkdown content={essaysPage.intro} />
       </div>
 

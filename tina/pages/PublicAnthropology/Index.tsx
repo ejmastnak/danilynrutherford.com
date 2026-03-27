@@ -41,7 +41,7 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Reflections */}
       <section className="mt-16">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
-        <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
+        <div data-tina-field={tinaField(publicAnthropologyPage, "reflectionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.reflectionsDescription} />
         </div>
         <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
@@ -60,7 +60,7 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Interventions */}
       <section className="mt-16">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
-        <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
+        <div data-tina-field={tinaField(publicAnthropologyPage, "interventionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interventionsDescription} />
         </div>
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
@@ -85,11 +85,10 @@ export default function PublicAnthropologyPage(props: Props) {
         </ul>
       </section>
 
-
       {/* Interviews */}
       <section className="mt-16">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
-        <div className="mt-5 prose max-w-2xl w-fit mx-auto italic">
+        <div data-tina-field={tinaField(publicAnthropologyPage, "interviewsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interviewsDescription} />
         </div>
         <div className="mt-10 flex flex-col gap-y-12 max-w-3xl mx-auto">

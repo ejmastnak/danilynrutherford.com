@@ -42,6 +42,11 @@ export const ReflectionCollection: Collection = {
       type: 'string',
     },
     {
+      name: 'date',
+      label: 'Date',
+      type: 'datetime',
+    },
+    {
       name: 'featuredImage',
       label: 'Featured Image',
       type: 'image',
@@ -50,11 +55,6 @@ export const ReflectionCollection: Collection = {
       name: 'featuredImageAlt',
       label: 'Featured Image alt text',
       type: 'string',
-    },
-    {
-      name: 'date',
-      label: 'Date',
-      type: 'datetime',
     },
     {
       name: 'body',

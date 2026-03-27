@@ -27,4 +27,5 @@ fragment MyEventsPageParts on EventsPage {
   h1
   upcomingEventsHeading
   pastEventsHeading
+  noUpcomingEventsMessage
 }

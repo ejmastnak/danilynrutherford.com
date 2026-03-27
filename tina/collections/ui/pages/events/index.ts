@@ -48,6 +48,12 @@ export const EventsPageCollection: Collection = {
       type: 'string',
     },
     {
+      name: 'noUpcomingEventsMessage',
+      label: 'No upcoming events message',
+      description: 'This message is displayed if there are no upcoming events',
+      type: 'rich-text',
+    },
+    {
       name: 'pastEventsHeading',
       label: 'Past events heading',
       type: 'string',

@@ -71,8 +71,8 @@ export default function EventsPage(props: Props) {
           ))}
         </ul>
         {upcomingEvents.length == 0 && 
-          <p className="mt-2 text-gray-600">
-            No upcoming events to display—check back soon!
+          <p data-tina-field={tinaField(eventsPage, "noUpcomingEventsMessage")} className="mt-2 text-gray-600">
+            {eventsPage.noUpcomingEventsMessage}
           </p>
         }
       </div>

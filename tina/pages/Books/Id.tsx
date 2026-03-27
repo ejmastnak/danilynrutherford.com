@@ -27,30 +27,30 @@ export default function Book(props: Props) {
           <div className="text-center md:text-left">
             <h1 data-tina-field={tinaField(book, "title")} className="text-4xl sm:text-5xl md:text-4xl">{book.title}</h1>
             <p data-tina-field={tinaField(book, "subtitle")} className="mt-2 text-xl sm:text-2xl text-gray-800">{book.subtitle}</p>
-            <p className="mt-2 text-gray-800">{book.publisher}, {book.year}</p>
+            <p className="mt-2 text-gray-800"><span data-tina-field={tinaField(book, "publisher")}>{book.publisher}</span>, <span data-tina-field={tinaField(book, "year")}>{book.year}</span></p>
           </div>
 
           {/* Desktop body and link button */}
           <div className="mt-6 hidden md:block ">
-            <LinkButton href={book.link}>
+            <LinkButton data-tina-field={tinaField(book, "publisherLinkButtonText")} href={book.link}>
               {book.publisherLinkButtonText}
             </LinkButton>
-            <div className="prose mt-6 pt-6 border-t border-gray-300">
+            <div data-tina-field={tinaField(book, "description")} className="prose mt-6 pt-6 border-t border-gray-300">
               <TinaMarkdown content={book.description} />
             </div>
           </div>
         </div>
-        <img className="shrink-0 h-full mx-auto w-56 md:w-80 lg:w-96 object-cover rounded-md" src={book.image} alt={book.imageAlt}/>
+        <img data-tina-field={tinaField(book, "image")} className="shrink-0 h-full mx-auto w-56 md:w-80 lg:w-96 object-cover rounded-md" src={book.image} alt={book.imageAlt}/>
       </div>
 
       {/* Mobile body and link button */}
       <div className="mt-6 md:hidden ">
         <div className="mx-auto w-fit">
-          <LinkButton href={book.link}>
+          <LinkButton data-tina-field={tinaField(book, "publisherLinkButtonText")} href={book.link}>
             {book.publisherLinkButtonText}
           </LinkButton>
         </div>
-        <div className="mt-5 prose">
+        <div data-tina-field={tinaField(book, "description")} className="mt-5 prose">
           <TinaMarkdown content={book.description} />
         </div>
       </div>

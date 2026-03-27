@@ -24,9 +24,10 @@ export default function Reflection(props: Props) {
       <div className="text-center mx-auto">
         <h1 data-tina-field={tinaField(reflection, "title")} className="text-4xl">{reflection.title}</h1>
         <p className="mt-2" data-tina-field={tinaField(reflection, "date")}>{formatDateString(reflection.date)}</p>
-        <p className="mt-1" data-tina-field={tinaField(reflection, "type")}>Reflection</p>
+        <p className="mt-1">Reflection</p>
 
         <img
+          data-tina-field={tinaField(reflection, "featuredImage")}
           className="my-10 w-full mx-auto h-72 max-w-md md:w-96 object-cover rounded-md"
           src={reflection.featuredImage}
           alt={reflection.featuredImageAlt}

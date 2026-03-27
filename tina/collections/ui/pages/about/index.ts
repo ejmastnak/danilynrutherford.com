@@ -60,7 +60,7 @@ export const AboutPageCollection: Collection = {
     {
       name: 'cv',
       label: 'CV PDF file',
-      description: 'Your CV is in your Media Library library',
+      description: 'The CV PDF file is in your Media Library library along with image files',
       type: 'image',
     },
     {
