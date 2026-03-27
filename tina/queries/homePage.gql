@@ -24,4 +24,104 @@ fragment MyHomePageParts on HomePage {
     title
     description
   }
+  heroImage
+  heroImageAlt
+  h1
+  aboutText
+  featuredBook {
+    ... on Book {
+      __typename
+      head {
+        __typename
+        title
+        description
+      }
+      title
+      subtitle
+      publisher
+      year
+      image
+      imageAlt
+      publisherLinkButtonText
+      link
+      description
+      reviewsHeading
+      reviews {
+        __typename
+        review
+        reviewer
+      }
+    }
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+  }
+  featuredBookDescription
+  featuredBookLinkText
+  academicBooksHeading
+  featuredAcademicBooks {
+    __typename
+    book {
+      ... on Book {
+        __typename
+        head {
+          __typename
+          title
+          description
+        }
+        title
+        subtitle
+        publisher
+        year
+        image
+        imageAlt
+        publisherLinkButtonText
+        link
+        description
+        reviewsHeading
+        reviews {
+          __typename
+          review
+          reviewer
+        }
+      }
+      ... on Document {
+        _sys {
+          filename
+          basename
+          hasReferences
+          breadcrumbs
+          path
+          relativePath
+          extension
+        }
+        id
+      }
+    }
+  }
+  featuredEssaysHeading
+  featuredEssays {
+    __typename
+    title
+    link
+    description
+  }
+  praiseHeading
+  featuredPraise {
+    __typename
+    review
+    reviewer
+    work
+  }
+  eventsHeading
+  eventsLinkText
 }

@@ -2,5 +2,72 @@
   "head": {
     "title": "Home",
     "description": ""
-  }
+  },
+  "heroImage": "/src/assets/img/uploads/danilyn-millie.jpg",
+  "heroImageAlt": "Danilyn and her daughter Millie",
+  "h1": "Danilyn Rutherford",
+  "aboutText": "Danilyn Rutherford is an anthropologist and author. She began her career as a visiting tutor at Goldsmiths College, before joining the faculty at the University of Chicago, then the University of California, Santa Cruz, where she was professor and chair. She has a passion for supporting other scholars, which she satisfies through her day job as President of the Wenner-Gren Foundation for Anthropological Research.\n",
+  "featuredBook": "tina/content/books/beautiful-mystery.json",
+  "featuredBookDescription": "A short introductory paragraph introducing Beautiful Mystery. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n",
+  "featuredBookLinkText": "New book: *Beautiful Mystery* (2025)\n",
+  "academicBooksHeading": "Academic books",
+  "featuredAcademicBooks": [
+    {
+      "book": "tina/content/books/living-in-the-stone-age.json"
+    },
+    {
+      "book": "tina/content/books/laughing-at-leviathan.json"
+    },
+    {
+      "book": "tina/content/books/raiding-the-land-of-the-foreigners.json"
+    }
+  ],
+  "featuredEssaysHeading": "Featured Essays",
+  "featuredEssays": [
+    {
+      "title": "Emergency Rooms",
+      "link": "https://www.degruyter.com/document/doi/10.36019/9781978841413-006/html",
+      "description": "Who gets to be the expert when it comes to care? Mother knows best, goes one version of the saying. Should it really be up to the doctors to decide what’s wrong and what to do? But what happens when mother doesn’t know best? When that warm and caring role starts feeling like an awkward gorilla costume, soft on the outside, hot and itchy on the inside, a get-up that makes it hard to move, see, and breathe?\n"
+    },
+    {
+      "title": "Becoming an Operating System",
+      "link": "https://anthrosource.onlinelibrary.wiley.com/doi/full/10.1111/amet.13013",
+      "description": "What is communicated in communication? Given our assumptions about language and personhood, we Americans tend to think we know. Yet for those of us who live in the company of people like my daughter, there isn’t a clear answer to this question. We dream of depths of meaning. But our loved ones have taught us that communication is just as much a matter of surfaces, of the sensations that swirl around a touch, a sound, or a sight.\n"
+    },
+    {
+      "title": "Proximity to Disability",
+      "link": "https://muse.jhu.edu/article/757552/pdf",
+      "description": "Proximity can be overwhelming. Proximity can be particularly overwhelming in these modern times. When we become close to another person, we expect them to affirm our identity: to help us see ourselves for who we really are. This is as much the case for our disabled children as for lovers. But what happens when we don’t get the recognition we’ve been taught we need?\n"
+    },
+    {
+      "title": "Kinky Empiricism",
+      "link": "https://anthrosource.onlinelibrary.wiley.com/doi/full/10.1111/j.1548-1360.2012.01154.x",
+      "description": "It is time for anthropology to reclaim the empirical. But this reclaiming must be accompanied by a rethinking of what empiricism means. What I affirm in this article is a kind of empiricism that builds on the singular power of anthropological ways of knowing the world. A kinky empiricism: kinky, like a slinky, twisting back on itself, but also kinky, like S and M and other queer elaborations of established scenarios, relationships, and things.\n"
+    }
+  ],
+  "praiseHeading": "Praise",
+  "featuredPraise": [
+    {
+      "review": "“…a highly sophisticated, polished, and at times dazzling piece of work.”\n",
+      "reviewer": "Webb Keane",
+      "work": "Raiding the Land of the Foreigners"
+    },
+    {
+      "review": "“…anthropology at its very best.”\n",
+      "reviewer": "Thomas Blom Hansen",
+      "work": "Laughing at Leviathan"
+    },
+    {
+      "review": "“…a deeply thoughtful and refreshingly programmatic book.”\n",
+      "reviewer": "Patricia Spyer",
+      "work": "Living in the Stone Age"
+    },
+    {
+      "review": "“Beautifully written and deeply moving.”\n",
+      "reviewer": "Tanya Luhrmann",
+      "work": "Beautiful Mystery"
+    }
+  ],
+  "eventsHeading": "Events",
+  "eventsLinkText": "More events"
 }
