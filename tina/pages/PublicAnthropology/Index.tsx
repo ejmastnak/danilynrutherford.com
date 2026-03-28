@@ -58,7 +58,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Interventions */}
-      <section className="mt-16">
+      <section className="mt-20">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
         <div data-tina-field={tinaField(publicAnthropologyPage, "interventionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interventionsDescription} />
@@ -86,7 +86,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Interviews */}
-      <section className="mt-16">
+      <section className="mt-20">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
         <div data-tina-field={tinaField(publicAnthropologyPage, "interviewsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interviewsDescription} />
