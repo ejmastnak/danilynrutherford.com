@@ -9,7 +9,32 @@ const head = content.data.homePage.head;
 
 const eventsResponse = await client.queries.eventConnection();
 const events = eventsResponse.data.eventConnection.edges?.map((edge) => edge.node);
+
+await optimizeTinaImages(content, [
+  {
+    srcPath: ['data', 'homePage', 'heroImage'],
+    altPath: ['data', 'homePage', 'heroImageAlt'],
+    width: 1024,
+  },
+  {
+    srcPath: ['data', 'homePage', 'featuredBook', 'image'],
+    altPath: ['data', 'homePage', 'featuredBook', 'imageAlt'],
+    width: 700,
+  }
+]);
+
+const bookImagesToOptimize = content.data.homePage.featuredAcademicBooks?.map((item, idx) => {
+  return {
+    srcPath: ['data', 'homePage', 'featuredAcademicBooks', `${idx}`, 'book', 'image'],
+    altPath: ['data', 'homePage', 'featuredAcademicBooks', `${idx}`, 'book', 'imageAlt'],
+    width: 600,
+    idx: idx,
+  }
+});
+await optimizeTinaImages(content, bookImagesToOptimize);
+
 ---
+
 
 <BaseLayout head={head}>
   <Index events={events} {...content} client:tina />

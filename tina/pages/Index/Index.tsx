@@ -1,11 +1,10 @@
 import { useTina, tinaField } from "tinacms/dist/react";
+import { useEffect, useState } from "react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
 import EventComponent from '@tina/components/Event.tsx'
 import Wrapper from '@tina/shared/Wrapper.tsx'
 import LinkButton from '@tina/components/LinkButton.tsx'
-
-import danilynMillieImage from '@/assets/img/uploads/danilyn-millie.jpg'
 
 import type { MyHomePageQuery, MyHomePageQueryVariables, Book, Event } from "@tina/__generated__/types";
 type Props = {
@@ -23,10 +22,44 @@ export default function HomePage(props: Props) {
   });
   const homePage = data.homePage;
 
-  const today = new Date()
-  const N = 2
-  const upcomingEvents = props.events.filter(e => new Date(e.date) >= today).sort((a, b) => a.date >= b.date ? 1 : -1);
-  const pastEvents = props.events.filter(e => new Date(e.date) < today).sort((a, b) => a.date < b.date ? 1 : -1);
+  const EVENTS_TO_DISPLAY = 2
+
+  function sortAsc(a, b) {
+    return new Date(a.date) - new Date(b.date);
+  }
+
+  function sortDesc(a, b) {
+    return new Date(b.date) - new Date(a.date);
+  }
+
+  function splitEvents(events, today) {
+    const upcoming = [];
+    const past = [];
+
+    events.forEach((e) => {
+      const date = new Date(e.date);
+      if (date >= today) upcoming.push(e);
+        else past.push(e);
+    });
+
+    return {
+      upcoming: upcoming.sort(sortAsc),
+      past: past.sort(sortDesc),
+    };
+  }
+
+  // SSG fallback (runs at build time) 
+  const initial = splitEvents(props.events, new Date());
+
+  // Runs during SSG, and also client-side if JS enabled
+  const [upcomingEvents, setUpcomingEvents] = useState(initial.upcoming);
+  const [pastEvents, setPastEvents] = useState(initial.past);
+
+  useEffect(() => {
+    const { upcoming, past } = splitEvents(props.events, new Date());
+    setUpcomingEvents(upcoming);
+    setPastEvents(past);
+  }, [props.events]);
 
   return (
     <div>
@@ -149,12 +182,12 @@ export default function HomePage(props: Props) {
         <PageWrapper>
           <h2 data-tina-field={tinaField(homePage, "eventsHeading")} className="text-5xl font-medium">{homePage.eventsHeading}</h2>
           <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
-            {upcomingEvents.slice(0, N).map((event) => (
+            {upcomingEvents.slice(0, EVENTS_TO_DISPLAY).map((event) => (
               <li key={event.id}><EventComponent event={event}/></li>
             ))}
             <li className="border-t border-gray-300"/>
-            {upcomingEvents.length < N && 
-              pastEvents.slice(0, N - pastEvents.length).map((event) => (
+            {upcomingEvents.length < EVENTS_TO_DISPLAY && 
+              pastEvents.slice(0, EVENTS_TO_DISPLAY - pastEvents.length).map((event) => (
                 <li key={event.id}><EventComponent event={event}/></li>
               ))
             }

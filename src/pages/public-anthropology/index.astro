@@ -26,15 +26,6 @@ const reflectionImagesToOptimize = reflections.map((item, idx) => {
 });
 await optimizeTinaImages(reflections, reflectionImagesToOptimize);
 
-const interventionImagesToOptimize = interventions.map((item, idx) => {
-  return {
-    srcPath: [`${idx}`, 'featuredImage'],
-    altPath: [`${idx}`, 'featuredImageAlt'],
-    width: 500,
-    idx: idx,
-  }
-});
-await optimizeTinaImages(interventions, interventionImagesToOptimize);
 ---
 
 <BaseLayout head={head}>
