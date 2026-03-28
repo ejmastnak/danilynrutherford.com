@@ -98,7 +98,7 @@ export const HomePageCollection: Collection = {
       list: true,
       ui: {
         itemProps: (item) => {
-          return { label: item.book.replace(/^tina\/content\/books\//, "").replace(/\.json$/, "") };
+          return { label: item.book?.replace(/^tina\/content\/books\//, "").replace(/\.json$/, "") };
         },
       },
       fields: [
@@ -132,7 +132,7 @@ export const HomePageCollection: Collection = {
       list: true,
       ui: {
         itemProps: (essay) => {
-          return { label: essay.title };
+          return { label: essay?.title };
         },
       },
       fields: [
@@ -173,7 +173,7 @@ export const HomePageCollection: Collection = {
       defaultItem: {
         review: "...consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
         reviewer: "John Doe",
-        work: "Beautiful Mystery",
+        work: "Example Work",
       },
       fields: [
         {

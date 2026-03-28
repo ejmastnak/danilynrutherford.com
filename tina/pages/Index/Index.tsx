@@ -122,7 +122,7 @@ export default function HomePage(props: Props) {
         <section className="mt-16 md:mt-20">
           <h2 data-tina-field={tinaField(homePage, "academicBooksHeading")} className="text-5xl font-medium text-center sm:text-left">{homePage.academicBooksHeading}</h2>
           <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
-            {homePage.featuredAcademicBooks.map((item) => (
+            {homePage.featuredAcademicBooks.filter(item => !!(item.book)).map((item) => (
               <li key={item.book.id}>
                 <a href={`/books/${item.book._sys.filename}`} className="h-fit">
                   <img
