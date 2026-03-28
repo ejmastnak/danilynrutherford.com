@@ -13,7 +13,7 @@ const content = await client.queries.myNav({ relativePath: "index.json" });
 const nav = content.data.nav;
 ---
 
-<nav class={`sticky relative top-0 bg-theme-darkgreen border-b border-theme-offwhite z-20 py-5 px-6 ${className ?? ""}`} >
+<nav class={`sticky relative top-0 bg-theme-darkgreen border-b border-theme-offwhite/50 z-20 py-5 px-6 ${className ?? ""}`} >
 
   <div class="max-w-5xl mx-auto">
 
