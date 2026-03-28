@@ -1,29 +1,9 @@
 {
   "name": "Danilyn Rutherford",
-  "footerLinks": [
-    {
-      "href": "/about",
-      "text": "About"
-    },
-    {
-      "href": "/books",
-      "text": "Books"
-    },
-    {
-      "href": "/essays",
-      "text": "Essays"
-    },
-    {
-      "href": "/public-anthropology",
-      "text": "Public Anthropology"
-    },
-    {
-      "href": "/events",
-      "text": "Events"
-    },
-    {
-      "href": "/contact",
-      "text": "Contact"
-    }
-  ]
+  "blueskyLink": "https://bsky.app/profile/danilynrutherford.bsky.social",
+  "instagramLink": "https://www.instagram.com/rutherforddanilyn/",
+  "xLink": "https://x.com/@danilynfox",
+  "facebookLink": "https://www.facebook.com/danilyn.rutherford",
+  "threadsLink": "https://www.threads.com/@danilyn.rutherford",
+  "linkedinLink": "https://www.linkedin.com/in/danilyn-rutherford-8b717722/"
 }

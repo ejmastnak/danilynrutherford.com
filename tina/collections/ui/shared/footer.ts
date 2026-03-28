@@ -21,59 +21,40 @@ export const FooterCollection: Collection = {
       type: "string",
     },
     {
-      name: "footerLinks",
-      label: "Footer Links",
-      type: "object",
-      list: true,
-      itemProps: (item) => {
-        return { label: item?.text };
-      },
-      defaultItem: {
-        href: "/example",
-        text: "Example",
-      },
-      fields: [
-        {
-          name: "href",
-          label: "Link",
-          type: "string",
-        },
-        {
-          name: "text",
-          label: "Link text",
-          type: "string",
-        },
-      ],
+      name: 'blueskyLink',
+      label: 'Bluesky profile link',
+      description: 'e.g. https://bsky.app/profile/danilynrutherford.bsky.social',
+      type: 'string',
     },
     {
-      name: "socialLinks",
-      label: "Social Links",
-      type: "object",
-      list: true,
-      itemProps: (item) => {
-        return { label: item?.site };
-      },
-      defaultItem: {
-        site: "Bluesky",
-        href: "https://bsky.app/profile/danilynrutherford.bsky.social",
-      },
-      fields: [
-        {
-          name: "site",
-          label: "Site",
-          type: "string",
-        },
-        {
-          name: "href",
-          label: "href",
-          type: "string",
-        },
-        {
-          name: 'icon',
-          label: 'Icon',
-          type: 'image',
-        },
-      ],
+      name: 'instagramLink',
+      label: 'Instagram profile link',
+      description: 'e.g. https://www.instagram.com/rutherforddanilyn/',
+      type: 'string',
+    },
+    {
+      name: 'xLink',
+      label: 'X profile link',
+      description: 'e.g. https://x.com/@danilynfox',
+      type: 'string',
+    },
+    {
+      name: 'facebookLink',
+      label: 'Facebook profile link',
+      description: 'e.g. https://www.facebook.com/danilyn.rutherford',
+      type: 'string',
+    },
+    {
+      name: 'threadsLink',
+      label: 'Threads profile link',
+      description: 'e.g. https://www.threads.com/@danilyn.rutherford',
+      type: 'string',
+    },
+    {
+      name: 'linkedinLink',
+      label: 'LinkedIn profile link',
+      description: 'e.g. https://www.linkedin.com/in/danilyn-rutherford-8b717722/',
+      type: 'string',
     },
   ],
 };

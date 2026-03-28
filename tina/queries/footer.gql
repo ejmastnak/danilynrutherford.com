@@ -20,20 +20,10 @@ query myFooter($relativePath: String!) {
 fragment MyFooterParts on Footer {
   __typename
   name
-  footerLinks {
-    __typename
-    href
-    text
-  }
-  footerLinks {
-    __typename
-    href
-    text
-  }
-  socialLinks {
-    __typename
-    site
-    href
-    icon
-  }
+  blueskyLink
+  instagramLink
+  xLink
+  facebookLink
+  threadsLink
+  linkedinLink
 }
