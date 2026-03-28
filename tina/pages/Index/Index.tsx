@@ -123,7 +123,7 @@ export default function HomePage(props: Props) {
           <h2 data-tina-field={tinaField(homePage, "academicBooksHeading")} className="text-5xl font-medium text-center sm:text-left">{homePage.academicBooksHeading}</h2>
           <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
             {homePage.featuredAcademicBooks.map((item) => (
-              <li>
+              <li key={item.book.id}>
                 <a href={`/books/${item.book._sys.filename}`} className="h-fit">
                   <img
                     src={item.book.image}
@@ -145,7 +145,7 @@ export default function HomePage(props: Props) {
           <h2 data-tina-field={tinaField(homePage, "featuredEssaysHeading")} className="text-5xl font-medium">{homePage.featuredEssaysHeading}</h2>
           <ul className="mt-8 grid md:grid-cols-2 gap-8 mx-auto">
             {homePage.featuredEssays.map((essay) => (
-              <a href={essay.link}>
+              <a href={essay.link} key={essay.title}>
                 <li className="bg-gray-50 rounded-md py-4 px-6 border border-gray-100 hover:outline hover:outline-1 hover:outline-gray-200 hover:shadow-md">
                   <p data-tina-field={tinaField(essay, "title")} className="underline font-semibold hover:text-blue-600">
                     {essay.title}
@@ -166,7 +166,7 @@ export default function HomePage(props: Props) {
           <h2 data-tina-field={tinaField(homePage, "praiseHeading")} className="text-5xl font-medium">{homePage.praiseHeading}</h2>
           <ul className="mt-8 grid md:grid-cols-4 gap-8 mx-auto px-4">
             {homePage.featuredPraise.map((praise) => (
-              <li>
+              <li key={praise.reviewer}>
                 <div data-tina-field={tinaField(praise, "review")} className="font-semibold">
                   <TinaMarkdown content={praise.review} />
                 </div>

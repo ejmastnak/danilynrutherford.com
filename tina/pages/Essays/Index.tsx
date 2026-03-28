@@ -45,7 +45,7 @@ export default function EssaysPage(props: Props) {
         {essayCategories
           .filter(category => essaysByCategory[category].length > 0)
           .map((category) => (
-            <div>
+            <div key={category}>
               <h2 className="text-2xl">{category}</h2>
               <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit max-w-2xl">
                 {essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
