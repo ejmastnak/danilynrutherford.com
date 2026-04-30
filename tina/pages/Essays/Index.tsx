@@ -1,4 +1,5 @@
 import { useTina, tinaField } from "tinacms/dist/react";
+import { slugify } from '@src/lib/slugify.js'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import LinkButton from '@tina/components/LinkButton.tsx'
 import H2Anchorable from '@tina/components/H2Anchorable.tsx'
@@ -6,7 +7,6 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
 import { renderChicagoCitation } from '@src/lib/renderChicagoCitation.jsx'
 import essayCategories from '@src/assets/data/essayCategories.json'
-import TableOfContents from '@tina/components/TableOfContents.tsx'
 
 import type { MyEssaysPageQuery, MyEssaysPageQueryVariables, Essay } from "@tina/__generated__/types";
 type Props = {
@@ -16,14 +16,6 @@ type Props = {
   essays: Array<Essay>;
 };
 
-function slugify(str) {
-  return str
-    .toLowerCase()
-    .normalize('NFKD')                // break accented chars into base + diacritic
-    .replace(/[\u0300-\u036f]/g, '')  // remove diacritics
-    .replace(/[^a-z0-9]+/g, '-')      // replace non-alphanumeric with hyphen
-    .replace(/^-+|-+$/g, '');         // trim leading/trailing hyphens
-}
 
 export default function EssaysPage(props: Props) {
   const { data } = useTina({
@@ -50,15 +42,8 @@ export default function EssaysPage(props: Props) {
     ),
   };
 
-
-  const headings = essayCategories.filter(category => essaysByCategory[category].length > 0).map((category) => ({
-      depth: 2,
-      slug: slugify(category),
-      text: category,
-    }))
-
   return (
-    <PageWrapper headings={headings}>
+    <PageWrapper>
 
       <h1 className="text-4xl" data-tina-field={tinaField(essaysPage, "h1")} >{essaysPage.h1}</h1>
 
@@ -70,7 +55,7 @@ export default function EssaysPage(props: Props) {
         {essayCategories
           .filter(category => essaysByCategory[category].length > 0)
           .map((category) => (
-            <section key={category} className="bg-theme-lightblue/10 w-fit px-6 py-12 rounded-lg">
+            <section key={category} className="bg-theme-lightblue/10 w-full min-w-fit px-6 py-12 rounded-lg">
               <div className="max-w-2xl mx-auto">
                 <H2Anchorable id={slugify(category)} className="text-2xl">{category}</H2Anchorable>
                 <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">

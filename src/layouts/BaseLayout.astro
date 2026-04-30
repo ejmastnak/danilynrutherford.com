@@ -5,10 +5,20 @@ import Nav from '@/shared/Nav.astro'
 import Footer from '@/shared/Footer.astro'
 import ClipPaths from '@/shared/ClipPaths.astro'
 
+import TableOfContents from '@/components/TableOfContents.astro'
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
 interface Props {
   head: { title: string, description: string },
+  headings?: Heading[];
 }
-const { head } = Astro.props as Props;
+const { head, headings } = Astro.props as Props;
+
 
 const currentPathname = Astro.url.pathname;
 ---
@@ -30,7 +40,15 @@ const currentPathname = Astro.url.pathname;
 
   <body class="min-h-screen flex flex-col bg-theme-offwhite">
     <Nav className="shrink-0" />
-    <main class="mx-auto flex-grow w-full">
+    <main class={`mx-auto flex-grow w-full ${headings ? 'flex gap-x-24' : ''}`}>
+      {/* Magic value: top-24 to push TOC under nav */}
+      {/* Magic value: 100vh-20rem keeps nav from colliding into footer at bottom of page and scrolling off screen at top */}
+      { 
+      headings &&
+      <div class="pt-20 pl-8">
+        <TableOfContents className="hidden md:block sticky top-28 max-h-[calc(100vh-20rem)] py-2 px-4 border border-gray-100 rounded shadow-sm" headings={headings} />
+      </div>
+      }
       <slot />
     </main>
     <Footer className="shrink-0" />

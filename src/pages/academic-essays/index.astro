@@ -1,7 +1,9 @@
 ---
 import client from "@tina/__generated__/client";
+import { slugify } from '@src/lib/slugify.js'
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Essays from "@tina/pages/Essays/Index.tsx";
+import essayCategories from '@src/assets/data/essayCategories.json'
 import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
 
 const content = await client.queries.myEssaysPage({ relativePath: "index.json" });
@@ -11,8 +13,26 @@ const essaysResponse = await client.queries.essayConnection({
   first: 200,
 });
 const essays = essaysResponse.data.essayConnection.edges?.map((edge) => edge.node);
+
+const essaysByCategory = essayCategories.reduce((acc, category) => {
+  acc[category] = [];
+  return acc;
+}, {});
+
+for (const essay of essays) {
+  if (essaysByCategory[essay.category]) {
+    essaysByCategory[essay.category].push(essay);
+  }
+}
+
+const headings = essayCategories.filter(category => essaysByCategory[category].length > 0).map((category) => ({
+  depth: 2,
+  slug: slugify(category),
+  text: category,
+}))
+
 ---
 
-<BaseLayout head={head}>
+<BaseLayout head={head} headings={headings}>
   <Essays essays={essays} {...content} client:load />
 </BaseLayout>

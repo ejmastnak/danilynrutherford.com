@@ -1,5 +1,6 @@
 ---
 import client from "@tina/__generated__/client";
+import { slugify } from '@src/lib/slugify.js'
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PublicAnthropology from "@tina/pages/PublicAnthropology/Index.tsx";
 import { optimizeTinaImages } from '@/lib/optimizeTinaImages';
@@ -26,9 +27,27 @@ const reflectionImagesToOptimize = reflections.map((item, idx) => {
 });
 await optimizeTinaImages(reflections, reflectionImagesToOptimize);
 
+const headings = [
+  {
+    depth: 2,
+    slug: slugify(content.data.publicAnthropologyPage.interventionsHeading),
+    text: content.data.publicAnthropologyPage.interventionsHeading,
+  },
+  {
+    depth: 2,
+    slug: slugify(content.data.publicAnthropologyPage.interviewsHeading),
+    text: content.data.publicAnthropologyPage.interviewsHeading,
+  },
+  {
+    depth: 2,
+    slug: slugify(content.data.publicAnthropologyPage.reflectionsHeading),
+    text: content.data.publicAnthropologyPage.reflectionsHeading,
+  }
+]
+
 ---
 
-<BaseLayout head={head}>
+<BaseLayout head={head} headings={headings}>
   <PublicAnthropology
     reflections={reflections}
     interventions={interventions}

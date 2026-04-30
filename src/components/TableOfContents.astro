@@ -1,0 +1,77 @@
+---
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+  className?: string;
+}
+
+const { headings, className } = Astro.props;
+
+// Normalize depth so the smallest depth starts at 0
+const minDepth = Math.min(...headings.map((h) => h.depth));
+const normalized = headings.map((h) => ({
+  ...h,
+  depth: h.depth - minDepth,
+}));
+---
+
+<nav class={`shrink-0 sticky overflow-y-auto ${className ?? ""}`}>
+  <p class="text-sm font-semibold mb-3 text-gray-900">
+    On this page
+  </p>
+
+  <ul class="space-y-1 text-sm">
+    {normalized.map((h) => (
+      <li
+        class="transition-colors"
+        style={`margin-left: ${h.depth * 0.75}rem`}
+      >
+        <a
+          href={`#${h.slug}`}
+          class="block py-1 text-gray-600 hover:text-gray-900 toc-link"
+          data-slug={h.slug}
+        >
+          {h.text}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  const links = Array.from(
+    document.querySelectorAll(".toc-link")
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        const link = links.find((l) => l.dataset.slug === id);
+
+        if (entry.isIntersecting) {
+          links.forEach((l) =>
+            l.classList.remove("!text-blue-700", "font-semibold")
+          );
+          link?.classList.add("!text-blue-700", "font-semibold");
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px -70% 0px",
+      threshold: 0.1,
+    }
+  );
+
+  links.forEach((link) => {
+    const el = document.getElementById(link.dataset.slug || "");
+    if (el) observer.observe(el);
+  });
+
+  window.addEventListener("beforeunload", () => observer.disconnect());
+</script>

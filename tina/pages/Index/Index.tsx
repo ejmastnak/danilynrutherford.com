@@ -64,7 +64,7 @@ export default function HomePage(props: Props) {
   return (
     <div>
 
-      <img data-tina-field={tinaField(homePage, "heroImage")} className="mx-auto object-cover w-full h-[360px] sm:h-[440px] lg:h-[700px] xl:h-[750px] md:rounded-md" src={homePage.heroImage} alt={homePage.heroImageAlt}/>
+      <img data-tina-field={tinaField(homePage, "heroImage")} className="mx-auto object-cover max-w-7xl w-full h-[360px] sm:h-[440px] lg:h-[700px] md:rounded-md md:shadow-md" src={homePage.heroImage} alt={homePage.heroImageAlt}/>
 
       <PageWrapper>
 
