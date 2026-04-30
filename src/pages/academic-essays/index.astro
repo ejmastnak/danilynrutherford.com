@@ -14,5 +14,5 @@ const essays = essaysResponse.data.essayConnection.edges?.map((edge) => edge.nod
 ---
 
 <BaseLayout head={head}>
-  <Essays essays={essays} {...content} client:tina />
+  <Essays essays={essays} {...content} client:load />
 </BaseLayout>

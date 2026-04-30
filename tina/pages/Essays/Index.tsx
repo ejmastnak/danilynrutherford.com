@@ -1,10 +1,12 @@
 import { useTina, tinaField } from "tinacms/dist/react";
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import LinkButton from '@tina/components/LinkButton.tsx'
+import H2Anchorable from '@tina/components/H2Anchorable.tsx'
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
 import { renderChicagoCitation } from '@src/lib/renderChicagoCitation.jsx'
 import essayCategories from '@src/assets/data/essayCategories.json'
+import TableOfContents from '@tina/components/TableOfContents.tsx'
 
 import type { MyEssaysPageQuery, MyEssaysPageQueryVariables, Essay } from "@tina/__generated__/types";
 type Props = {
@@ -13,6 +15,15 @@ type Props = {
   query: string;
   essays: Array<Essay>;
 };
+
+function slugify(str) {
+  return str
+    .toLowerCase()
+    .normalize('NFKD')                // break accented chars into base + diacritic
+    .replace(/[\u0300-\u036f]/g, '')  // remove diacritics
+    .replace(/[^a-z0-9]+/g, '-')      // replace non-alphanumeric with hyphen
+    .replace(/^-+|-+$/g, '');         // trim leading/trailing hyphens
+}
 
 export default function EssaysPage(props: Props) {
   const { data } = useTina({
@@ -39,8 +50,15 @@ export default function EssaysPage(props: Props) {
     ),
   };
 
+
+  const headings = essayCategories.filter(category => essaysByCategory[category].length > 0).map((category) => ({
+      depth: 2,
+      slug: slugify(category),
+      text: category,
+    }))
+
   return (
-    <PageWrapper>
+    <PageWrapper headings={headings}>
 
       <h1 data-tina-field={tinaField(essaysPage, "h1")} className="text-5xl">{essaysPage.h1}</h1>
 
@@ -54,7 +72,7 @@ export default function EssaysPage(props: Props) {
           .map((category) => (
             <section key={category} className="bg-theme-lightblue/10 px-6 py-12 rounded-lg">
               <div className="max-w-2xl mx-auto">
-                <h2 className="text-2xl">{category}</h2>
+                <H2Anchorable id={slugify(category)} className="text-2xl">{category}</H2Anchorable>
                 <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
                   {essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
                     <li key={publication.id}>
