@@ -60,7 +60,7 @@ export default function EventsPage(props: Props) {
 
   return (
     <PageWrapper>
-      <h1 data-tina-field={tinaField(eventsPage, "h1")} className="text-5xl ">{eventsPage.h1}</h1>
+      <h1 data-tina-field={tinaField(eventsPage, "h1")} className="text-4xl ">{eventsPage.h1}</h1>
 
       {/* Upcoming events */}
       <div className="mt-10">

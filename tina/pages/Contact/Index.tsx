@@ -19,7 +19,7 @@ export default function ContactPage(props: Props) {
 
   return (
     <PageWrapper>
-      <h1 data-tina-field={tinaField(contactPage, "h1")} className="text-4xl">{contactPage.h1}</h1>
+      <h1 className="text-4xl" data-tina-field={tinaField(contactPage, "h1")}>{contactPage.h1}</h1>
       <div data-tina-field={tinaField(contactPage, "intro")} className="mt-4 prose">
         <TinaMarkdown content={contactPage.intro} />
       </div>

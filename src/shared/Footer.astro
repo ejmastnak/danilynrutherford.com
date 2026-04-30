@@ -4,15 +4,15 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import client from "@tina/__generated__/client";
 
 interface Props {
-  classes: string
+  className: string
 }
-const { classes } = Astro.props as Props;
+const { className } = Astro.props as Props;
 
 const content = await client.queries.myFooter({ relativePath: "index.json" });
 const footer = content.data.footer;
 ---
 
-<div class={`bg-theme-darkgreen text-white pt-12 pb-16 px-8 overflow-x-auto ${classes ? classes : ''}`} >
+<div class={`bg-theme-darkgreen text-white pt-12 pb-16 px-8 overflow-x-auto ${className ? className : ''}`} >
   <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center gap-y-5 gap-x-2">
 
     <div class="h-fit text-center sm:text-left">

@@ -82,7 +82,7 @@ export default function HomePage(props: Props) {
         {/* Featured book */}
         <div className="mt-24 flex flex-col md:flex-row gap-x-10 lg:gap-x-12">
           <div>
-            <h1 className="text-5xl font-medium text-center md:text-left">{homePage.featuredBook.title}</h1>
+            <h2 className="text-5xl font-medium text-center md:text-left">{homePage.featuredBook.title}</h2>
             <p className="mt-0.5 md:text-lg text-gray-700 text-center md:text-left">{homePage.featuredBook.subtitle}</p>
 
             {/* Desktop about blurb */}

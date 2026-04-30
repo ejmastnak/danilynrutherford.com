@@ -60,17 +60,17 @@ export default function EssaysPage(props: Props) {
   return (
     <PageWrapper headings={headings}>
 
-      <h1 data-tina-field={tinaField(essaysPage, "h1")} className="text-5xl">{essaysPage.h1}</h1>
+      <h1 className="text-4xl" data-tina-field={tinaField(essaysPage, "h1")} >{essaysPage.h1}</h1>
 
       <div data-tina-field={tinaField(essaysPage, "intro")} className="mt-5 prose">
         <TinaMarkdown content={essaysPage.intro} components={components} />
       </div>
 
-      <div className="mt-10 space-y-24">
+      <div className="mt-10 space-y-20 sm:space-y-24">
         {essayCategories
           .filter(category => essaysByCategory[category].length > 0)
           .map((category) => (
-            <section key={category} className="bg-theme-lightblue/10 px-6 py-12 rounded-lg">
+            <section key={category} className="bg-theme-lightblue/10 w-fit px-6 py-12 rounded-lg">
               <div className="max-w-2xl mx-auto">
                 <H2Anchorable id={slugify(category)} className="text-2xl">{category}</H2Anchorable>
                 <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">

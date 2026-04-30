@@ -25,7 +25,7 @@ export default function Book(props: Props) {
         <div className="w-full max-w-2xl">
 
           <div className="text-center md:text-left">
-            <h1 data-tina-field={tinaField(book, "title")} className="text-4xl sm:text-5xl md:text-4xl">{book.title}</h1>
+            <h1 data-tina-field={tinaField(book, "title")} className="text-4xl">{book.title}</h1>
             <p data-tina-field={tinaField(book, "subtitle")} className="mt-2 text-xl sm:text-2xl text-gray-800">{book.subtitle}</p>
             <p className="mt-2 text-gray-800"><span data-tina-field={tinaField(book, "publisher")}>{book.publisher}</span>, <span data-tina-field={tinaField(book, "year")}>{book.year}</span></p>
           </div>

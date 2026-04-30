@@ -22,7 +22,7 @@ export default function Intervention(props: Props) {
   return (
     <PageWrapper>
       <div className="text-center mx-auto">
-        <h1 data-tina-field={tinaField(intervention, "title")} className="text-4xl">{intervention.title}</h1>
+        <h1 className="text-4xl" data-tina-field={tinaField(intervention, "title")}>{intervention.title}</h1>
         <p className="mt-2" data-tina-field={tinaField(intervention, "date")}>{formatDateString(intervention.date)}</p>
         <p className="mt-1" data-tina-field={tinaField(intervention, "type")}>Intervention</p>
 

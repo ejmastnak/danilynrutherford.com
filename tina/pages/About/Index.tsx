@@ -20,7 +20,7 @@ export default function AboutPage(props: Props) {
   const aboutPage = data.aboutPage;
 
   return (
-    <PageWrapper>
+    <PageWrapper className="mx-auto w-fit">
       <img className="object-cover w-full max-w-sm md:max-w-md mx-auto rounded-md" data-tina-field={tinaField(aboutPage, "image")} src={aboutPage.image} alt={aboutPage.imageAlt}/>
 
       <h1 data-tina-field={tinaField(aboutPage, "h1")} className="mt-8 text-4xl text-center">{aboutPage.h1}</h1>

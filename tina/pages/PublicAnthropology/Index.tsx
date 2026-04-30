@@ -52,14 +52,14 @@ export default function PublicAnthropologyPage(props: Props) {
 
   return (
     <PageWrapper headings={headings}>
-      <h1 data-tina-field={tinaField(publicAnthropologyPage, "h1")} className="text-5xl">{publicAnthropologyPage.h1}</h1>
+      <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")} className="text-5xl">{publicAnthropologyPage.h1}</h1>
 
       <div data-tina-field={tinaField(publicAnthropologyPage, "intro")} className="mt-5 prose">
         <TinaMarkdown content={publicAnthropologyPage.intro} components={components} />
       </div>
 
       {/* Interventions */}
-      <section className="mt-20 bg-theme-lightblue/10 px-6 py-12 rounded-lg">
+      <section className="mt-20 w-fit bg-theme-lightblue/10 px-6 py-12 rounded-lg">
         <H2Anchorable id="interventions" data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="-mt-24 pt-24 text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</H2Anchorable>
 
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
@@ -85,7 +85,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Interviews */}
-      <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+      <section className="mt-24 sm:mt-32 w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
         <H2Anchorable id="interviews" data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</H2Anchorable>
 
@@ -118,7 +118,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Reflections */}
-      <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+      <section className="mt-24 sm:mt-32 w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
         <H2Anchorable id="reflections" data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</H2Anchorable>
         <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">

@@ -22,7 +22,7 @@ export default function Reflection(props: Props) {
   return (
     <PageWrapper>
       <div className="text-center mx-auto">
-        <h1 data-tina-field={tinaField(reflection, "title")} className="text-4xl">{reflection.title}</h1>
+        <h1 className="text-4xl" data-tina-field={tinaField(reflection, "title")}>{reflection.title}</h1>
         <p className="mt-2" data-tina-field={tinaField(reflection, "date")}>{formatDateString(reflection.date)}</p>
         <p className="mt-1">Reflection</p>
 
