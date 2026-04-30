@@ -34,8 +34,9 @@ export default function PublicAnthropologyPage(props: Props) {
   return (
     <PageWrapper>
       <h1 data-tina-field={tinaField(publicAnthropologyPage, "h1")} className="text-5xl">{publicAnthropologyPage.h1}</h1>
+
       <div data-tina-field={tinaField(publicAnthropologyPage, "intro")} className="mt-5 prose">
-        <TinaMarkdown content={publicAnthropologyPage.intro} />
+        <TinaMarkdown content={publicAnthropologyPage.intro} components={components} />
       </div>
 
       {/* Interventions */}
@@ -69,7 +70,15 @@ export default function PublicAnthropologyPage(props: Props) {
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
         <div className="mt-10 flex flex-col gap-y-12 max-w-3xl mx-auto">
           Interviews will appear here.
+
+          {/* title */}
+          {/* date */}
+          {/* link */}
+          {/* body */}
+          {/* event */}
+
         </div>
+
       </section>
 
       {/* Reflections */}

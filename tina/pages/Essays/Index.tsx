@@ -33,12 +33,19 @@ export default function EssaysPage(props: Props) {
     }
   }
 
+  const components = {
+    a: (props) => (
+      <a href={props.url} className="text-blue-600 font-medium hover:underline hover:text-blue-500 hover:cursor-pointer">{props.children}</a>
+    ),
+  };
+
   return (
     <PageWrapper>
 
       <h1 data-tina-field={tinaField(essaysPage, "h1")} className="text-5xl">{essaysPage.h1}</h1>
+
       <div data-tina-field={tinaField(essaysPage, "intro")} className="mt-5 prose">
-        <TinaMarkdown content={essaysPage.intro} />
+        <TinaMarkdown content={essaysPage.intro} components={components} />
       </div>
 
       <div className="mt-10 space-y-24">
