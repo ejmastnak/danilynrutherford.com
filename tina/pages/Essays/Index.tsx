@@ -41,26 +41,28 @@ export default function EssaysPage(props: Props) {
         <TinaMarkdown content={essaysPage.intro} />
       </div>
 
-      <div className="mt-10 flex flex-col gap-y-10">
+      <div className="mt-10 space-y-24">
         {essayCategories
           .filter(category => essaysByCategory[category].length > 0)
           .map((category) => (
-            <div key={category}>
-              <h2 className="text-2xl">{category}</h2>
-              <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit max-w-2xl">
-                {essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
-                  <li key={publication.id}>
-                    <div className="p-6 rounded-lg max-w-3xl">
-                      <div className="font-medium">{renderChicagoCitation(publication)}</div>
-                      <p className="mt-0.5">{publication.formatType}</p>
-                      {publication.href && 
-                        <a href={publication.href} target="_blank" rel="noopener noreferrer" className="mt-3 w-fit text-gray-700 font-medium inline-flex items-center gap-x-1 hover:text-gray-900 hover:underline">Link <ArrowTopRightOnSquareIcon className="size-5 shrink-0"/></a>
-                      }
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <section key={category} className="bg-theme-lightblue/10 px-6 py-12 rounded-lg">
+              <div className="max-w-2xl mx-auto">
+                <h2 className="text-2xl">{category}</h2>
+                <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
+                  {essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
+                    <li key={publication.id}>
+                      <div className="p-6 rounded-lg max-w-3xl">
+                        <div className="font-medium">{renderChicagoCitation(publication)}</div>
+                        <p className="mt-0.5">{publication.formatType}</p>
+                        {publication.href && 
+                          <a href={publication.href} target="_blank" rel="noopener noreferrer" className="mt-3 w-fit text-gray-700 font-medium inline-flex items-center gap-x-1 hover:text-gray-900 hover:underline">Link <ArrowTopRightOnSquareIcon className="size-5 shrink-0"/></a>
+                        }
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
           ))}
       </div>
 

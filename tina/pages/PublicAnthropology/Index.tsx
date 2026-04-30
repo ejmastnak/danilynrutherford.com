@@ -39,7 +39,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </div>
 
       {/* Interventions */}
-      <section className="mt-20 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+      <section className="mt-20 bg-theme-lightblue/10 px-6 py-12 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
         
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
