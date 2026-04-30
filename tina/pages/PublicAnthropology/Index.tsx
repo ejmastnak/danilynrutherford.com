@@ -38,34 +38,15 @@ export default function PublicAnthropologyPage(props: Props) {
         <TinaMarkdown content={publicAnthropologyPage.intro} />
       </div>
 
-      {/* Reflections */}
-      <section className="mt-16">
-        <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
-        <div data-tina-field={tinaField(publicAnthropologyPage, "reflectionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
-          <TinaMarkdown content={publicAnthropologyPage.reflectionsDescription} />
-        </div>
-        <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
-          {props.reflections.sort((a, b) => new Date(b.date) - new Date(a.date)).map((reflection) => (
-            <li key={reflection.id}>
-              <a href={`/reflections/${reflection._sys.filename}`} className="text-center">
-                <img src={reflection.featuredImage} alt={reflection.featuredImageAlt} className="object-cover w-full max-w-sm sm:w-56 h-56 rounded-md mx-auto hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"/>
-                <p className="mt-1 text-sm text-gray-600">{formatDateString(reflection.date)}</p>
-                <p className="mt-px font-medium hover:underline">{reflection.title}</p>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </section>
-
       {/* Interventions */}
-      <section className="mt-20">
+      <section className="mt-20 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
         <div data-tina-field={tinaField(publicAnthropologyPage, "interventionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interventionsDescription} />
         </div>
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
-          {props.interventions.sort((a, b) => new Date(b.date) - new Date(a.date)).map((intervention) => (
-            <li key={intervention.id} className="border-b border-gray-300 pb-12">
+          {props.interventions.sort((a, b) => new Date(b.date) - new Date(a.date)).map((intervention, idx) => (
+            <li key={intervention.id} className={`border-gray-300 pb-12 ${idx < props.interventions.length - 1 ? 'border-b' : ''}`}>
               <a href={intervention.link} className="block">
                 <p className="mt-px font-medium hover:underline text-lg">{intervention.title}</p>
               </a>
@@ -86,7 +67,7 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Interviews */}
-      <section className="mt-20">
+      <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
         <div data-tina-field={tinaField(publicAnthropologyPage, "interviewsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
           <TinaMarkdown content={publicAnthropologyPage.interviewsDescription} />
@@ -95,6 +76,26 @@ export default function PublicAnthropologyPage(props: Props) {
           Interviews will appear here.
         </div>
       </section>
+
+      {/* Reflections */}
+      <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+        <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
+        <div data-tina-field={tinaField(publicAnthropologyPage, "reflectionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
+          <TinaMarkdown content={publicAnthropologyPage.reflectionsDescription} />
+        </div>
+        <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
+          {props.reflections.sort((a, b) => new Date(b.date) - new Date(a.date)).map((reflection) => (
+            <li key={reflection.id}>
+              <a href={`/reflections/${reflection._sys.filename}`} className="text-center">
+                <img src={reflection.featuredImage} alt={reflection.featuredImageAlt} className="object-cover w-full max-w-sm sm:w-56 h-56 rounded-md mx-auto hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"/>
+                <p className="mt-1 text-sm text-gray-600">{formatDateString(reflection.date)}</p>
+                <p className="mt-px font-medium hover:underline">{reflection.title}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
 
     </PageWrapper>
   );
