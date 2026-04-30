@@ -41,9 +41,7 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Interventions */}
       <section className="mt-20 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
-        <div data-tina-field={tinaField(publicAnthropologyPage, "interventionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
-          <TinaMarkdown content={publicAnthropologyPage.interventionsDescription} />
-        </div>
+        
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
           {props.interventions.sort((a, b) => new Date(b.date) - new Date(a.date)).map((intervention, idx) => (
             <li key={intervention.id} className={`border-gray-300 pb-12 ${idx < props.interventions.length - 1 ? 'border-b' : ''}`}>
@@ -69,9 +67,6 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Interviews */}
       <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
-        <div data-tina-field={tinaField(publicAnthropologyPage, "interviewsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
-          <TinaMarkdown content={publicAnthropologyPage.interviewsDescription} />
-        </div>
         <div className="mt-10 flex flex-col gap-y-12 max-w-3xl mx-auto">
           Interviews will appear here.
         </div>
@@ -80,9 +75,6 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Reflections */}
       <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
-        <div data-tina-field={tinaField(publicAnthropologyPage, "reflectionsDescription")} className="mt-5 prose max-w-2xl w-fit mx-auto italic">
-          <TinaMarkdown content={publicAnthropologyPage.reflectionsDescription} />
-        </div>
         <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
           {props.reflections.sort((a, b) => new Date(b.date) - new Date(a.date)).map((reflection) => (
             <li key={reflection.id}>

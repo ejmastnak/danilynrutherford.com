@@ -52,29 +52,14 @@ export const PublicAnthropologyPageCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'reflectionsDescription',
-      label: 'Reflections description',
-      type: 'rich-text',
-    },
-    {
       name: 'interventionsHeading',
       label: 'Interventions heading',
       type: 'string',
     },
     {
-      name: 'interventionsDescription',
-      label: 'Interventions description',
-      type: 'rich-text',
-    },
-    {
       name: 'interviewsHeading',
       label: 'Interviews heading',
       type: 'string',
-    },
-    {
-      name: 'interviewsDescription',
-      label: 'Interviews description',
-      type: 'rich-text',
     },
   ]
 };
