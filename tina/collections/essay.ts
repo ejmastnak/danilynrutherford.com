@@ -4,7 +4,7 @@ import essayCategories from "@src/assets/data/essayCategories.json";
 
 export const EssayCollection: Collection = {
   name: "essay",
-  label: "Essays Collection",
+  label: "Academic Essays Collection",
   path: "tina/content/essays",
   format: "json",
   ui: {

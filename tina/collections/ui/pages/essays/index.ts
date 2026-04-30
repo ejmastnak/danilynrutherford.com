@@ -4,12 +4,12 @@ import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION,
 export const EssaysPageCollection: Collection = {
 
   name: "essaysPage",
-  label: "Essays Page",
+  label: "Academic Essays Page",
   path: "tina/content/ui/pages/essays",
   format: "json",
 
   ui: {
-    router: () => "/essays",
+    router: () => "/academic-essays",
     allowedActions: {
       create: false,
       delete: false,
