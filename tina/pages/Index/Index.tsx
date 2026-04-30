@@ -118,6 +118,7 @@ export default function HomePage(props: Props) {
           </div>
         </div>
 
+
         {/* Academic books */}
         <section className="mt-16 md:mt-20">
           <h2 data-tina-field={tinaField(homePage, "academicBooksHeading")} className="text-5xl font-medium text-center sm:text-left">{homePage.academicBooksHeading}</h2>
@@ -128,7 +129,7 @@ export default function HomePage(props: Props) {
                   <img
                     src={item.book.image}
                     alt={item.book.imageAlt}
-                    className="w-64 sm:max-w-md object-cover w-full aspect-[2/3] mx-auto rounded-md hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"
+                    className="w-64 max-w-sm sm:max-w-md object-cover w-full aspect-[2/3] mx-auto rounded-md hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md"
                   />
                 </a>
                 <div className="mt-3 sm:mt-1.5 text-center">

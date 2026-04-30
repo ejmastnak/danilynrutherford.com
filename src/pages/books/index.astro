@@ -8,7 +8,7 @@ const content = await client.queries.myBooksPage({ relativePath: "index.json" })
 const head = content.data.booksPage.head;
 
 const booksResponse = await client.queries.bookConnection();
-const books = booksResponse.data.bookConnection.edges?.map((edge) => edge.node);
+const books = (booksResponse.data.bookConnection.edges?.map((edge) => edge.node)).sort((a, b) => b.year - a.year);
 
 const imagesToOptimize = books.map((book, idx) => {
   return {
