@@ -1,6 +1,8 @@
 import type { Collection } from "tinacms";
 import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION, CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION, } from "@src/assets/config.ts";
 
+import { condenseAst } from '@src/lib/ast.js'
+
 export const InterviewCollection: Collection = {
   name: "interview",
   label: "Interviews Collection",
@@ -24,6 +26,12 @@ export const InterviewCollection: Collection = {
       type: 'datetime',
     },
     {
+      name: 'publisher',
+      label: 'Publisher',
+      description: 'Name of podcast, radio show, etc.',
+      type: 'string',
+    },
+    {
       name: 'link',
       label: 'External link',
       type: 'string',
@@ -43,11 +51,11 @@ export const InterviewCollection: Collection = {
       ui: {
         optionComponent: (
           props: {
-            title: string,
+            title: any,
           },
           _internalSys: { path: string }
         ) => {
-          return props.title;
+          return condenseAst(props.title) ?? "Linked event";
         }
       }
     }

@@ -68,16 +68,32 @@ export default function PublicAnthropologyPage(props: Props) {
       {/* Interviews */}
       <section className="mt-32 bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         <h2 data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
-        <div className="mt-10 flex flex-col gap-y-12 max-w-3xl mx-auto">
-          Interviews will appear here.
 
-          {/* title */}
-          {/* date */}
-          {/* link */}
-          {/* body */}
-          {/* event */}
-
-        </div>
+        {props.interviews.length
+          ? 
+          <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
+            {props.interviews.sort((a, b) => new Date(b.date) - new Date(a.date)).map((interview, idx) => (
+              <li key={interview.id} className={`border-gray-300 pb-12 ${idx < props.interviews.length - 1 ? 'border-b' : ''}`}>
+                <a href={interview.link} className="block">
+                  <p className="mt-px font-medium hover:underline text-lg">{interview.title}</p>
+                </a>
+                <p className="mt-px text-gray-600">{formatDateString(interview.date)}</p>
+                <Pillbox className="mt-2">{interview.publisher}</Pillbox>
+                <div className="my-4 prose text-gray-800">
+                  <TinaMarkdown content={interview.body} components={components} />
+                </div>
+                <div>
+                  {/* Custom LinkButton */}
+                  <ExternalLinkButton href={interview.link} >
+                    Link ({interview.publisher})
+                  </ExternalLinkButton>
+                </div>
+              </li>
+            ))}
+          </ul>
+          :
+          <p className="mt-5 text-gray-600 max-w-3xl mx-auto">No interviews published yet—check back soon!</p>
+        }
 
       </section>
 

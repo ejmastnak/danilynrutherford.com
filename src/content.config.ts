@@ -122,4 +122,37 @@ const interventions = defineCollection({
   }),
 });
 
-export const collections = { books, reflections, interventions };
+const interviews = defineCollection({
+  loader: async () => {
+    const response = await client.queries.interviewConnection();
+
+    return response.data.interviewConnection.edges
+      ?.filter((edge) => !!edge?.node)
+      .map((edge) => {
+        const node = edge!.node!;
+
+        return {
+          ...node,
+          id: node._sys.relativePath.replace(/\.json$/, ""),
+          tinaInfo: node._sys,
+        };
+      });
+  },
+
+  schema: z.object({
+    tinaInfo: z.object({
+      filename: z.string(),
+      basename: z.string(),
+      path: z.string(),
+      relativePath: z.string(),
+    }),
+    title: z.string().nullish(),
+    date: z.coerce.date().nullish(),
+    publisher: z.string().nullish(),
+    link: z.string().nullish(),
+    body: z.any().nullish(),
+    event: z.any().nullish(),
+  }),
+});
+
+export const collections = { books, reflections, interventions, interviews };
