@@ -13,7 +13,7 @@ type Props = {
   variables: MyEssaysPageQueryVariables;
   data: MyEssaysPageQuery;
   query: string;
-  essays: Array<Essay>;
+  essaysByCategory: Record<string, Essay[]>;
 };
 
 export default function EssaysPage(props: Props) {
@@ -23,17 +23,6 @@ export default function EssaysPage(props: Props) {
     data: props.data,
   });
   const essaysPage = data.essaysPage;
-
-  const essaysByCategory = essayCategories.reduce((acc, category) => {
-    acc[category] = [];
-    return acc;
-  }, {});
-
-  for (const essay of props.essays) {
-    if (essaysByCategory[essay.category]) {
-      essaysByCategory[essay.category].push(essay);
-    }
-  }
 
   const components = {
     a: (props) => (
@@ -52,13 +41,13 @@ export default function EssaysPage(props: Props) {
 
       <div className="mt-10 space-y-20 sm:space-y-24">
         {essayCategories
-          .filter(category => essaysByCategory[category].length > 0)
+          .filter(category => props.essaysByCategory[category].length > 0)
           .map((category) => (
             <section key={category} className="bg-theme-lightblue/10 w-full min-w-fit px-6 py-12 rounded-lg">
               <div className="max-w-2xl mx-auto">
                 <H2Anchorable id={slugify(category)} className="text-2xl">{category}</H2Anchorable>
                 <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
-                  {essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
+                  {props.essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
                     <li key={publication.id}>
                       <div className="p-6 rounded-lg max-w-3xl">
                         <div className="font-medium">{renderChicagoCitation(publication)}</div>
