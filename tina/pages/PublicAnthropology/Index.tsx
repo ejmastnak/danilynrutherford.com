@@ -68,9 +68,9 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Interviews */}
-      <section className="mt-24 sm:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+      <section className="mt-24 md:mt-28 lg:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
-        <H2Anchorable id={publicAnthropologyPage.interviewsHeading} data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</H2Anchorable>
+        <H2Anchorable id={slugify(publicAnthropologyPage.interviewsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</H2Anchorable>
 
         {props.interviews.length
           ? 
@@ -101,9 +101,9 @@ export default function PublicAnthropologyPage(props: Props) {
       </section>
 
       {/* Reflections */}
-      <section className="mt-24 sm:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
+      <section className="mt-24 md:mt-28 lg:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
         {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
-        <H2Anchorable id={publicAnthropologyPage.reflectionsHeading} data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</H2Anchorable>
+        <H2Anchorable id={slugify(publicAnthropologyPage.reflectionsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="text-4xl -mt-24 pt-24 text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</H2Anchorable>
         <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
           {props.reflections.sort((a, b) => new Date(b.date) - new Date(a.date)).map((reflection) => (
             <li key={reflection.id}>

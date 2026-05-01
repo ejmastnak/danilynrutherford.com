@@ -1,0 +1,113 @@
+---
+import ChevronRightIcon from 'astro-heroicons/outline/ChevronRight.astro';
+import ChevronDownIcon from 'astro-heroicons/outline/ChevronDown.astro';
+
+interface Heading {
+  depth: number;
+  slug: string;
+  text: string;
+}
+
+interface Props {
+  headings: Heading[];
+  className?: string;
+}
+
+const { headings, className } = Astro.props;
+
+// Normalize depth so the smallest depth starts at 0
+const minDepth = Math.min(...headings.map((h) => h.depth));
+const normalized = headings.map((h) => ({
+  ...h,
+  depth: h.depth - minDepth,
+}));
+---
+
+<script>
+// ------------------------------------------------- //
+// Popover icon transition
+// ------------------------------------------------- //
+const popover = document.getElementById("mobile-toc");
+const closedIcon = document.getElementById("toc-icon-closed");
+const openIcon = document.getElementById("toc-icon-open");
+const toggleBtn = document.getElementById("mobile-toc-toggle");
+
+function syncIconState() {
+  const isOpen = popover.hasAttribute("open");
+  closedIcon.classList.toggle("hidden", isOpen);
+  openIcon.classList.toggle("hidden", !isOpen);
+  toggleBtn.setAttribute("aria-expanded", String(isOpen));
+}
+
+syncIconState();  // initial sync
+
+popover.addEventListener("toggle", syncIconState);
+// ------------------------------------------------- //
+
+
+const links = Array.from(
+  document.querySelectorAll(".mobile-toc-link")
+);
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
+      const link = links.find((l) => l.dataset.slug === id);
+
+      if (entry.isIntersecting) {
+        links.forEach((l) =>
+          l.classList.remove("!text-theme-darkgreen", "font-semibold")
+        );
+        link?.classList.add("!text-theme-darkgreen", "font-semibold");
+      }
+    });
+  },
+  {
+    rootMargin: "0px 0px -70% 0px",
+    threshold: 0.1,
+  }
+);
+
+links.forEach((link) => {
+  const el = document.getElementById(link.dataset.slug || "");
+  if (el) observer.observe(el);
+  link.addEventListener("click", () => {
+    popover?.hidePopover();
+  });
+});
+
+window.addEventListener("beforeunload", () => observer.disconnect());
+</script>
+
+
+<nav class={`overflow-y-auto px-4 py-2 bg-theme-darkgreen border-b border-theme-offwhite/30 ${className ?? ''}`}>
+
+  <button
+    popovertarget="mobile-toc"
+    class="mt-1 inline-flex items-center gap-x-1.5 rounded-md bg-theme-offwhite px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50"
+    id="mobile-toc-toggle"
+    type="button"
+  >
+    On this page
+    <ChevronRightIcon id="toc-icon-closed" class="size-5 text-gray-700 shrink-0 transition-transform duration-150" />
+    <ChevronDownIcon id="toc-icon-open" class="size-5 text-gray-700 shrink-0 hidden transition-transform duration-150" />
+  </button>
+
+  <el-popover id="mobile-toc" anchor="bottom-start" anchor-strategy="fixed" popover="" class="mt-2 m-0 w-full bg-theme-offwhite p-0 shadow-lg transition [transition-behavior:allow-discrete] data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in" tabindex="-1" aria-labelledby="mobile-toc-toggle">
+    <ul class="text-sm">
+      {normalized.map((h, idx) => (
+      <li class={`px-4 py-1.5 transition-colors border-b border-gray-300 ${idx === 0 ? 'border-t' : ''}`} style={`margin-left: ${h.depth * 0.75}rem`} >
+        <a
+          href={`#${h.slug}`}
+          class="block text-gray-700 hover:text-gray-900 mobile-toc-link"
+          data-slug={h.slug}
+        >
+          {h.text}
+        </a>
+      </li>
+      ))}
+    </ul>
+  </el-popover>
+
+</nav>

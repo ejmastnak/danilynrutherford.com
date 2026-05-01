@@ -16,7 +16,6 @@ type Props = {
   essays: Array<Essay>;
 };
 
-
 export default function EssaysPage(props: Props) {
   const { data } = useTina({
     query: props.query,

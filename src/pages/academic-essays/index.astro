@@ -34,5 +34,5 @@ const headings = essayCategories.filter(category => essaysByCategory[category].l
 ---
 
 <BaseLayout head={head} headings={headings}>
-  <Essays essays={essays} {...content} client:load />
+  <Essays essays={essays} {...content} client:tina />
 </BaseLayout>
