@@ -66,8 +66,8 @@ export default function EventsPage(props: Props) {
       <div className="mt-10">
         <h2 data-tina-field={tinaField(eventsPage, "upcomingEventsHeading")} className="text-2xl font-semibold">{eventsPage.upcomingEventsHeading}</h2>
         <ul role="list" className="max-w-3xl">
-          {upcomingEvents.map((event) => (
-            <li key={event.id} className="py-8 border-b border-gray-300"><Event event={event} /></li>
+          {upcomingEvents.map((event, idx) => (
+            <li key={event.id} className={`py-8 border-gray-300 ${idx === 0 ? '' : 'border-t'}`}><Event event={event} /></li>
           ))}
         </ul>
         {upcomingEvents.length == 0 && 
@@ -81,8 +81,8 @@ export default function EventsPage(props: Props) {
       <div className="mt-10 md:mt-16">
         <h2 data-tina-field={tinaField(eventsPage, "pastEventsHeading")} className="text-2xl font-semibold">{eventsPage.pastEventsHeading}</h2>
         <ul role="list" className="max-w-3xl">
-          {pastEvents.map((event) => (
-            <li key={event.id} className="py-8 border-b border-gray-300"><Event event={event} /></li>
+          {pastEvents.map((event, idx) => (
+            <li key={event.id} className={`py-8 border-gray-300 ${idx === 0 ? '' : 'border-t'}`}><Event event={event} /></li>
           ))}
         </ul>
         {pastEvents.length == 0 && 

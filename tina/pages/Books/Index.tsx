@@ -23,9 +23,9 @@ export default function BooksPage(props: Props) {
     <PageWrapper>
       <h1 data-tina-field={tinaField(booksPage, "h1")} className="text-4xl text-center md:text-left mx-auto md:mx-0 w-fit border-b border-gray-300 pb-1 md:border-none">{booksPage.h1}</h1>
 
-      <ul className="mt-12 flex flex-col gap-y-20">
-        {props.books.map((book) => (
-          <li key={book.id} className="border-b border-gray-300 pb-20">
+      <ul className="mt-16 space-y-20">
+        {props.books.map((book, idx) => (
+          <li key={book.id} className={`border-gray-300 ${idx === 0 ? '' : 'border-t pt-20'}`}>
             <div className="md:flex gap-x-16">
 
               {/* Mobile title/subtitle */}
