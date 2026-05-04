@@ -47,16 +47,16 @@ const currentPathname = Astro.url.pathname;
       {/* Mobile TOC  */}
       {
       headings &&
-      <div class="md:hidden top-24 sticky -translate-y-4">
-        <MobileTableOfContents headings={headings} class="inset-x-0" />
+      <div class="md:hidden sticky top-[var(--header-height)]">
+        <MobileTableOfContents headings={headings} />
       </div>
       }
 
       {/* Desktop TOC  */}
       { 
       headings &&
-      <div class="hidden md:block pt-20 pl-8">
-        <TableOfContents className="fixed top-28" headings={headings} />
+      <div class="hidden md:block shrink-0">
+        <TableOfContents className="sticky top-[var(--toc-height)] max-h-[var(--toc-max-height)]" headings={headings} />
       </div>
       }
 

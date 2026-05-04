@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --header-height: 4.0rem;
+  --toc-height: calc(var(--header-height) + 2.0rem);
+  --toc-max-height: calc(100vh - var(--toc-height));
+  --mobile-toc-height: 3.5rem;
+}
+
+/* Apply to anchor link targets */
+@layer components {
+  .anchor {
+    @apply scroll-mt-[calc(var(--header-height)_+_var(--mobile-toc-height)_+_0.5rem)] md:scroll-mt-[calc(var(--header-height)_+_0.5rem)];
+  }
+}
+
 @layer utilities {
   .clip-wave-bottom {
     clip-path: url(#clipWaveBottom);

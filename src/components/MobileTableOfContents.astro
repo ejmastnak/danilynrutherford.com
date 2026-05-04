@@ -80,12 +80,11 @@ links.forEach((link) => {
 window.addEventListener("beforeunload", () => observer.disconnect());
 </script>
 
-
-<nav class={`overflow-y-auto px-4 py-2 bg-theme-darkgreen border-b border-theme-offwhite/30 ${className ?? ''}`}>
+<nav class={`overflow-y-auto px-4 py-2 bg-theme-darkgreen border-b border-theme-offwhite/30 h-[var(--mobile-toc-height)] flex items-center ${className ?? ''}`}>
 
   <button
     popovertarget="mobile-toc"
-    class="mt-1 inline-flex items-center gap-x-1.5 rounded-md bg-theme-offwhite px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50"
+    class="inline-flex items-center gap-x-1.5 rounded-md bg-theme-offwhite px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50"
     id="mobile-toc-toggle"
     type="button"
   >

@@ -2,7 +2,6 @@ import { useTina, tinaField } from "tinacms/dist/react";
 import { slugify } from '@src/lib/slugify.js'
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import LinkButton from '@tina/components/LinkButton.tsx'
-import H2Anchorable from '@tina/components/H2Anchorable.tsx'
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import PageWrapper from '@tina/shared/PageWrapper.tsx'
 import { renderChicagoCitation } from '@src/lib/renderChicagoCitation.jsx'
@@ -45,7 +44,7 @@ export default function EssaysPage(props: Props) {
           .map((category) => (
             <section key={category} className="bg-theme-lightblue/10 w-full min-w-fit px-6 py-12 rounded-lg">
               <div className="max-w-2xl mx-auto">
-                <H2Anchorable id={slugify(category)} className="text-2xl">{category}</H2Anchorable>
+                <h2 id={slugify(category)} className="anchor text-2xl">{category}</h2>
                 <ul className="flex flex-col -mx-6 sm:mx-0 divide-y w-fit">
                   {props.essaysByCategory[category].sort((a, b) => b.year - a.year).map((publication) => (
                     <li key={publication.id}>

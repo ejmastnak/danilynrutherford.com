@@ -13,13 +13,13 @@ const content = await client.queries.myNav({ relativePath: "index.json" });
 const nav = content.data.nav;
 ---
 
-<nav class={`sticky relative top-0 bg-theme-darkgreen border-b border-theme-offwhite/30 z-20 py-5 px-6 ${className ?? ""}`} >
+<nav class={`sticky relative top-0 bg-theme-darkgreen border-b border-theme-offwhite/30 z-20 py-0 px-5 h-[var(--header-height)] ${className ?? ""}`} >
 
-  <div class="max-w-5xl mx-auto">
+  <div class="max-w-5xl mx-auto flex items-center h-full">
 
-    <div class="flex items-center text-white">
+    <div class="flex items-center w-full justify-content:space-between text-white">
 
-      <a class="hidden xxxxs:inline-block text-lg xxxxs:text-xl xxxs:text-2xl xxs:text-3xl text-nowrap hover:underline hover:text-theme-offwhite" href="/">Danilyn Rutherford</a>
+      <a class="hidden flex-grow xxxxs:inline-block text-lg xxxxs:text-xl xxxs:text-2xl xxs:text-3xl text-nowrap hover:underline hover:text-theme-offwhite" href="/">Danilyn Rutherford</a>
 
       <!-- Desktop -->
       <ul class="hidden lg:flex ml-auto flex gap-x-8 translate-y-px">
@@ -31,8 +31,8 @@ const nav = content.data.nav;
       <!-- Mobile menu -->
       <el-dropdown class="inline-block lg:hidden ml-auto">
         <button class="inline-flex items-center justify-center gap-x-1.5 rounded-md text-theme-offwhite outline outline-2 outline-theme-offwhite/65 px-2 py-1 text-sm font-semibold shadow-sm hover:outline-theme-offwhite/90">
-          <Bars3Icon id="mobile-menu-bars-icon" class="h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
-          <XMarkIcon id="mobile-menu-x-icon" class="hidden h-[1.75rem] w-[1.75rem] xs:h-[2rem] xs:w-[2rem]" />
+          <Bars3Icon id="mobile-menu-bars-icon" class="h-[1.75rem] w-[1.75rem]" />
+          <XMarkIcon id="mobile-menu-x-icon" class="hidden h-[1.75rem] w-[1.75rem]" />
         </button>
 
         <el-menu id="mobile-menu-el-menu" anchor="bottom end" popover class="m-0 origin-top-right rounded-md bg-theme-offwhite p-0 shadow-lg outline outline-1 outline-theme-darkgreen/30 transition [--anchor-gap:theme(spacing.2)] [transition-behavior:allow-discrete] data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in">
