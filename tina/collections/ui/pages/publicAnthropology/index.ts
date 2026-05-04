@@ -42,11 +42,6 @@ export const PublicAnthropologyPageCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'intro',
-      label: 'Introductory text',
-      type: 'rich-text',
-    },
-    {
       name: 'reflectionsHeading',
       label: 'Reflections heading',
       type: 'string',
