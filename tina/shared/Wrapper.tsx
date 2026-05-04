@@ -8,11 +8,7 @@ interface Props {
 export default function Wrapper({ className, children }: Props) {
   return (
     <div className={`max-w-6xl mx-auto px-6 md:px-10 w-full ${className ?? ""}`} >
-      <div className="flex gap-x-24">
-        <div className="overflow-x-auto">
-          {children}
-        </div>
-      </div>
+      {children}
     </div>
   );
 }
