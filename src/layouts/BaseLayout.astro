@@ -39,10 +39,8 @@ const currentPathname = Astro.url.pathname;
 
   <body class="min-h-screen flex flex-col bg-theme-offwhite">
     <Nav className="shrink-0" />
-    <main class={`mx-auto max-w-7xl flex-grow w-full ${headings ? 'md:flex md:flex-row-reverse lg:gap-x-12 xl:gap-x-28' : ''}`}>
-
-      {/* Magic value: top-24 to push TOC under nav */}
-      {/* Magic value: 100vh-20rem keeps nav from colliding into footer at bottom of page and scrolling off screen at top */}
+    <!-- Magic value: pl-16 accomodates for TableOfContents pushing main content left -->
+    <main class={`mx-auto max-w-7xl flex-grow w-full ${headings ? 'md:flex md:flex-row-reverse lg:gap-x-12 xl:gap-x-28 xl:pl-16' : ''}`}>
 
       {/* Mobile TOC  */}
       {
@@ -60,9 +58,10 @@ const currentPathname = Astro.url.pathname;
       </div>
       }
 
-      <div>
+      <div class="w-full">
         <slot />
       </div>
+
     </main>
     <Footer className="shrink-0" />
     <ClipPaths/>

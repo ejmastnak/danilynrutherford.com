@@ -34,7 +34,7 @@ export default function PublicAnthropologyPage(props: Props) {
 
   return (
     <PageWrapper>
-      <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")} className="text-5xl">{publicAnthropologyPage.h1}</h1>
+      <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")}>{publicAnthropologyPage.h1}</h1>
 
       <div data-tina-field={tinaField(publicAnthropologyPage, "intro")} className="mt-5 prose">
         <TinaMarkdown content={publicAnthropologyPage.intro} components={components} />

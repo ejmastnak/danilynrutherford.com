@@ -8,7 +8,7 @@ interface Props {
 
 export default function PageWrapper({ children, className }: Props) {
   return (
-    <Wrapper className={`py-10 md:py-16 ${className ?? ''}`}>
+    <Wrapper className={`w-full py-10 md:py-16 ${className ?? ''}`}>
       {children}
     </Wrapper>
   );
