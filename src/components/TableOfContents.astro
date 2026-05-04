@@ -20,13 +20,14 @@ const normalized = headings.map((h) => ({
 }));
 ---
 
-<nav class={`shrink-0 overflow-y-auto max-h-[calc(100vh-20rem)] py-2 px-4 border border-gray-100 rounded shadow-sm ${className ?? ""}`}>
-  <p class="text-sm font-semibold mb-3 text-gray-900">
-    On this page
-  </p>
+<nav class={`w-40 overflow-y-auto max-h-[calc(100vh-20rem)] py-2 px-4 border border-gray-100 rounded shadow-sm ${className ?? ""}`}>
+  <div class="mx-auto">
+    <p class="text-sm font-semibold mb-3 text-gray-900">
+      On this page
+    </p>
 
-  <ul class="space-y-1 text-sm">
-    {normalized.map((h) => (
+    <ul class="space-y-1 text-sm">
+      {normalized.map((h) => (
       <li
         class="transition-colors"
         style={`margin-left: ${h.depth * 0.75}rem`}
@@ -39,39 +40,40 @@ const normalized = headings.map((h) => ({
           {h.text}
         </a>
       </li>
-    ))}
-  </ul>
+      ))}
+    </ul>
+  </div>
 </nav>
 
 <script>
-  const links = Array.from(
-    document.querySelectorAll(".toc-link")
-  );
+const links = Array.from(
+  document.querySelectorAll(".toc-link")
+);
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const id = entry.target.id;
-        const link = links.find((l) => l.dataset.slug === id);
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.id;
+      const link = links.find((l) => l.dataset.slug === id);
 
-        if (entry.isIntersecting) {
-          links.forEach((l) =>
-            l.classList.remove("!text-blue-700", "font-semibold")
-          );
-          link?.classList.add("!text-blue-700", "font-semibold");
-        }
-      });
-    },
-    {
-      rootMargin: "0px 0px -70% 0px",
-      threshold: 0.1,
-    }
-  );
+      if (entry.isIntersecting) {
+        links.forEach((l) =>
+          l.classList.remove("!text-blue-700", "font-semibold")
+        );
+        link?.classList.add("!text-blue-700", "font-semibold");
+      }
+    });
+  },
+  {
+    rootMargin: "0px 0px -70% 0px",
+    threshold: 0.1,
+  }
+);
 
-  links.forEach((link) => {
-    const el = document.getElementById(link.dataset.slug || "");
-    if (el) observer.observe(el);
-  });
+links.forEach((link) => {
+  const el = document.getElementById(link.dataset.slug || "");
+  if (el) observer.observe(el);
+});
 
-  window.addEventListener("beforeunload", () => observer.disconnect());
+window.addEventListener("beforeunload", () => observer.disconnect());
 </script>

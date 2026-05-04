@@ -4,7 +4,8 @@
 
 :root {
   --header-height: 4.0rem;
-  --toc-height: calc(var(--header-height) + 2.0rem);
+  --toc-margin: theme(spacing.4);
+  --toc-height: calc(var(--header-height) + var(--toc-margin));
   --toc-max-height: calc(100vh - var(--toc-height));
   --mobile-toc-height: 3.5rem;
 }
