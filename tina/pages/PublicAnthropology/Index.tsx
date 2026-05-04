@@ -43,17 +43,15 @@ export default function PublicAnthropologyPage(props: Props) {
         <ul className="mt-12 flex flex-col gap-y-12 max-w-3xl mx-auto border-t pt-12 border-gray-300">
           {props.interventions.sort((a, b) => new Date(b.date) - new Date(a.date)).map((intervention, idx) => (
             <li key={intervention.id} className={`border-gray-300 pb-12 ${idx < props.interventions.length - 1 ? 'border-b' : ''}`}>
-              <a href={intervention.link} className="block">
-                <p className="mt-px font-medium hover:underline text-lg">{intervention.title}</p>
-              </a>
+              <p className="mt-px font-medium text-lg">{intervention.title}</p>
               <p className="mt-px text-gray-600">{formatDateString(intervention.date)}</p>
-              <Pillbox className="mt-2">Published in {intervention.publisher}</Pillbox>
-              <div className="my-4 prose text-gray-800">
+              {/* <Pillbox className="mt-2">Published in {intervention.publisher}</Pillbox> */}
+              <div className="mt-4 prose text-gray-800">
                 <TinaMarkdown content={intervention.body} components={components} />
               </div>
               <div>
                 {/* Custom LinkButton */}
-                <ExternalLinkButton href={intervention.link} >
+                <ExternalLinkButton className="mt-5" href={intervention.link} >
                   Read (in {intervention.publisher})
                 </ExternalLinkButton>
               </div>
