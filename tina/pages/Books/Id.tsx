@@ -40,7 +40,7 @@ export default function Book(props: Props) {
             </div>
           </div>
         </div>
-        <img data-tina-field={tinaField(book, "image")} className="shrink-0 h-full mx-auto w-56 md:w-80 lg:w-96 object-cover rounded-md" src={book.image} alt={book.imageAlt}/>
+        <img data-tina-field={tinaField(book, "image")} className="shrink-0 h-full mx-auto w-72 md:w-80 lg:w-96 object-cover rounded-md" src={book.image} alt={book.imageAlt}/>
       </div>
 
       {/* Mobile body and link button */}
@@ -50,7 +50,7 @@ export default function Book(props: Props) {
             {book.publisherLinkButtonText}
           </LinkButton>
         </div>
-        <div data-tina-field={tinaField(book, "description")} className="mt-5 prose">
+        <div data-tina-field={tinaField(book, "description")} className="mt-5 prose max-w-xl mx-auto">
           <TinaMarkdown content={book.description} />
         </div>
       </div>
@@ -61,7 +61,7 @@ export default function Book(props: Props) {
         <div className="mt-8 flex flex-col gap-y-10">
           {book.reviews.map((review, idx) => (
             <div key={condenseAst(review.reviewer)} className={(idx % 2 == 1) ? 'ml-auto' : ''}>
-              <div data-tina-field={tinaField(review, "review")} className="max-w-3xl font-medium text-gray-800 leading-relaxed"><TinaMarkdown content={review.review} /></div>
+              <div data-tina-field={tinaField(review, "review")} className="max-w-xl md:max-w-2xl font-medium text-gray-800 leading-relaxed"><TinaMarkdown content={review.review} /></div>
               <div data-tina-field={tinaField(review, "reviewer")} className="mt-2"><TinaMarkdown content={review.reviewer} /></div>
             </div>
           ))}
