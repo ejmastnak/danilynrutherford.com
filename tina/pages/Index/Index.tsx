@@ -80,10 +80,10 @@ export default function HomePage(props: Props) {
         </div>
 
         {/* Featured book */}
-        <div className="mt-24 flex flex-col md:flex-row gap-x-10 lg:gap-x-12">
+        <div className="mt-16 md:mt-24 flex flex-col md:flex-row gap-x-10 lg:gap-x-12">
           <div>
-            <h2 className="text-5xl font-medium text-center md:text-left">{homePage.featuredBook.title}</h2>
-            <p className="mt-0.5 md:text-lg text-gray-700 text-center md:text-left">{homePage.featuredBook.subtitle}</p>
+            <h2 className="text-4xl md:text-5xl font-medium text-center md:text-left">{homePage.featuredBook.title}</h2>
+            <p className="mt-1 md:text-lg text-gray-700 text-center md:text-left">{homePage.featuredBook.subtitle}</p>
 
             {/* Desktop about blurb */}
             <div className="hidden md:block mt-5">
@@ -100,7 +100,7 @@ export default function HomePage(props: Props) {
             <img
               src={homePage.featuredBook.image}
               alt={homePage.featuredBook.imageAlt}
-              className="w-full mx-auto md:mx-0 max-w-md lg:max-w-lg object-cover h-fit rounded hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md" 
+              className="w-full mx-auto mt-5 md:mt-0 md:mx-0 max-w-md lg:max-w-lg object-cover h-fit rounded hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md" 
             />
           </a>
 
@@ -120,8 +120,8 @@ export default function HomePage(props: Props) {
 
 
         {/* Academic books */}
-        <section className="mt-16 md:mt-20">
-          <h2 data-tina-field={tinaField(homePage, "academicBooksHeading")} className="text-5xl font-medium text-center sm:text-left">{homePage.academicBooksHeading}</h2>
+        <section className="mt-16 md:mt-24">
+          <h2 data-tina-field={tinaField(homePage, "academicBooksHeading")} className="text-4xl md:text-5xl font-medium text-center">{homePage.academicBooksHeading}</h2>
           <ul className="mt-10 grid sm:grid-cols-3 gap-x-8 gap-y-12 mx-auto">
             {homePage.featuredAcademicBooks.filter(item => !!(item.book)).map((item) => (
               <li key={item.book.id}>
@@ -143,7 +143,7 @@ export default function HomePage(props: Props) {
 
         {/* Selected essays */}
         <section className="mt-20 md:mt-24">
-          <h2 data-tina-field={tinaField(homePage, "featuredEssaysHeading")} className="text-5xl font-medium">{homePage.featuredEssaysHeading}</h2>
+          <h2 data-tina-field={tinaField(homePage, "featuredEssaysHeading")} className="text-4xl md:text-5xl text-center md:text-left font-medium">{homePage.featuredEssaysHeading}</h2>
           <ul className="mt-8 grid md:grid-cols-2 gap-8 mx-auto">
             {homePage.featuredEssays.map((essay) => (
               <a href={essay.link} key={essay.title}>
@@ -164,7 +164,7 @@ export default function HomePage(props: Props) {
       {/* Praise */}
       <section className="mt-12 bg-theme-darkgreen text-white py-24">
         <Wrapper>
-          <h2 data-tina-field={tinaField(homePage, "praiseHeading")} className="text-5xl font-medium">{homePage.praiseHeading}</h2>
+          <h2 data-tina-field={tinaField(homePage, "praiseHeading")} className="text-4xl md:text-5xl font-medium">{homePage.praiseHeading}</h2>
           <ul className="mt-8 grid md:grid-cols-4 gap-8 mx-auto px-4">
             {homePage.featuredPraise.map((praise) => (
               <li key={praise.reviewer}>
@@ -181,7 +181,7 @@ export default function HomePage(props: Props) {
       {/* Events */}
       <section>
         <PageWrapper>
-          <h2 data-tina-field={tinaField(homePage, "eventsHeading")} className="text-5xl font-medium">{homePage.eventsHeading}</h2>
+          <h2 data-tina-field={tinaField(homePage, "eventsHeading")} className="text-4xl md:text-5xl font-medium">{homePage.eventsHeading}</h2>
           <ul role="list" className="mt-8 lg:mt-12 flex flex-col gap-y-8 w-fit">
             {upcomingEvents.slice(0, EVENTS_TO_DISPLAY).map((event) => (
               <li key={event.id}><EventComponent event={event}/></li>
