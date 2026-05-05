@@ -34,7 +34,7 @@ export default function BooksPage(props: Props) {
                 <p className="text-lg mt-0.5">{book.subtitle}</p>
               </div>
 
-              <a href={`/books/${book._sys.filename}`} className="h-fit">
+              <a href={`/books/${book._sys.filename}`}>
                 <img
                   src={book.image}
                   alt={book.imageAlt}

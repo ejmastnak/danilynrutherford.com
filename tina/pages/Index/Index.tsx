@@ -96,11 +96,11 @@ export default function HomePage(props: Props) {
             </div>
 
           </div>
-          <a href={`/books/${homePage.featuredBook._sys.filename}`} className="h-fit">
+          <a href={`/books/${homePage.featuredBook._sys.filename}`}>
             <img
               src={homePage.featuredBook.image}
               alt={homePage.featuredBook.imageAlt}
-              className="w-full mx-auto mt-5 md:mt-0 md:mx-0 max-w-md lg:max-w-lg object-cover h-fit rounded hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md" 
+              className="w-full h-auto mx-auto mt-5 md:mt-0 md:mx-0 max-w-md lg:max-w-lg rounded hover:outline hover:outline-1 hover:outline-gray-300 hover:shadow-md" 
             />
           </a>
 
