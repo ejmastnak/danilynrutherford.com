@@ -3,7 +3,7 @@ import { CMS_HTML_HEAD_FIELD_DESCRIPTION, CMS_HTML_HEAD_TITLE_FIELD_DESCRIPTION,
 
 export const InterventionCollection: Collection = {
   name: "intervention",
-  label: "Interventions Collection",
+  label: "Writings Collection",
   path: "tina/content/interventions",
   format: "json",
   ui: {
