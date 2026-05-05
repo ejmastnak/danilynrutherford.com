@@ -27,5 +27,7 @@ fragment MyPublicAnthropologyPageParts on PublicAnthropologyPage {
   h1
   reflectionsHeading
   interventionsHeading
+  interventionsLinkButtonText
   interviewsHeading
+  interviewsLinkButtonText
 }

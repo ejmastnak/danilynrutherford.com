@@ -6,5 +6,7 @@
   "h1": "Public Anthropology",
   "reflectionsHeading": "Reflections",
   "interventionsHeading": "Writings",
-  "interviewsHeading": "Interviews"
+  "interventionsLinkButtonText": "Read",
+  "interviewsHeading": "Interviews",
+  "interviewsLinkButtonText": "Listen"
 }

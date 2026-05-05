@@ -52,8 +52,20 @@ export const PublicAnthropologyPageCollection: Collection = {
       type: 'string',
     },
     {
+      name: 'interventionsLinkButtonText',
+      label: 'Writings entry link text',
+      description: 'To include publisher in the link text, use the magic sequence "{{publisher}}", which will be replaced with the publisher of each writing. E.g. "Read in {{publisher}}" would render links like "Read in TIME", "Read in Salon", etc. You can of course just use plain text like "Read" or "More".',
+      type: 'string',
+    },
+    {
       name: 'interviewsHeading',
       label: 'Interviews heading',
+      type: 'string',
+    },
+    {
+      name: 'interviewsLinkButtonText',
+      label: 'Interviews entry link text',
+      description: 'To include publisher in the link text, use the magic sequence "{{publisher}}", which will be replaced with the publisher of each writing. E.g. "Listen in {{publisher}}" would render links like "Listen in NPR", "Listen in WUNC News ", etc.',
       type: 'string',
     },
   ]

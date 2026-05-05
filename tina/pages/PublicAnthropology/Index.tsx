@@ -32,6 +32,17 @@ export default function PublicAnthropologyPage(props: Props) {
   });
   const publicAnthropologyPage = data.publicAnthropologyPage;
 
+  /**
+    Replaces the magic string "{{publisher}}, if present, with the publisher"
+  */
+  function renderLinkButtonText(template, publisher) {
+    if (template == null) return "";
+    const pub = publisher ?? "";
+    return template.includes("{{publisher}}")
+      ? template.replace(/{{publisher}}/g, pub)
+      : template;
+  }
+
   return (
     <PageWrapper>
       <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")}>{publicAnthropologyPage.h1}</h1>
@@ -53,9 +64,8 @@ export default function PublicAnthropologyPage(props: Props) {
                 <TinaMarkdown content={intervention.body} components={components} />
               </div>
               <div>
-                {/* Custom LinkButton */}
                 <ExternalLinkButton className="mt-5" href={intervention.link} >
-                  Read (in {intervention.publisher})
+                  {renderLinkButtonText(publicAnthropologyPage.interventionsLinkButtonText, intervention.publisher)}
                 </ExternalLinkButton>
               </div>
             </li>
@@ -81,9 +91,8 @@ export default function PublicAnthropologyPage(props: Props) {
                   <TinaMarkdown content={interview.body} components={components} />
                 </div>
                 <div>
-                  {/* Custom LinkButton */}
                   <ExternalLinkButton href={interview.link} >
-                    Link
+                    {renderLinkButtonText(publicAnthropologyPage.interviewsLinkButtonText, interview.publisher)}
                   </ExternalLinkButton>
                 </div>
               </li>
