@@ -46,8 +46,9 @@ export default function PublicAnthropologyPage(props: Props) {
               <a href={intervention.link} className="hover:underline">
                 <p className="mt-px font-medium text-lg">{intervention.title}</p>
               </a>
+              {/* <Pillbox className="mt-2">{intervention.publisher}</Pillbox> */}
+              <p className="mt-px text-gray-600">{intervention.publisher}</p>
               <p className="mt-px text-gray-600">{formatDateString(intervention.date)}</p>
-              {/* <Pillbox className="mt-2">Published in {intervention.publisher}</Pillbox> */}
               <div className="mt-4 prose text-gray-800">
                 <TinaMarkdown content={intervention.body} components={components} />
               </div>
