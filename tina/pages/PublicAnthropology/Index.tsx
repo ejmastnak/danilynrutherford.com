@@ -75,15 +75,15 @@ export default function PublicAnthropologyPage(props: Props) {
                 <a href={interview.link} className="block">
                   <p className="mt-px font-medium hover:underline text-lg">{interview.title}</p>
                 </a>
+                <p className="mt-px text-gray-600">{interview.publisher}</p>
                 <p className="mt-px text-gray-600">{formatDateString(interview.date)}</p>
-                <Pillbox className="mt-2">{interview.publisher}</Pillbox>
                 <div className="my-4 prose text-gray-800">
                   <TinaMarkdown content={interview.body} components={components} />
                 </div>
                 <div>
                   {/* Custom LinkButton */}
                   <ExternalLinkButton href={interview.link} >
-                    Link ({interview.publisher})
+                    Link
                   </ExternalLinkButton>
                 </div>
               </li>
