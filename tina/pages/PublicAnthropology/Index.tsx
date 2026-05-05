@@ -36,7 +36,7 @@ export default function PublicAnthropologyPage(props: Props) {
     <PageWrapper>
       <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")}>{publicAnthropologyPage.h1}</h1>
 
-      {/* Interventions */}
+      {/* Interventions (Writings) */}
       <section className="mt-10 w-full min-w-fit bg-theme-lightblue/10 px-6 py-12 rounded-lg">
         <h2 id={slugify(publicAnthropologyPage.interventionsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="anchor text-3xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
 

@@ -48,7 +48,7 @@ export const PublicAnthropologyPageCollection: Collection = {
     },
     {
       name: 'interventionsHeading',
-      label: 'Interventions heading',
+      label: 'Writings heading',
       type: 'string',
     },
     {
