@@ -55,7 +55,7 @@ export default function Event({event}: Props) {
         <div className="prose font-semibold text-gray-800">
           <TinaMarkdown content={event.title} />
         </div>
-        <p className="italic text-sm ml-px">{event.institution}</p>
+        <p className="text-gray-600 text-sm ml-px">{event.institution}</p>
         <div className="flex flex-col gap-x-2 gap-y-1 my-1">
           {event.type && <Pillbox>{event.type}</Pillbox>}
         </div>
