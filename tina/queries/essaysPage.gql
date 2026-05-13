@@ -25,4 +25,5 @@ fragment MyEssaysPageParts on EssaysPage {
     description
   }
   h1
+  intro
 }

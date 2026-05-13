@@ -47,6 +47,10 @@ export default function PublicAnthropologyPage(props: Props) {
     <PageWrapper>
       <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")}>{publicAnthropologyPage.h1}</h1>
 
+      <div data-tina-field={tinaField(publicAnthropologyPage, "intro")} className="mt-5 prose">
+        <TinaMarkdown content={publicAnthropologyPage.intro} components={components} />
+      </div>
+
       {/* Interventions (Writings) */}
       <section className="mt-10 w-full min-w-fit bg-theme-lightblue/10 px-6 py-12 rounded-lg">
         <h2 id={slugify(publicAnthropologyPage.interventionsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "interventionsHeading")} className="anchor text-3xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interventionsHeading}</h2>
@@ -75,7 +79,8 @@ export default function PublicAnthropologyPage(props: Props) {
 
       {/* Interviews */}
       <section className="mt-24 md:mt-28 lg:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
-        <h2 id={slugify(publicAnthropologyPage.interviewsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="anchor text-3xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
+        {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
+        <h2 id={slugify(publicAnthropologyPage.interviewsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "interviewsHeading")} className="anchor text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.interviewsHeading}</h2>
 
         {props.interviews.length
           ? 
@@ -106,7 +111,8 @@ export default function PublicAnthropologyPage(props: Props) {
 
       {/* Reflections */}
       <section className="mt-24 md:mt-28 lg:mt-32 w-full min-w-fit bg-theme-lightblue/10 px-6 py-10 rounded-lg">
-        <h2 id={slugify(publicAnthropologyPage.reflectionsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="anchor text-3xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
+        {/* Magic value: -mt with +pt pushes h2 below absolutely placed top nav so anchor links work */}
+        <h2 id={slugify(publicAnthropologyPage.reflectionsHeading)} data-tina-field={tinaField(publicAnthropologyPage, "reflectionsHeading")} className="anchor text-4xl text-center mx-auto md:mx-0 md:ml-5">{publicAnthropologyPage.reflectionsHeading}</h2>
         <ul className="mt-12 grid mx-auto sm:grid-cols-3 gap-8 max-w-4xl">
           {props.reflections.sort((a, b) => new Date(b.date) - new Date(a.date)).map((reflection) => (
             <li key={reflection.id}>
@@ -119,9 +125,6 @@ export default function PublicAnthropologyPage(props: Props) {
           ))}
         </ul>
       </section>
-
-
-
 
     </PageWrapper>
   );

@@ -34,6 +34,10 @@ export default function EssaysPage(props: Props) {
 
       <h1 className="text-4xl" data-tina-field={tinaField(essaysPage, "h1")} >{essaysPage.h1}</h1>
 
+      <div data-tina-field={tinaField(essaysPage, "intro")} className="mt-5 prose">
+        <TinaMarkdown content={essaysPage.intro} components={components} />
+      </div>
+
       <div className="mt-10 space-y-20 sm:space-y-24">
         {essayCategories
           .filter(category => props.essaysByCategory[category].length > 0)

@@ -41,5 +41,10 @@ export const EssaysPageCollection: Collection = {
       label: 'Heading',
       type: 'string',
     },
+    {
+      name: 'intro',
+      label: 'Introductory text',
+      type: 'rich-text',
+    },
   ]
 };
