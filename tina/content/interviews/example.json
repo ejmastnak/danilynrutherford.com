@@ -1,7 +1,7 @@
 {
-  "title": "Example Interview",
-  "publisher": "NPR",
-  "link": "#interviews",
-  "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n",
-  "event": ""
+  "title": "Interview with Michelle Glogovac",
+  "publisher": "Read the Damn Book",
+  "link": "https://podcasts.apple.com/us/podcast/beautiful-mystery-with-danilyn-rutherford/id1479782634?i=1000729349346",
+  "body": "In this episode of Read the Damn Book, host Michelle Glogovac sits down with anthropologist and author Danilyn Rutherford to discuss her powerful memoir Beautiful Mystery. The book chronicles Rutherford’s journey as a mother to her daughter Millie, who lives with an undiagnosed disability. Together, Michelle and Danilyn explore themes of parenting, communication, caregiving, and loss, while also examining the political and social realities of healthcare and support systems for people with disabilities. Rutherford shares moving insights on the importance of empathy, resilience, and community, while celebrating the rich social worlds that children like Millie create.\n",
+  "event": "tina/content/events/beautiful-mystery-interview-with-michelle-glogovac.json"
 }
