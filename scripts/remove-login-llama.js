@@ -29,6 +29,9 @@ const injection = `
   img[alt="TinaCMS Security Illustration"] {
     display: none !important;
   }
+  img[alt="Tina the Llama playing a large orange key like a guitar."] {
+    display: none !important;
+  }
 </style>
 `;
 
