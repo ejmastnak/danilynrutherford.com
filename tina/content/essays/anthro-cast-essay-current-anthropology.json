@@ -4,9 +4,12 @@
   "category": "Research articles",
   "authors": [
     {
-      "givenName": "Danilyn",
-      "familyName": "Rutherford and Chip Colwell"
+      "givenName": "Chip",
+      "familyName": "Colwell and Danilyn Rutherford"
     }
   ],
-  "containerTitle": "Example Journal of Social Theory"
+  "containerTitle": "Current Anthropology",
+  "year": "2025",
+  "volume": "66",
+  "issue": "1"
 }
