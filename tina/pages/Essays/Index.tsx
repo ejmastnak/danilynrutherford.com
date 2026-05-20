@@ -50,7 +50,6 @@ export default function EssaysPage(props: Props) {
                     <li key={publication.id}>
                       <div className="p-6 rounded-lg max-w-3xl">
                         <div className="font-medium">{renderChicagoCitation(publication)}</div>
-                        <p className="mt-0.5">{publication.formatType}</p>
                         {publication.href && 
                           <a href={publication.href} target="_blank" rel="noopener noreferrer" className="mt-3 w-fit text-gray-700 font-medium inline-flex items-center gap-x-1 hover:text-gray-900 hover:underline">Link <ArrowTopRightOnSquareIcon className="size-5 shrink-0"/></a>
                         }

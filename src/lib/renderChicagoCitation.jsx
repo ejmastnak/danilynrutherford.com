@@ -55,7 +55,7 @@ function Editors({ editors = [] }) {
 export function renderChicagoCitation(pub) {
   const hasAuthors = pub.authors && pub.authors.length > 1
 
-  switch (pub.formatType) {
+  switch (pub.citationFormat) {
     case citationFormats["article-journal"]:
       return (
         <>
