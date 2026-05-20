@@ -73,7 +73,7 @@ export function renderChicagoCitation(pub) {
       return (
         <>
           {hasAuthors && <><Authors authors={pub.authors} /> </>}
-          Review of {pub.title}.{" "}
+          {pub.title}.{" "}
           {pub.containerTitle && <i>{pub.containerTitle}</i>}
           {pub.volume && <> {pub.volume}</>}
           {pub.issue && <> ({pub.issue})</>}
