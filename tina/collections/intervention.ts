@@ -29,7 +29,7 @@ export const InterventionCollection: Collection = {
           name: "description",
           label: "Description",
           description: CMS_HTML_HEAD_DESCRIPTION_FIELD_DESCRIPTION,
-          type: "string",
+          type: "rich-text",
         },
       ],
     },

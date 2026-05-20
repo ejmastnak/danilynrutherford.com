@@ -1,6 +1,7 @@
 ---
 import "@/assets/css/tailwind.css";
 import "@/assets/css/fonts.css";
+import { condenseAst } from '@src/lib/ast.js'
 import Nav from '@/shared/Nav.astro'
 import Footer from '@/shared/Footer.astro'
 import ClipPaths from '@/shared/ClipPaths.astro'
@@ -14,7 +15,7 @@ interface Heading {
 }
 
 interface Props {
-  head: { title: string, description: string },
+  head: { title: string, description: any },
   headings?: Heading[];
 }
 const { head, headings } = Astro.props as Props;
@@ -26,7 +27,7 @@ const currentPathname = Astro.url.pathname;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={head.description} />
+    <meta name="description" content={condenseAst(head.description)} />
     <title>{head.title}</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">

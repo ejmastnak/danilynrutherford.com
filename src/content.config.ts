@@ -27,7 +27,7 @@ const books = defineCollection({
     }),
     head: z.object({
       title: z.string(),
-      description: z.string(),
+      description: z.any(),
     }),
     title: z.string().nullish(),
     subtitle: z.string().nullish(),
@@ -74,7 +74,7 @@ const reflections = defineCollection({
     }),
     head: z.object({
       title: z.string(),
-      description: z.string(),
+      description: z.any(),
     }),
     title: z.string().nullish(),
     featuredImage: z.string().nullish(),
@@ -110,7 +110,7 @@ const interventions = defineCollection({
     }),
     head: z.object({
       title: z.string(),
-      description: z.string(),
+      description: z.any(),
     }),
     title: z.string().nullish(),
     featuredImage: z.string().nullish(),
