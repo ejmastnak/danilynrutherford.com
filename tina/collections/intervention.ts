@@ -39,16 +39,6 @@ export const InterventionCollection: Collection = {
       type: 'string',
     },
     {
-      name: 'featuredImage',
-      label: 'Featured Image',
-      type: 'image',
-    },
-    {
-      name: 'featuredImageAlt',
-      label: 'Featured Image alt text',
-      type: 'string',
-    },
-    {
       name: 'date',
       label: 'Date',
       type: 'datetime',
