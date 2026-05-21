@@ -41,11 +41,14 @@ export default function ContactPage(props: Props) {
               {contactPage.primaryEmail}
             </a>
           </li>
-          <li>
-            <a data-tina-field={tinaField(contactPage, "secondaryEmail")} className="inline-block text-gray-700 hover:text-blue-700 hover:underline" href={`mailto:${contactPage.secondaryEmail}`}>
-              {contactPage.secondaryEmail}
-            </a>
-          </li>
+          {contactPage.secondaryEmail && 
+            <li>
+              <a data-tina-field={tinaField(contactPage, "secondaryEmail")} className="inline-block text-gray-700 hover:text-blue-700 hover:underline" href={`mailto:${contactPage.secondaryEmail}`}>
+                {contactPage.secondaryEmail}
+              </a>
+            </li>
+          }
+
         </ul>
       </div>
 
