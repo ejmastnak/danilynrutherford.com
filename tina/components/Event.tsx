@@ -10,6 +10,7 @@ type Props = {
     date: string,
     time?: string,
     location: string,
+    link?: string,
     description: string,
   }
 };
@@ -65,8 +66,14 @@ export default function Event({event}: Props) {
         </div>
 
         {event.location && 
-          <div className="mt-2.5 text-sm text-gray-600">
+          <p className="mt-2.5 text-sm text-gray-600">
             <span className="font-semibold">Location:</span> {event.location}
+          </p>
+        }
+
+        {event.link && 
+          <div className="mt-2.5 text-sm text-gray-600">
+            <span className="font-semibold">Link:</span> <a href={event.link} className="text-theme-darkblue hover:text-blue-700 hover:underline">{event.link}</a>
           </div>
         }
 

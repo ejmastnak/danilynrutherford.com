@@ -53,6 +53,12 @@ export const EventCollection: Collection = {
       type: 'string',
     },
     {
+      name: 'link',
+      label: 'Link (optional)',
+      description: "For e.g. registration links, links to a podcast, etc.",
+      type: 'string',
+    },
+    {
       name: 'description',
       label: 'Description',
       type: 'rich-text',
