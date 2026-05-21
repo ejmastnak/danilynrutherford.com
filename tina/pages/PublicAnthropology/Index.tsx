@@ -32,17 +32,6 @@ export default function PublicAnthropologyPage(props: Props) {
   });
   const publicAnthropologyPage = data.publicAnthropologyPage;
 
-  /**
-    Replaces the magic string "{{publisher}}, if present, with the publisher"
-  */
-  function renderLinkButtonText(template, publisher) {
-    if (template == null) return "";
-    const pub = publisher ?? "";
-    return template.includes("{{publisher}}")
-      ? template.replace(/{{publisher}}/g, pub)
-      : template;
-  }
-
   return (
     <PageWrapper>
       <h1 className="text-4xl" data-tina-field={tinaField(publicAnthropologyPage, "h1")}>{publicAnthropologyPage.h1}</h1>
@@ -69,7 +58,7 @@ export default function PublicAnthropologyPage(props: Props) {
               </div>
               <div>
                 <ExternalLinkButton className="mt-5" href={intervention.link} >
-                  {renderLinkButtonText(publicAnthropologyPage.interventionsLinkButtonText, intervention.publisher)}
+                  {intervention.linkText ?? "Read"}
                 </ExternalLinkButton>
               </div>
             </li>
@@ -97,7 +86,7 @@ export default function PublicAnthropologyPage(props: Props) {
                 </div>
                 <div>
                   <ExternalLinkButton href={interview.link} >
-                    {renderLinkButtonText(publicAnthropologyPage.interviewsLinkButtonText, interview.publisher)}
+                    {interview.linkText ?? "Listen"}
                   </ExternalLinkButton>
                 </div>
               </li>

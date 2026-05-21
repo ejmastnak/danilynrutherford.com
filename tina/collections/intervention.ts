@@ -12,6 +12,9 @@ export const InterventionCollection: Collection = {
       description: "The filename field is used internally by the content management system and is visible only to you, not to visitors.",
     },
   },
+  defaultItem: {
+    linkText: "Read",
+  },
   fields: [
     {
       name: "head",
@@ -52,6 +55,12 @@ export const InterventionCollection: Collection = {
     {
       name: 'link',
       label: 'External link',
+      type: 'string',
+    },
+    {
+      name: 'linkText',
+      label: 'Link text',
+      description: 'Text that appears on the link button; e.g. "Read", "View", etc.',
       type: 'string',
     },
     {

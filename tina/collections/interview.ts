@@ -8,6 +8,9 @@ export const InterviewCollection: Collection = {
   label: "Interviews Collection",
   path: "tina/content/interviews",
   format: "json",
+  defaultItem: {
+    linkText: "Listen",
+  },
   ui: {
     filename: {
       showFirst: true,
@@ -34,6 +37,12 @@ export const InterviewCollection: Collection = {
     {
       name: 'link',
       label: 'External link',
+      type: 'string',
+    },
+    {
+      name: 'linkText',
+      label: 'Link text',
+      description: 'Text that appears on the link button; e.g. "Listen", "View", etc.',
       type: 'string',
     },
     {
