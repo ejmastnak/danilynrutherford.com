@@ -41,6 +41,14 @@ export default defineConfig({
     },
     accept: TINA_SUPPORTED_IMAGE_MIMES,
   },
+  search: {
+    tina: {
+      indexerToken: process.env.SEARCH_TOKEN,
+      fuzzyEnabled: false,
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  },
   schema: {
     collections: [
       HomePageCollection,
