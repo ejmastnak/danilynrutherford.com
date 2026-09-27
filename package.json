@@ -6,7 +6,8 @@
     "dev": "tinacms dev -c \"astro dev\"",
     "build": "tinacms build && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "postbuild": "node scripts/remove-login-llama.js"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
